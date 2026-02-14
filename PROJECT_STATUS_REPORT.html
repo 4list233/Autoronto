@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R2Y5 Project Status Report - January 25, 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header .meta {
+            font-size: 1em;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.2s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .stat-card h3 {
+            color: #667eea;
+            font-size: 1em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .stat-card .number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .section {
+            margin: 40px 0;
+        }
+        
+        .section h2 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section h3 {
+            color: #555;
+            font-size: 1.3em;
+            margin: 25px 0 15px 0;
+        }
+        
+        .good-list {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        
+        .good-list li {
+            margin: 10px 0;
+            margin-left: 20px;
+        }
+        
+        .issue-card {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+        
+        .issue-card.critical {
+            background: #f8d7da;
+            border-left-color: #dc3545;
+        }
+        
+        .issue-card h3 {
+            margin-top: 0;
+            color: #856404;
+        }
+        
+        .issue-card.critical h3 {
+            color: #721c24;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95em;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        thead tr {
+            background: #667eea;
+            color: white;
+            text-align: left;
+        }
+        
+        th, td {
+            padding: 15px;
+        }
+        
+        tbody tr {
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tbody tr:nth-of-type(even) {
+            background: #f8f9fa;
+        }
+        
+        tbody tr:hover {
+            background: #e9ecef;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        
+        .status.green {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status.yellow {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .status.red {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+        }
+        
+        .action-box {
+            background: #e7f3ff;
+            border-left: 4px solid #0066cc;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+        
+        .action-box h4 {
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+        
+        .action-box ul {
+            margin-left: 20px;
+        }
+        
+        .action-box li {
+            margin: 8px 0;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 30px 40px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        .emoji {
+            font-size: 1.2em;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 R2Y5 Project Status Report</h1>
+            <div class="meta">
+                <strong>Generated:</strong> January 25, 2026<br>
+                <strong>Project ID:</strong> 4336931
+            </div>
+        </div>
+        
+        <div class="content">
+            <!-- Stats Overview -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Overall Progress</h3>
+                    <div class="number">42.8%</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 42.8%"></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <h3>Hours Logged</h3>
+                    <div class="number">811h</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Tasks</h3>
+                    <div class="number">127</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Active Teams</h3>
+                    <div class="number">18</div>
+                </div>
+            </div>
+            
+            <!-- What's Going Well -->
+            <div class="section">
+                <h2><span class="emoji">✅</span> What's Going Well</h2>
+                <ul class="good-list">
+                    <li><strong>All tasks have clear, descriptive titles</strong> - No placeholder or missing names</li>
+                    <li><strong>Strong completion in some teams:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li>GUI: 92.2% complete (16h logged)</li>
+                            <li>Recruitment: 94.9% complete (47.5h logged)</li>
+                            <li>2DOD: 100% complete (23h logged)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Well-organized WBS structure</strong> with consistent team grouping</li>
+                    <li><strong>811 hours of work successfully tracked</strong> and logged</li>
+                </ul>
+            </div>
+            
+            <!-- Critical Issues -->
+            <div class="section">
+                <h2><span class="emoji">⚠️</span> Critical Issues to Address</h2>
+                
+                <div class="issue-card critical">
+                    <h3>1. Missing Hour Estimates (HIGH PRIORITY)</h3>
+                    <p><strong>127 out of 127 tasks (100%)</strong> have NO estimated hours</p>
+                    <p>Only <em>actual</em> hours are being tracked</p>
+                    <p><strong>Impact:</strong> Cannot properly plan capacity, deadlines, or resource allocation</p>
+                    <p><strong>Recommendation:</strong> Add estimates to all tasks using actual hours as baseline</p>
+                </div>
+                
+                <div class="issue-card">
+                    <h3>2. Lack of Task Dependencies</h3>
+                    <p>Only <strong>2 out of 127 tasks (1.6%)</strong> have dependencies defined</p>
+                    <p>Most projects should have 20-30% of tasks with dependencies</p>
+                    <p><strong>Impact:</strong> Cannot identify critical path or task sequencing</p>
+                    <p><strong>Recommendation:</strong> Add Finish-to-Start (FS) dependencies between sequential tasks</p>
+                </div>
+                
+                <div class="issue-card critical">
+                    <h3>3. Uneven Progress Across Teams</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Team</th>
+                                <th>Progress</th>
+                                <th>Hours</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>GUI</td>
+                                <td>92.2%</td>
+                                <td>16h</td>
+                                <td><span class="status green">✅ On track</span></td>
+                            </tr>
+                            <tr>
+                                <td>Recruitment</td>
+                                <td>94.9%</td>
+                                <td>47.5h</td>
+                                <td><span class="status green">✅ Complete</span></td>
+                            </tr>
+                            <tr>
+                                <td>2DOD</td>
+                                <td>100%</td>
+                                <td>23h</td>
+                                <td><span class="status green">✅ Complete</span></td>
+                            </tr>
+                            <tr>
+                                <td>Localization</td>
+                                <td>77.1%</td>
+                                <td>75h</td>
+                                <td><span class="status yellow">🟡 Good progress</span></td>
+                            </tr>
+                            <tr>
+                                <td>Planning</td>
+                                <td>61.9%</td>
+                                <td>204h</td>
+                                <td><span class="status yellow">🟡 Most hours spent</span></td>
+                            </tr>
+                            <tr>
+                                <td>Mob. Innovation & 000</td>
+                                <td>58.2%</td>
+                                <td>120h</td>
+                                <td><span class="status yellow">🟡 Moderate</span></td>
+                            </tr>
+                            <tr>
+                                <td>Mechanical</td>
+                                <td>46.9%</td>
+                                <td>0h</td>
+                                <td><span class="status red">🔴 Hours not logged</span></td>
+                            </tr>
+                            <tr>
+                                <td>Systems Software</td>
+                                <td>43.4%</td>
+                                <td>7h</td>
+                                <td><span class="status red">🔴 Behind</span></td>
+                            </tr>
+                            <tr>
+                                <td>Electrical</td>
+                                <td>34.4%</td>
+                                <td>175h</td>
+                                <td><span class="status red">🔴 High hours, low completion</span></td>
+                            </tr>
+                            <tr>
+                                <td>Mapping</td>
+                                <td>12.0%</td>
+                                <td>30h</td>
+                                <td><span class="status red">🔴 Just started</span></td>
+                            </tr>
+                            <tr>
+                                <td>Simulation</td>
+                                <td>4.9%</td>
+                                <td>7h</td>
+                                <td><span class="status red">🔴 Just started</span></td>
+                            </tr>
+                            <tr style="background: #f8d7da;">
+                                <td><strong>3DOD</strong></td>
+                                <td><strong>0.0%</strong></td>
+                                <td><strong>106.5h</strong></td>
+                                <td><span class="status red"><strong>🔴 No progress logged!</strong></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="margin-top: 15px; padding: 15px; background: #fff; border: 2px solid #dc3545; border-radius: 6px;">
+                        <strong style="color: #721c24;">⚠️ Special Concern - 3DOD Team:</strong>
+                        <ul style="margin: 10px 0 0 20px; color: #721c24;">
+                            <li>106.5 hours logged but showing 0% progress</li>
+                            <li>4 active tasks (BEVFusion, Onboarding, LiDAR bring-up, Adverse weather)</li>
+                            <li><strong>Action needed:</strong> Update task progress percentages immediately</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Task Status Breakdown -->
+            <div class="section">
+                <h2><span class="emoji">📈</span> Task Status Breakdown</h2>
+                <div class="stats-grid">
+                    <div class="stat-card" style="border-left-color: #dc3545;">
+                        <h3>Not Started</h3>
+                        <div class="number">57</div>
+                        <small>44.9% of tasks</small>
+                    </div>
+                    <div class="stat-card" style="border-left-color: #ffc107;">
+                        <h3>In Progress</h3>
+                        <div class="number">27</div>
+                        <small>21.3% of tasks</small>
+                    </div>
+                    <div class="stat-card" style="border-left-color: #28a745;">
+                        <h3>Completed</h3>
+                        <div class="number">43</div>
+                        <small>33.9% of tasks</small>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Action Items -->
+            <div class="section">
+                <h2><span class="emoji">🎯</span> Immediate Action Items</h2>
+                
+                <div class="action-box">
+                    <h4>For Team Leads:</h4>
+                    <ul>
+                        <li><strong>Add hour estimates to all tasks</strong> (use actual hours as reference for completed work)</li>
+                        <li><strong>Update progress percentages</strong> for tasks with logged hours (especially 3DOD)</li>
+                        <li><strong>Define task dependencies</strong> for sequential work</li>
+                        <li><strong>Review "Not Started" tasks</strong> (57 tasks) - are they still needed?</li>
+                    </ul>
+                </div>
+                
+                <div class="action-box">
+                    <h4>For Project Management:</h4>
+                    <ul>
+                        <li>Investigate why Electrical has 175h logged but only 34% complete</li>
+                        <li>Support 3DOD in updating their progress tracking</li>
+                        <li>Consider reallocating resources to teams showing &lt;20% progress</li>
+                        <li>Set up a bulk update process for missing estimates</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Recommendations -->
+            <div class="section">
+                <h2><span class="emoji">💡</span> Recommended Next Steps</h2>
+                <ol style="margin-left: 20px; line-height: 2;">
+                    <li><strong>Estimation Sprint:</strong> Spend 1-2 hours as leads adding estimates to all tasks</li>
+                    <li><strong>Dependency Mapping:</strong> Identify critical path and add FS dependencies</li>
+                    <li><strong>Progress Audit:</strong> Teams with logged hours but 0% progress need immediate updates</li>
+                    <li><strong>Resource Review:</strong> Teams with very low progress may need support or task reassignment</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>Technical Details:</strong> Data exported from TeamGantt API on January 25, 2026</p>
+            <p>18 teams • 27 subgroups • 10 milestones • 70+ active team members</p>
+            <p style="margin-top: 15px;">Questions or need help updating estimates? Contact project management for bulk update support.</p>
+        </div>
+    </div>
+</body>
+</html>

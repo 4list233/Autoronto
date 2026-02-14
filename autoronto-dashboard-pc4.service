@@ -1,0 +1,17 @@
+[Unit]
+Description=aUToronto PM Dashboard (Streamlit)
+After=network.target
+
+[Service]
+Type=simple
+User=autoronto
+WorkingDirectory=/home/autoronto/Desktop/PM_Server/Autoronto/dashboard
+Environment="PATH=/home/autoronto/Desktop/PM_Server/Autoronto/.venv/bin:/usr/local/bin:/usr/bin:/bin"
+ExecStart=/home/autoronto/Desktop/PM_Server/Autoronto/.venv/bin/streamlit run app.py --server.address=0.0.0.0 --server.port=8501
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/autoronto/Desktop/PM_Server/Autoronto/dashboard/logs/dashboard.log
+StandardError=append:/home/autoronto/Desktop/PM_Server/Autoronto/dashboard/logs/dashboard.error.log
+
+[Install]
+WantedBy=multi-user.target

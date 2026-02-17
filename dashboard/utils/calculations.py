@@ -54,6 +54,10 @@ def detect_task_issues(task, config):
     """Detect issues with a task. Returns list of issue strings."""
     issues = []
 
+    # Milestones are checkpoints, not work items — skip issue detection
+    if task.get("type") == "milestone":
+        return issues
+
     overdue = days_overdue(task.get("end_date"))
     if overdue > config.get("overdue_critical_days", 7):
         issues.append(f"Overdue by {overdue} days (CRITICAL)")
@@ -64,15 +68,14 @@ def detect_task_issues(task, config):
         issues.append("Hours logged but 0% progress")
 
     if not task.get("resources") or len(task.get("resources", [])) == 0:
-        if task.get("type") != "milestone":
-            issues.append("Unassigned")
+        issues.append("Unassigned")
 
     return issues
 
 
 def categorize_alert(issues):
     """Categorize alert as critical or warning."""
-    critical_keywords = ["CRITICAL", "0% progress", "Unassigned"]
+    critical_keywords = ["CRITICAL", "0% progress"]
     for issue in issues:
         for kw in critical_keywords:
             if kw in issue:

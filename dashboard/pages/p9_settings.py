@@ -166,7 +166,7 @@ def render():
     # Task status thresholds
     st.markdown('<div class="metric-card" style="margin-bottom:16px;">', unsafe_allow_html=True)
     st.markdown("#### ⚠️ Task Alert Thresholds")
-    col1, col2, col3 = st.columns(3)
+    col1, col2 = st.columns(2)
     with col1:
         overdue_crit = st.number_input(
             "Overdue Critical (days)",
@@ -182,14 +182,6 @@ def render():
             value=config.get("stalled_task_days", 14),
             key="stalled_days",
             help="Tasks with no updates for this many days trigger a warning",
-        )
-    with col3:
-        over_est = st.number_input(
-            "Over Estimate % Warning",
-            min_value=100, max_value=300,
-            value=config.get("over_estimate_percent", 150),
-            key="over_est",
-            help="Tasks exceeding this % of estimated hours trigger a warning",
         )
     st.markdown('</div>', unsafe_allow_html=True)
 
@@ -250,7 +242,6 @@ def render():
                 "high_hour_weeks": high_weeks,
                 "overdue_critical_days": overdue_crit,
                 "stalled_task_days": stalled_days,
-                "over_estimate_percent": over_est,
                 "on_track_progress": on_track,
                 "at_risk_progress": at_risk,
                 "competition_date": comp_date,
@@ -274,7 +265,6 @@ def render():
                 "high_hour_weeks": 2,
                 "overdue_critical_days": 7,
                 "stalled_task_days": 14,
-                "over_estimate_percent": 150,
                 "on_track_progress": 75,
                 "at_risk_progress": 50,
                 "member_hours_per_week": 10,
@@ -306,7 +296,7 @@ def render():
             <b>Project:</b> R2Y5 (ID: {project_id})<br>
             <b>Endpoints:</b><br>
             • <code>GET /projects/{{id}}/children</code> — Fetch hierarchical task tree<br>
-            • <code>PATCH /tasks/{{id}}</code> — Update estimated hours<br>
+            • <code>PATCH /tasks/{{id}}</code> — Update task details<br>
             • <code>POST /times</code> — Log actual hours via time blocks<br>
             • <code>GET /tasks/{{id}}</code> — Verify task status
         </p>

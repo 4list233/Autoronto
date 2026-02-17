@@ -7,7 +7,6 @@
     "high_hour_weeks": 2,
     "overdue_critical_days": 7,
     "stalled_task_days": 14,
-    "over_estimate_percent": 150,
     "on_track_progress": 75,
     "at_risk_progress": 50,
     "weeks_historical": 8,

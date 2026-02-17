@@ -76,8 +76,7 @@ def render():
             <div>
                 <p style="color:#F6AE2D; font-weight:600; margin:0;">Auto-Distribution Logic</p>
                 <p style="color:#8899AA; font-size:12px; margin:2px 0 0;">
-                    Allocates hours across assigned tasks proportionally to estimated workload.
-                    <b>Formula:</b> task_hours = total_allocated × (task_est / total_est_for_member).
+                    Allocates hours across assigned tasks based on actual tracked time.
                     Uses TeamGantt's POST /v1/times endpoint to create time blocks.
                 </p>
             </div>
@@ -140,7 +139,6 @@ def render():
             rows.append({
                 "Task": t["name"],
                 "Team": t["group"],
-                "Est. Hours": t["estimated_hours"],
                 "My Hours": f"{share:.1f}h",
                 "Progress": f"{t['percent_complete']}%",
             })

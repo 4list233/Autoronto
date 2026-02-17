@@ -36,7 +36,6 @@ def render_task_table(tasks, config, show_group=True, show_issues=True):
             "": status_icon,
             "Task": t.get("name", ""),
             "Progress": f"{t.get('percent_complete', 0)}%",
-            "Est. Hours": t.get("estimated_hours", 0),
             "Act. Hours": t.get("actual_hours", 0),
             "Deadline": deadline_str,
             "Assignees": ", ".join(t.get("resources", [])[:3]),

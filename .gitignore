@@ -33,3 +33,9 @@ Thumbs.db
 
 # Dashboard specific
 dashboard/.streamlit/
+
+# Debug output from delete script
+scripts/debug_output/
+
+# Real user roles (contains team member names)
+scripts/user_roles_REAL.json

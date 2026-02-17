@@ -76,7 +76,7 @@ def get_all_tasks(data=None):
 
     all_tasks = []
 
-    def collect(items, parent_group="", parent_group_id=None, depth=0):
+    def collect(items, parent_group="", parent_group_id=None, subgroup="", depth=0):
         for item in items:
             if item.get("type") in ("task", "milestone"):
                 resources = item.get("resources", [])
@@ -91,6 +91,7 @@ def get_all_tasks(data=None):
                     "wbs": item.get("wbs", ""),
                     "group": parent_group,
                     "group_id": parent_group_id,
+                    "subgroup": subgroup,
                     "estimated_hours": item.get("estimated_hours") or 0,
                     "actual_hours": item.get("actual_hours") or 0,
                     "percent_complete": item.get("percent_complete") or 0,
@@ -105,9 +106,20 @@ def get_all_tasks(data=None):
                     "depth": depth,
                 })
             if "children" in item:
-                gname = item.get("name", parent_group) if item.get("type") == "group" else parent_group
-                gid = item.get("id", parent_group_id) if item.get("type") == "group" else parent_group_id
-                collect(item["children"], gname, gid, depth + (1 if item.get("type") == "group" else 0))
+                itype = item.get("type")
+                if itype == "group":
+                    gname = item.get("name", parent_group)
+                    gid = item.get("id", parent_group_id)
+                    sgname = ""
+                elif itype == "subgroup":
+                    gname = parent_group
+                    gid = parent_group_id
+                    sgname = item.get("name", subgroup)
+                else:
+                    gname = parent_group
+                    gid = parent_group_id
+                    sgname = subgroup
+                collect(item["children"], gname, gid, sgname, depth + (1 if itype in ("group", "subgroup") else 0))
 
     collect(data)
     return all_tasks
@@ -134,13 +146,10 @@ def get_teams(data=None):
         in_progress = len([t for t in team_tasks if 0 < t["percent_complete"] < 100])
         not_started = len([t for t in team_tasks if t["percent_complete"] == 0])
 
-        total_est = sum(t["estimated_hours"] for t in team_tasks)
         total_act = sum(t["actual_hours"] for t in team_tasks)
 
-        # Weighted progress
-        if total_est > 0:
-            progress = sum(t["percent_complete"] * t["estimated_hours"] for t in team_tasks) / total_est
-        elif total_tasks > 0:
+        # Progress: simple average of percent_complete
+        if total_tasks > 0:
             progress = sum(t["percent_complete"] for t in team_tasks) / total_tasks
         else:
             progress = 0
@@ -173,7 +182,6 @@ def get_teams(data=None):
             "completed": completed,
             "in_progress": in_progress,
             "not_started": not_started,
-            "estimated_hours": total_est,
             "actual_hours": total_act,
             "progress": round(progress, 1),
             "resources": list(all_resources),
@@ -265,7 +273,6 @@ def get_project_summary(data=None):
     in_progress = len([t for t in all_tasks if 0 < t["percent_complete"] < 100])
     not_started = len([t for t in all_tasks if t["percent_complete"] == 0])
 
-    total_est = sum(t["estimated_hours"] for t in all_tasks)
     total_act = sum(t["actual_hours"] for t in all_tasks)
 
     if total_tasks > 0:
@@ -297,7 +304,6 @@ def get_project_summary(data=None):
         "completed": completed,
         "in_progress": in_progress,
         "not_started": not_started,
-        "total_estimated_hours": total_est,
         "total_actual_hours": total_act,
         "avg_progress": round(avg_progress, 1),
         "days_to_competition": days_to_competition,

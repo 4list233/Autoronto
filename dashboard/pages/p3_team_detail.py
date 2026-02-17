@@ -92,7 +92,6 @@ def render():
                 "Task": t["name"],
                 "Type": t["type"],
                 "Assignees": ", ".join(t["resources"][:3]),
-                "Est. Hrs": t["estimated_hours"],
                 "Act. Hrs": t["actual_hours"],
                 "Progress": f"{t['percent_complete']}%",
                 "Deadline": t.get("end_date", "—"),
@@ -157,10 +156,6 @@ def render():
     st.markdown('<div class="metric-card">', unsafe_allow_html=True)
     st.markdown("#### 🚨 Action Items for Lead")
     action_items = []
-
-    zero_est = [t for t in team_tasks if t["estimated_hours"] == 0]
-    if zero_est:
-        action_items.append(f"**{len(zero_est)} tasks** have no estimated hours")
 
     zero_prog = [t for t in team_tasks if t["actual_hours"] > 0 and t["percent_complete"] == 0]
     if zero_prog:

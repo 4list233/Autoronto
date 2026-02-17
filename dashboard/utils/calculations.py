@@ -12,14 +12,8 @@ def calculate_variance(estimated, actual):
 
 
 def calculate_weighted_progress(tasks):
-    """Calculate weighted average progress by estimated hours."""
-    total_est = sum(t.get("estimated_hours", 0) for t in tasks)
-    if total_est > 0:
-        return sum(
-            t.get("percent_complete", 0) * t.get("estimated_hours", 0)
-            for t in tasks
-        ) / total_est
-    elif tasks:
+    """Calculate average progress across tasks."""
+    if tasks:
         return sum(t.get("percent_complete", 0) for t in tasks) / len(tasks)
     return 0
 
@@ -69,16 +63,8 @@ def detect_task_issues(task, config):
     if task.get("actual_hours", 0) > 0 and task.get("percent_complete", 0) == 0:
         issues.append("Hours logged but 0% progress")
 
-    est = task.get("estimated_hours", 0)
-    act = task.get("actual_hours", 0)
-    if est > 0 and act > est * (config.get("over_estimate_percent", 150) / 100):
-        issues.append(f"Over budget ({round(act/est*100)}% of estimate)")
-
     if not task.get("resources") or len(task.get("resources", [])) == 0:
         issues.append("Unassigned")
-
-    if est == 0:
-        issues.append("Missing estimated hours")
 
     return issues
 

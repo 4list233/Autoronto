@@ -32,8 +32,8 @@ def load_env():
 load_env()
 
 # Configuration
-API_TOKEN = os.getenv('TEAMGANTT_API_KEY', '')
-PROJECT_ID = int(os.getenv('TEAMGANTT_PROJECT_ID', '0'))
+API_TOKEN = os.getenv('TEAMGANTT_API_KEY', '').strip('"')
+PROJECT_ID = int(os.getenv('TEAMGANTT_PROJECT_ID', '0').strip('"'))
 
 if not API_TOKEN or not PROJECT_ID:
     print("❌ ERROR: Missing API credentials in .env file")

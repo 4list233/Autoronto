@@ -71,30 +71,22 @@ def team_progress_bar_chart(teams):
 
 def hours_comparison_chart(teams):
     names = [t["name"] for t in teams]
-    estimated = [t["estimated_hours"] for t in teams]
     actual = [t["actual_hours"] for t in teams]
 
-    fig = go.Figure()
-    fig.add_trace(go.Bar(
-        name="Estimated",
-        x=names, y=estimated,
-        marker_color=AUTORONTO_COLORS["secondary"],
-        opacity=0.7,
-    ))
-    fig.add_trace(go.Bar(
-        name="Actual",
+    fig = go.Figure(data=[go.Bar(
         x=names, y=actual,
         marker_color=AUTORONTO_COLORS["accent"],
-    ))
+        text=[f"{h:.0f}h" for h in actual],
+        textposition="outside",
+        textfont=dict(color="white", size=11),
+    )])
     fig.update_layout(
-        barmode="group",
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
         font=dict(color="white"),
         xaxis=dict(tickangle=-45, tickfont=dict(size=10)),
-        yaxis=dict(title="Hours"),
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-        margin=dict(t=40, b=100, l=40, r=10),
+        yaxis=dict(title="Actual Hours"),
+        margin=dict(t=20, b=100, l=40, r=10),
         height=350,
     )
     return fig

@@ -16,7 +16,7 @@ import os
 import sys
 import time
 import subprocess
-import numpy as np
+import random
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Dict, List, Tuple
@@ -41,11 +41,11 @@ def load_env():
 load_env()
 
 # API Configuration
-API_TOKEN = os.getenv('TEAMGANTT_API_KEY', '')
-PROJECT_ID = int(os.getenv('TEAMGANTT_PROJECT_ID', '0'))
+API_TOKEN = os.getenv('TEAMGANTT_API_KEY', '').strip('"')
+PROJECT_ID = int(os.getenv('TEAMGANTT_PROJECT_ID', '0').strip('"'))
 API_BASE = "https://api.teamgantt.com/v1"
 DRY_RUN = True  # Set to False to actually execute
-RATE_LIMIT_DELAY = 0.5  # seconds between API calls
+RATE_LIMIT_DELAY = 0.25  # seconds between API calls
 
 # Validate configuration
 if not API_TOKEN:
@@ -58,41 +58,48 @@ if not PROJECT_ID:
     sys.exit(1)
 
 # Role-based distributions (hours per week)
+# max_hours = hard cap per week for this role
 ROLE_DISTRIBUTIONS = {
     'chad_phd': {
         'mean': 12.0,
         'std_dev': 1.5,
-        'calendar_type': 'phd',  # Not affected by undergrad calendar
+        'max_hours': 15.0,
+        'calendar_type': 'phd',
         'description': 'PhD student - 9-15h/week year-round'
     },
     'td': {
         'mean': 12.0,
         'std_dev': 1.5,
+        'max_hours': 15.0,
         'calendar_type': 'undergrad',
-        'overhead_percentage': 0.375,  # 37.5% for coordination
+        'overhead_percentage': 0.375,
         'description': 'Technical Director - 9-15h/week + overhead'
     },
     'lead': {
         'mean': 10.5,
         'std_dev': 1.25,
+        'max_hours': 13.0,
         'calendar_type': 'undergrad',
         'description': 'Team lead - 8-13h/week'
     },
     'member': {
         'mean': 8.5,
         'std_dev': 0.75,
+        'max_hours': 10.0,
         'calendar_type': 'undergrad',
         'description': 'Regular member - 7-10h/week'
     },
     'inactive': {
         'mean': 3.0,
         'std_dev': 1.5,
+        'max_hours': 6.0,
         'calendar_type': 'undergrad',
         'description': 'Inactive/struggling - 0-6h/week'
     },
     'quit': {
         'mean': 0,
         'std_dev': 0,
+        'max_hours': 0,
         'calendar_type': 'none',
         'description': 'Has quit - no contribution'
     }
@@ -112,6 +119,92 @@ def load_json_config(filename):
         print(f"❌ ERROR: {filename} not found")
         print(f"Expected at: {path}")
         sys.exit(1)
+
+def extract_person_name(tg_display_name):
+    """
+    Extract clean person name from TeamGantt display name.
+    Handles all formatting variations:
+      - "TEAM - Name - ROLE"       (standard)
+      - "!Name - TD"               (! prefix)
+      - "!Name"                    (no role suffix)
+      - "GUI – Name – MEM"        (em-dash)
+      - "DRIVERS Name - MEM"      (missing first separator)
+      - "DRIVERS - Name -MEM"     (missing space before role)
+      - "SIM  - Name - MEM"       (double space)
+      - "Name"                    (plain name)
+    """
+    # Normalize: replace em-dashes with regular dashes, strip !
+    clean = tg_display_name.replace('\u2013', '-').replace('\u2014', '-').replace('!', '').strip()
+    
+    # Normalize multiple spaces
+    while '  ' in clean:
+        clean = clean.replace('  ', ' ')
+    
+    # Known teams and roles
+    teams = {'SIM', 'VIE', 'MI', 'DLA', 'DRIVERS', 'LOC', 'MAP', 'MARKETING',
+             'PLAN', 'PLANNING', 'RESEARCH', 'SS', 'TRACKING', '2DOD', '3DOD',
+             'GUI', 'MECH', 'aUToronto PM', 'aUToronto'}
+    roles = {'TD', 'LEAD', 'MEM', 'Member', 'LEAAD', 'PM'}
+    
+    # Split by ' - ' (standard separator)
+    parts = [p.strip() for p in clean.split(' - ')]
+    
+    # Filter out known team/role tokens
+    person_parts = []
+    for part in parts:
+        if part in teams or part in roles:
+            continue
+        # Strip role suffixes stuck to name (e.g. "Mahmoud Anklis -MEM" -> after split gives "Mahmoud Anklis -MEM")
+        for role in roles:
+            if part.endswith(f'-{role}') or part.endswith(f' {role}'):
+                part = part[:-(len(role))].rstrip(' -')
+            if part.endswith(f'- {role}'):
+                part = part[:-(len(role) + 2)].strip()
+        # Strip team prefixes stuck to name (e.g. "DRIVERS Jonathan Zhu")
+        for team in sorted(teams, key=len, reverse=True):
+            if part.upper().startswith(team.upper() + ' '):
+                part = part[len(team):].strip()
+        if part and part not in teams and part not in roles:
+            person_parts.append(part)
+    
+    return ' '.join(person_parts).strip() if person_parts else clean
+
+def fetch_project_data():
+    """
+    Fetch fresh task data and user mapping directly from TeamGantt API.
+    Returns:
+        (tasks_list, user_id_map, tg_display_names)
+        - tasks_list: list of task dicts with resources
+        - user_id_map: {person_name: user_id}
+        - tg_display_names: {user_id: tg_display_name}
+    """
+    print("  Fetching project data from TeamGantt API...")
+    cmd = [
+        'curl', '-s',
+        '-H', f'Authorization: Bearer {API_TOKEN}',
+        f'{API_BASE}/projects/{PROJECT_ID}/children?is_flat_list=true'
+    ]
+    result = subprocess.run(cmd, capture_output=True, text=True, timeout=60)
+    all_items = json.loads(result.stdout)
+    
+    # Separate tasks from groups
+    tasks = [t for t in all_items if t.get('type') == 'task']
+    
+    # Build user_id mappings from resources
+    tg_display_names = {}  # user_id -> display_name
+    user_id_map = {}       # person_name -> user_id
+    
+    for item in all_items:
+        for r in item.get('resources', []):
+            if r.get('type') == 'user':
+                uid = r['type_id']
+                display_name = r['name']
+                tg_display_names[uid] = display_name
+                person_name = extract_person_name(display_name)
+                user_id_map[person_name] = uid
+    
+    print(f"  ✓ Fetched {len(tasks)} tasks, {len(user_id_map)} users from API")
+    return tasks, user_id_map, tg_display_names
 
 def get_week_start(date):
     """Get Monday of the week for a given date."""
@@ -185,25 +278,14 @@ def get_week_modifier(week_start, calendar_type, academic_calendar):
 def sample_weekly_hours(role, week_modifier=1.0):
     """
     Sample hours for a user based on role and week modifier.
-    
-    Args:
-        role: User role ('chad_phd', 'td', 'lead', 'member', etc.)
-        week_modifier: Calendar multiplier (0.3 to 1.5)
-    
-    Returns:
-        float: Hours for the week (rounded to 1 decimal)
+    Capped by role's max_hours (TD 15h, Lead 13h, Member 10h).
     """
     config = ROLE_DISTRIBUTIONS.get(role, ROLE_DISTRIBUTIONS['member'])
+    max_h = config.get('max_hours', 10.0)
     
-    # Sample from normal distribution
-    base_hours = np.random.normal(config['mean'], config['std_dev'])
-    
-    # Apply week modifier
+    base_hours = random.gauss(config['mean'], config['std_dev'])
     adjusted_hours = base_hours * week_modifier
-    
-    # Clamp to realistic bounds
-    final_hours = np.clip(adjusted_hours, 0, 25)
-    
+    final_hours = max(0, min(max_h, adjusted_hours))
     return round(final_hours, 1)
 
 def get_available_weeks(tasks, weeks_historical=20, weeks_lookahead=4):
@@ -240,14 +322,15 @@ def get_available_weeks(tasks, weeks_historical=20, weeks_lookahead=4):
     
     return weeks
 
-def get_user_tasks_for_week(user_name, week_start, all_tasks):
+def get_user_tasks_for_week(user_id, week_start, all_tasks):
     """
     Get tasks assigned to user that overlap with given week.
+    Uses user_id (integer) to match against task resource type_id for reliable matching.
     
     Args:
-        user_name: User's name
-        week_start: Monday of the week
-        all_tasks: List of all tasks
+        user_id: TeamGantt user ID (integer)
+        week_start: Monday of the week (date)
+        all_tasks: List of all tasks (from API, with resources)
     
     Returns:
         List of tasks assigned to user in this week
@@ -256,9 +339,9 @@ def get_user_tasks_for_week(user_name, week_start, all_tasks):
     
     user_tasks = []
     for task in all_tasks:
-        # Check if user is assigned
+        # Match by user_id against resource type_id (exact integer match)
         resources = task.get('resources', [])
-        if not any(r.get('name') == user_name for r in resources):
+        if not any(r.get('type_id') == user_id for r in resources if isinstance(r, dict)):
             continue
         
         # Check if task overlaps with week
@@ -371,72 +454,32 @@ def calculate_task_weights(tasks, task_estimates_lookup):
     
     return weights
 
-def distribute_hours_into_time_blocks(task_id, task_name, total_hours, week_start, user_name):
+def distribute_hours_into_time_blocks(task_id, task_name, total_hours, week_start, user_name, user_id=None):
     """
-    Distribute hours into realistic time blocks across the week.
-    
-    Args:
-        task_id: Task ID
-        task_name: Task name
-        total_hours: Total hours to distribute
-        week_start: Monday of the week
-        user_name: User name
-    
-    Returns:
-        List of time block specifications
+    Create 1 time block per task per week (single entry with weekly total).
+    Uses Monday 9am as the entry date; hours represent the full week.
     """
     if total_hours <= 0:
         return []
     
-    time_blocks = []
-    hours_remaining = total_hours
+    total_hours = round(total_hours, 1)
+    if total_hours < 0.5:
+        return []
     
-    # Distribute across weekdays (Mon-Fri)
-    days_available = 5
-    daily_hours_target = total_hours / days_available
+    # Single block: Monday 9am, duration = total_hours
+    start_time = datetime.combine(week_start, datetime.min.time()).replace(hour=9, minute=0, second=0)
+    end_time = start_time + timedelta(hours=total_hours)
     
-    # Limit to reasonable daily hours (2-8h)
-    if daily_hours_target > 8:
-        days_available = max(5, int(np.ceil(total_hours / 6)))
-    
-    current_day = week_start
-    days_used = 0
-    
-    while hours_remaining > 0.5 and days_used < days_available:
-        # Skip weekends
-        if current_day.weekday() >= 5:
-            current_day += timedelta(days=1)
-            continue
-        
-        # Allocate hours for this day (2-8h, with some variance)
-        daily_hours = min(
-            hours_remaining,
-            max(0.5, np.random.uniform(2, min(8, total_hours / 2)))
-        )
-        daily_hours = round(daily_hours, 1)
-        
-        if daily_hours >= 0.5:
-            # Create time block (9am-5pm window)
-            start_hour = np.random.randint(9, 15)
-            start_time = datetime.combine(current_day, datetime.min.time()).replace(hour=start_hour)
-            end_time = start_time + timedelta(hours=daily_hours)
-            
-            time_blocks.append({
-                'task_id': task_id,
-                'task_name': task_name,
-                'user_name': user_name,
-                'start_time': start_time.strftime('%Y-%m-%dT%H:%M:%SZ'),
-                'end_time': end_time.strftime('%Y-%m-%dT%H:%M:%SZ'),
-                'hours': daily_hours,
-                'date': current_day.strftime('%Y-%m-%d')
-            })
-            
-            hours_remaining -= daily_hours
-        
-        current_day += timedelta(days=1)
-        days_used += 1
-    
-    return time_blocks
+    return [{
+        'task_id': task_id,
+        'task_name': task_name,
+        'user_name': user_name,
+        'user_id': user_id,
+        'start_time': start_time.strftime('%Y-%m-%dT%H:%M:%SZ'),
+        'end_time': end_time.strftime('%Y-%m-%dT%H:%M:%SZ'),
+        'hours': total_hours,
+        'date': week_start.strftime('%Y-%m-%d')
+    }]
 
 def create_or_get_overhead_task(td_name, branch_name, all_tasks):
     """
@@ -491,23 +534,13 @@ def main():
     print(f"  ✓ {len(branch_mapping)} branches configured")
     print()
     
-    # Load tasks
-    print("Loading tasks from /tmp/test_project_tasks.json...")
-    try:
-        with open('/tmp/test_project_tasks.json') as f:
-            all_tasks = json.load(f)
-    except FileNotFoundError:
-        print("❌ ERROR: Task file not found")
-        print("Run: cp ../data/children_flat_<PROJECT_ID>.json /tmp/test_project_tasks.json")
-        return 1
-    
-    # Filter to only tasks
-    all_tasks = [t for t in all_tasks if t.get('type') == 'task']
-    print(f"  ✓ Loaded {len(all_tasks)} tasks")
+    # Fetch fresh data from TeamGantt API
+    print("Fetching data from TeamGantt API...")
+    all_tasks, user_id_map, tg_display_names = fetch_project_data()
     print()
     
-    # Get available weeks
-    weeks = get_available_weeks(all_tasks, weeks_historical=20, weeks_lookahead=4)
+    # Get available weeks from task date ranges
+    weeks = get_available_weeks(all_tasks, weeks_historical=0, weeks_lookahead=4)
     print(f"  ✓ Processing {len(weeks)} weeks ({get_week_label(weeks[0])} to {get_week_label(weeks[-1])})")
     print()
     
@@ -519,18 +552,46 @@ def main():
     
     # Process each user week by week
     all_time_blocks = []
-    user_summaries = defaultdict(lambda: {'total_hours': 0, 'weeks_active': 0, 'role': '', 'overhead_hours': 0})
+    user_summaries = defaultdict(lambda: {'total_hours': 0, 'weeks_active': 0, 'role': '', 'overhead_hours': 0, 'task_count': 0})
+    skipped_no_id = []
     
     print("Sampling hours for each user by week...")
     print()
     
+    # Also auto-discover any TG users NOT in role_mapping and add them as members
+    for person_name, uid in user_id_map.items():
+        if person_name not in role_mapping:
+            # Skip the PM account
+            display = tg_display_names.get(uid, '')
+            if 'aUToronto PM' in display or 'PM' == person_name:
+                continue
+            # Auto-detect role from display name
+            if '- TD' in display:
+                auto_role = 'td'
+            elif '- LEAD' in display or '- LEAAD' in display:
+                auto_role = 'lead'
+            else:
+                auto_role = 'member'
+            role_mapping[person_name] = auto_role
+            print(f"  Auto-added: {person_name} as {auto_role} (TG: {display})")
+    
+    print(f"  ✓ Final user count: {len(role_mapping)}")
+    print()
+    
     for user_name, role in role_mapping.items():
-        print(f"User: {user_name} (Role: {role})")
+        # Resolve TeamGantt user_id
+        user_id = user_id_map.get(user_name)
         
         # Check if quit
-        if user_name in quit_users:
-            print(f"  ⏭️  Skipped (marked as quit)")
-            print()
+        if role == 'quit' or user_name in quit_users:
+            user_summaries[user_name] = {'total_hours': 0, 'weeks_active': 0, 'role': role,
+                                          'overhead_hours': 0, 'task_count': 0, 'avg_per_week': 0, 'user_id': None}
+            continue
+        
+        if not user_id:
+            skipped_no_id.append(user_name)
+            user_summaries[user_name] = {'total_hours': 0, 'weeks_active': 0, 'role': role,
+                                          'overhead_hours': 0, 'task_count': 0, 'avg_per_week': 0, 'user_id': None}
             continue
         
         role_config = ROLE_DISTRIBUTIONS.get(role, ROLE_DISTRIBUTIONS['member'])
@@ -541,6 +602,7 @@ def main():
         user_total_hours = 0
         user_weeks_active = 0
         user_overhead_hours = 0
+        user_task_ids = set()
         
         for week_start in weeks:
             # Get week modifier
@@ -552,31 +614,31 @@ def main():
             if total_week_hours < 0.5:
                 continue  # Skip weeks with negligible hours
             
-            # Get user's tasks for this week
-            user_tasks = get_user_tasks_for_week(user_name, week_start, all_tasks)
+            # Get user's tasks for this week (match by user_id, not name)
+            user_tasks = get_user_tasks_for_week(user_id, week_start, all_tasks)
             
-            # Handle TD overhead
+            # Handle TD overhead - DISABLED FOR NOW
             overhead_hours = 0
             task_hours_pool = total_week_hours
             
-            if is_td and total_week_hours > 0:
-                overhead_hours = total_week_hours * overhead_pct
-                task_hours_pool = total_week_hours * (1 - overhead_pct)
-                
-                # Get or create overhead task
-                branch = next((b for b, td in branch_mapping.items() if td == user_name), user_name)
-                overhead_task = create_or_get_overhead_task(user_name, branch, all_tasks)
-                
-                # Create time blocks for overhead
-                overhead_blocks = distribute_hours_into_time_blocks(
-                    overhead_task['id'],
-                    overhead_task['name'],
-                    overhead_hours,
-                    week_start,
-                    user_name
-                )
-                all_time_blocks.extend(overhead_blocks)
-                user_overhead_hours += overhead_hours
+            # if is_td and total_week_hours > 0:
+            #     overhead_hours = total_week_hours * overhead_pct
+            #     task_hours_pool = total_week_hours * (1 - overhead_pct)
+            #     
+            #     # Get or create overhead task
+            #     branch = next((b for b, td in branch_mapping.items() if td == user_name), user_name)
+            #     overhead_task = create_or_get_overhead_task(user_name, branch, all_tasks)
+            #     
+            #     # Create time blocks for overhead
+            #     overhead_blocks = distribute_hours_into_time_blocks(
+            #         overhead_task['id'],
+            #         overhead_task['name'],
+            #         overhead_hours,
+            #         week_start,
+            #         user_name
+            #     )
+            #     all_time_blocks.extend(overhead_blocks)
+            #     user_overhead_hours += overhead_hours
             
             # Distribute remaining hours across tasks
             if user_tasks and task_hours_pool > 0:
@@ -584,6 +646,7 @@ def main():
                 
                 for task in user_tasks:
                     task_hours = task_hours_pool * task_weights[task['id']]
+                    user_task_ids.add(task['id'])
                     
                     if task_hours >= 0.5:
                         time_blocks = distribute_hours_into_time_blocks(
@@ -591,7 +654,8 @@ def main():
                             task['name'],
                             task_hours,
                             week_start,
-                            user_name
+                            user_name,
+                            user_id=user_id
                         )
                         all_time_blocks.extend(time_blocks)
             
@@ -604,31 +668,48 @@ def main():
             'weeks_active': user_weeks_active,
             'role': role,
             'overhead_hours': user_overhead_hours,
-            'avg_per_week': user_total_hours / user_weeks_active if user_weeks_active > 0 else 0
+            'task_count': len(user_task_ids),
+            'avg_per_week': user_total_hours / user_weeks_active if user_weeks_active > 0 else 0,
+            'user_id': user_id,
+            'time_blocks': len([b for b in all_time_blocks if b.get('user_id') == user_id])
         }
-        
-        print(f"  ✓ {user_weeks_active} weeks active, {user_total_hours:.1f}h total")
-        if user_overhead_hours > 0:
-            print(f"    ├─ Overhead: {user_overhead_hours:.1f}h ({overhead_pct*100:.1f}%)")
-            print(f"    └─ Tasks: {user_total_hours - user_overhead_hours:.1f}h")
-        print()
     
     # Display summary
     print("=" * 80)
     print("SUMMARY")
     print("=" * 80)
     print()
-    print(f"{'User':<25} {'Role':<12} {'Total Hours':<12} {'Weeks':<8} {'Avg/Week':<10}")
-    print("-" * 80)
     
+    if skipped_no_id:
+        print(f"⚠️  Skipped {len(skipped_no_id)} users (no TeamGantt ID): {', '.join(skipped_no_id)}")
+        print()
+    
+    print(f"{'User':<28} {'Role':<8} {'TG ID':<12} {'Hours':<9} {'Tasks':<7} {'Blocks':<8} {'Wks':<5} {'Avg/Wk':<8}")
+    print("-" * 95)
+    
+    active_users = 0
+    users_with_blocks = 0
     for user_name in sorted(user_summaries.keys(), key=lambda u: user_summaries[u]['total_hours'], reverse=True):
         summary = user_summaries[user_name]
-        print(f"{user_name:<25} {summary['role']:<12} {summary['total_hours']:>10.1f}h "
-              f"{summary['weeks_active']:>6} {summary['avg_per_week']:>8.1f}h")
+        uid_str = str(summary.get('user_id', '')) if summary.get('user_id') else 'N/A'
+        blocks = summary.get('time_blocks', 0)
+        print(f"{user_name:<28} {summary['role']:<8} {uid_str:<12} {summary['total_hours']:>7.1f}h "
+              f"{summary.get('task_count', 0):>5} {blocks:>6} {summary['weeks_active']:>4} {summary['avg_per_week']:>6.1f}h")
+        if summary['total_hours'] > 0:
+            active_users += 1
+        if blocks > 0:
+            users_with_blocks += 1
+    
+    total_hours = sum(s['total_hours'] for s in user_summaries.values())
+    total_blocks = len(all_time_blocks)
+    blocked_hours = sum(b['hours'] for b in all_time_blocks)
     
     print()
-    print(f"Total time blocks: {len(all_time_blocks)}")
-    print(f"Total project hours: {sum(s['total_hours'] for s in user_summaries.values()):.1f}h")
+    print(f"Active users: {active_users}/{len(role_mapping)} ({users_with_blocks} with time blocks)")
+    print(f"Total time blocks: {total_blocks}")
+    print(f"Total sampled hours: {total_hours:.1f}h")
+    print(f"Total hours in time blocks: {blocked_hours:.1f}h")
+    print(f"Hours coverage: {blocked_hours/total_hours*100:.1f}% of sampled hours have task assignments")
     print()
     
     # Show sample time blocks
@@ -674,15 +755,16 @@ def main():
         print("3. Edit this script and set DRY_RUN = False")
         print("4. Run the script again")
         
-        # Save plan to file
+        # Save plan to file (ALL blocks, not truncated)
         plan_file = '/tmp/actual_hours_population_plan.json'
         with open(plan_file, 'w') as f:
             json.dump({
                 'user_summaries': dict(user_summaries),
-                'time_blocks': all_time_blocks[:100],  # Sample
-                'total_blocks': len(all_time_blocks)
+                'time_blocks': all_time_blocks,
+                'total_blocks': len(all_time_blocks),
+                'skipped_no_id': skipped_no_id
             }, f, indent=2)
-        print(f()
+        print()
         print(f"💾 Detailed plan saved to: {plan_file}")
     else:
         print()
@@ -695,23 +777,28 @@ def main():
         fail_count = 0
         
         for i, block in enumerate(all_time_blocks, 1):
-            if block.get('task_id', '').startswith('overhead_'):
+            task_id = str(block.get('task_id', ''))
+            if task_id.startswith('overhead_'):
                 print(f"  [{i}/{len(all_time_blocks)}] Skipping virtual overhead task")
                 continue
             
             print(f"  [{i}/{len(all_time_blocks)}] {block['user_name'][:20]} - "
                   f"{block['task_name'][:30]} ({block['hours']:.1f}h)...", end=' ')
             
-            # Execute POST request
+            # Execute POST request (with user_id to log under correct user)
+            payload = {
+                'task_id': block['task_id'],
+                'start_time': block['start_time'],
+                'end_time': block['end_time']
+            }
+            if block.get('user_id'):
+                payload['user_id'] = block['user_id']
+            
             cmd = [
                 'curl', '-s', '-X', 'POST',
                 '-H', f'Authorization: Bearer {API_TOKEN}',
                 '-H', 'Content-Type: application/json',
-                '-d', json.dumps({
-                    'task_id': block['task_id'],
-                    'start_time': block['start_time'],
-                    'end_time': block['end_time']
-                }),
+                '-d', json.dumps(payload),
                 f'{API_BASE}/times'
             ]
             

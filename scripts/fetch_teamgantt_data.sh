@@ -12,18 +12,31 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
-# Load .env file if it exists
+# Load .env file if it exists (check both scripts dir and parent dir)
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-if [ -f "$SCRIPT_DIR/.env" ]; then
-    export $(grep -v '^#' "$SCRIPT_DIR/.env" | xargs)
+PROJECT_ROOT="$( cd "$SCRIPT_DIR/.." && pwd )"
+
+if [ -f "$PROJECT_ROOT/.env" ]; then
+    set -a  # Export all variables
+    source "$PROJECT_ROOT/.env"
+    set +a
+elif [ -f "$SCRIPT_DIR/.env" ]; then
+    set -a
+    source "$SCRIPT_DIR/.env"
+    set +a
 fi
 
 # Use arguments if provided, otherwise use .env values
 if [ -n "$1" ]; then
     TEAMGANTT_TOKEN="$1"
-elif [ -z "$TEAMGANTT_TOKEN" ]; then
+else
+    # Try both variable names for compatibility
+    TEAMGANTT_TOKEN="${TEAMGANTT_API_KEY:-${TEAMGANTT_TOKEN}}"
+fi
+
+if [ -z "$TEAMGANTT_TOKEN" ]; then
     echo "Error: No API token provided."
-    echo "Either pass it as an argument or set TEAMGANTT_TOKEN in .env file"
+    echo "Either pass it as an argument or set TEAMGANTT_API_KEY in .env file"
     echo ""
     echo "Usage: $0 [YOUR_API_TOKEN] [PROJECT_ID]"
     echo "Example: $0 abc123token"
@@ -35,7 +48,8 @@ fi
 if [ -n "$2" ]; then
     PROJECT_ID="$2"
 else
-    PROJECT_ID="${PROJECT_ID:-}"
+    # Try both variable names for compatibility
+    PROJECT_ID="${TEAMGANTT_PROJECT_ID:-${PROJECT_ID}}"
 fi
 
 echo -e "${GREEN}=== TeamGantt Data Exporter ===${NC}\n"

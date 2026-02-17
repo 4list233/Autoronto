@@ -118,8 +118,7 @@ def render():
                     "Team": task["group"],
                     "Issues": "; ".join(task["issues"]),
                     "Progress": f"{task['percent_complete']}%",
-                    "Est.": task["estimated_hours"],
-                    "Act.": task["actual_hours"],
+                    "Act. Hrs": task["actual_hours"],
                     "Deadline": task.get("end_date", "—"),
                 })
             st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)

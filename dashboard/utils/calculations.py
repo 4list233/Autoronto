@@ -64,7 +64,8 @@ def detect_task_issues(task, config):
         issues.append("Hours logged but 0% progress")
 
     if not task.get("resources") or len(task.get("resources", [])) == 0:
-        issues.append("Unassigned")
+        if task.get("type") != "milestone":
+            issues.append("Unassigned")
 
     return issues
 

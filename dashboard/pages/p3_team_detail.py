@@ -162,7 +162,7 @@ def render():
         for t in zero_prog:
             action_items.append(f'Task "{t["name"]}": {t["actual_hours"]}h logged but 0% progress reported')
 
-    unassigned = [t for t in team_tasks if not t["resources"]]
+    unassigned = [t for t in team_tasks if not t["resources"] and t["type"] != "milestone"]
     if unassigned:
         for t in unassigned:
             action_items.append(f'Task "{t["name"]}" is unassigned')

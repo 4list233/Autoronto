@@ -44,7 +44,7 @@ load_env()
 API_TOKEN = os.getenv('TEAMGANTT_API_KEY', '').strip('"')
 PROJECT_ID = int(os.getenv('TEAMGANTT_PROJECT_ID', '0').strip('"'))
 API_BASE = "https://api.teamgantt.com/v1"
-DRY_RUN = True  # Set to False to actually execute
+DRY_RUN = False  # Set to False to actually execute
 RATE_LIMIT_DELAY = 0.25  # seconds between API calls
 
 # Validate configuration

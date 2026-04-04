@@ -1,0 +1,545 @@
+================================================================================
+AUTOPARK FINANCIAL DATA EXTRACTION - COMPREHENSIVE REPORT
+================================================================================
+Source Documents:
+  1. AutoPark_Financial_Model.xlsx (advanced scenarios with projections)
+  2. AutoPark_Pricing_Model.docx (dynamic pricing formulas)
+  3. AutoPark_Hardware_Cost_Breakdown.docx (v1 - comprehensive breakdown)
+  4. AutoPark_Hardware_Cost_Breakdown_v2.docx (v2 - verified via Gemini)
+
+Extracted: April 4, 2026
+For Use: Financial Appendix Slides - MI Pitch Deck
+
+================================================================================
+1. PRICING MODEL & REVENUE MECHANICS
+================================================================================
+
+DYNAMIC PRICING FRAMEWORK
+Two-sided marketplace with demand-elasticity-based revenue split:
+
+Demand Index D: Continuous 0.0–1.0 score (ML-predicted real-time for each lot)
+
+PRICING FORMULAS:
+  Lot Commission Rate L(D) = 30% − (15% × D)
+    Range: 30% at D=0.0 → 15% at D=1.0
+    
+  User Convenience Fee U(D) = 5% + (15% × D)
+    Range: 5% at D=0.0 → 20% at D=1.0
+    
+  Total AutoPark Take T(D) = L(D) + U(D) = 35% (CONSTANT)
+    Always 35% of base lot price P, regardless of demand
+
+ML MODEL INPUTS FOR DEMAND INDEX:
+  • Time & Calendar (hour, day, month, holidays, school calendar)
+  • Live Lot Occupancy (RSU spot count, lot API data)
+  • Nearby Events (Rogers Centre, Scotiabank Arena, conventions, concerts)
+  • Geographic Context (distance to downtown, transit proximity, density zone)
+  • Weather (temperature, precipitation, transit disruptions)
+  • Live Price Signals (Parkopedia, Google Maps competitor pricing)
+  • AutoPark Network Data (OBU routing patterns to this lot)
+
+DEMAND INDEX INTERPRETATION:
+  D Range         Label              Typical Scenario
+  0.0 – 0.2       Very Low Demand    Suburban lot, Tuesday midday, no events
+  0.2 – 0.4       Low Demand         Residential area, weekday morning off-peak
+  0.4 – 0.6       Moderate Demand    Pearson Airport weekday; shopping mall Sat noon
+  0.6 – 0.8       High Demand        Downtown core weekday evening; pre-event buildup
+  0.8 – 1.0       Very High Demand   Rogers game night; downtown Fri dinner rush; snowstorm
+
+TRANSACTION BREAKDOWN EXAMPLES:
+Let P = base parking price (set by lot owner)
+
+AT D=0.0 (Very Low Demand):
+  Parking Lot Receives:        70% of P
+  User Pays:                   105% of P (5% convenience fee)
+  AutoPark Lot Commission:     30% of P
+  AutoPark User Fee:           5% of P
+  AutoPark Total Revenue:      35% of P
+
+AT D=0.5 (Moderate Demand):
+  Parking Lot Receives:        77.5% of P
+  User Pays:                   112.5% of P (12.5% convenience fee)
+  AutoPark Lot Commission:     22.5% of P
+  AutoPark User Fee:           12.5% of P
+  AutoPark Total Revenue:      35% of P
+
+AT D=1.0 (Very High Demand):
+  Parking Lot Receives:        85% of P
+  User Pays:                   120% of P (20% convenience fee)
+  AutoPark Lot Commission:     15% of P
+  AutoPark User Fee:           20% of P
+  AutoPark Total Revenue:      35% of P
+
+FREE LOTS (P = 0):
+  Flat convenience fee: $0.99 cap
+  Covers autonomous manoeuvre operational cost (V2X handshake, GNSS routing, RSU gate control)
+
+================================================================================
+2. OBU HARDWARE COSTS - ON-BOARD UNIT
+================================================================================
+
+DUAL ARCHITECTURE STRATEGY:
+  PILOT PHASE (~500 units):     Use Cohda MK6C module (pre-FCC certified)
+  PRODUCTION (~50,000+ units):  Migrate to Snapdragon 2150 chip-down design
+
+2.1 CHIPSET SELECTION & COMPARATIVE PRICING
+
+Qualcomm Snapdragon 2150 (PRIMARY CHOICE):
+  ✅ Recommended for production
+  Unit Cost (500):    $185/unit
+  Unit Cost (50k):    $98/unit
+  Features: Integrated C-V2X PC5+Uu, 5G, GNSS, HSM, quad-core ARM
+  Grade: AEC-Q100 Gr.1 automotive
+  Status: Production-ready 2024/2025
+
+Qualcomm V2X 350 (Companion Option):
+  Unit Cost (500):    $115/unit
+  Unit Cost (50k):    $62/unit
+  Features: C-V2X, NR-V2X, DSR Companion, eHSM
+  Grade: AEC-Q100
+  Use: Standalone sensor or paired with SoC
+
+Autotalks CRATON2 (Alternative):
+  Unit Cost (500):    $88/unit
+  Unit Cost (50k):    $48/unit
+  Features: Dual DSRC + C-V2X, integrated EVK, eHSM
+  Grade: AEC-Q100 Gr.2
+  Use: Lower-cost, hardware-agnostic DSRC/C-V2X
+
+Cohda MK6C (Module - PILOT ONLY):
+  ✅ Recommended for pilot (avoids FCC certification NRE)
+  Unit Cost (500):    $550/unit
+  Unit Cost (50k):    $285/unit
+  Features: Pre-FCC-certified, dual DSRC+C-V2X, integrated RTK, Linux OS
+  Grade: -40°C to +85°C automotive
+  Benefit: Eliminates $12k–$15k FCC testing cost at pilot scale
+
+2.2 OBU COMPLETE BILL OF MATERIALS (BOM)
+
+PILOT PHASE (~500 units) — COHDA MK6C PATH:
+
+Component                              Spec                           Unit Cost
+─────────────────────────────────────────────────────────────────────────────
+Core V2X SoC/Module                    Cohda MK6C                     $550.00
+RTK GNSS Module                        u-blox ZED-F9R                 $140.00
+CAN FD Controller                      Microchip MCP2518FD            $1.85
+Automotive Ethernet PHY                NXP TJA1100 (100BASE-T1)       $2.87
+Passives, Connectors, Housing          Automotive-grade PCB, IP54     $25.00
+PCB Assembly + QA                      SMT + burn-in testing          $20.00
+─────────────────────────────────────────────────────────────────────────────
+PILOT TOTAL BOM PER UNIT:                                            $739.72
+
+MASS PRODUCTION (~50,000 units) — SNAPDRAGON 2150 CHIP-DOWN PATH:
+
+Component                              Spec                           Unit Cost
+─────────────────────────────────────────────────────────────────────────────
+Core V2X SoC                           Snapdragon 2150                $98.00
+RTK GNSS Module                        u-blox ZED-F9R                 $92.00
+CAN FD Controller                      Microchip MCP2518FD            $0.85
+Automotive Ethernet PHY                NXP TJA1100                    $1.40
+Passives, Connectors, Housing          Automotive-grade PCB, IP54     $12.00
+PCB Assembly + QA                      SMT + burn-in testing          $8.00
+─────────────────────────────────────────────────────────────────────────────
+PRODUCTION TOTAL BOM PER UNIT:                                       $212.25
+
+GNSS MODULE SELECTION (VERIFIED - MANDATORY RTK):
+  u-blox ZED-F9R:
+    Accuracy: 2 cm RTK
+    Dead Reckoning: Yes (IMU + wheel tick)
+    Critical for: Underground garage safety (cannot lose fix >48 hours)
+    Pilot Cost: $140/unit
+    Production Cost: $92/unit
+  
+  Alternative (NOT RECOMMENDED):
+    u-blox ZED-F9P: $112–$78 (no dead reckoning, insufficient for GNSS-denied)
+    u-blox NEO-D9S (PPP): $34–$22 (too slow convergence; safety risk)
+    Septentrio mosaic-X5: $245–$165 (overkill, unjustified cost)
+
+KEY DESIGN NOTES:
+  ✅ RSU Anchor Strategy Required: Each RSU broadcasts its own precise RTK 
+     coordinates via V2X PC5 sidelink to re-zero vehicle position after 
+     extended underground parking (critical for Level B4 garages).
+
+2.3 OEM INTEGRATION & INSTALLATION COSTS
+
+OEM NRE — Engineering Integration (One-Time per OEM):
+  Cost: $500,000 – $2,000,000
+  Notes: Largest single B2B cost item; OEM engineers validate & certify on platform
+
+OEM Factory Install Labour (Per Vehicle):
+  Cost: $40 – $100 per vehicle
+  Notes: Assembly line integration; wiring harness routing; software flashing
+
+OEM Model Certification (Per Model/Platform):
+  Cost: $50,000 – $200,000 per model
+  Notes: FMVSS validation and OEM internal sign-off
+
+Dealer Retrofit Install (Aftermarket - Higher Friction):
+  Cost: $350 – $650 per vehicle
+  Notes: Alternative if OEM factory install unavailable
+
+OBU HARDWARE DESIGN NRE (GAP - NOT YET BUDGETED):
+  Cost: $150,000 – $400,000 (one-time)
+  Covers: PCB design, firmware development, hardware prototyping (3–5 runs)
+
+================================================================================
+3. RSU HARDWARE COSTS - ROAD-SIDE UNIT
+================================================================================
+
+RSU BILL OF MATERIALS (BOM)
+Per unit installed at parking lot gate
+
+PILOT PHASE (~50 gates):
+
+Component                              Spec                           Unit Cost
+─────────────────────────────────────────────────────────────────────────────
+Embedded Compute                       RPi CM4 Industrial/custom ARM   $55–$100
+C-V2X Modem Module                     Autotalks CRATON2 / Qual V2X   $85–$160
+RFID Reader                            UHF (860–960 MHz)              $30–$75
+Gate Control Relay                     Industrial relay + I/O         $20–$45
+LTE / 5G Module                        Sierra Wireless or equiv.      $35–$70
+Antenna Assembly                       V2X + LTE combo (external)     $30–$65
+Weatherproof Enclosure                 IP65 NEMA 4X industrial        $65–$150
+Power Supply + UPS                     24 VDC PSU + 4h battery        $50–$110
+Mounting + Cabling                     DIN rail, conduit hardware     $25–$55
+PCB Assembly (SMT)                     Contract manufacturing         $18–$40
+QA / Commissioning                     Burn-in + config               $10–$25
+─────────────────────────────────────────────────────────────────────────────
+PILOT TOTAL BOM PER UNIT:                                            $423–$895
+
+MASS PRODUCTION (~5,000 gates):
+
+Component                              Spec                           Unit Cost
+─────────────────────────────────────────────────────────────────────────────
+Embedded Compute                       RPi CM4 Industrial/custom ARM   $28–$55
+C-V2X Modem Module                     Autotalks CRATON2 / Qual V2X   $40–$80
+RFID Reader                            UHF (860–960 MHz)              $15–$40
+Gate Control Relay                     Industrial relay + I/O         $10–$22
+LTE / 5G Module                        Sierra Wireless or equiv.      $18–$38
+Antenna Assembly                       V2X + LTE combo (external)     $15–$35
+Weatherproof Enclosure                 IP65 NEMA 4X industrial        $30–$80
+Power Supply + UPS                     24 VDC PSU + 4h battery        $25–$60
+Mounting + Cabling                     DIN rail, conduit hardware     $12–$28
+PCB Assembly (SMT)                     Contract manufacturing         $8–$18
+QA / Commissioning                     Burn-in + config               $5–$12
+─────────────────────────────────────────────────────────────────────────────
+PRODUCTION TOTAL BOM PER UNIT:                                       $206–$468
+
+RSU INSTALLATION COSTS (Per Gate - On-Site Labour)
+
+Electrician / Technician Labour:       $300–$600 (wiring, conduit, power)
+Gate Integration & Programming:        $200–$400 (relay wiring, open/close testing)
+Network / Cellular Setup:              $80–$200 (SIM provisioning, static IP)
+Testing & Commissioning:               $150–$300 (end-to-end OBU test)
+Parking Management Software Config:    $100–$250 (Genetec/T2/Conduent API hooks)
+─────────────────────────────────────────────────────────────────────────────
+TOTAL INSTALLATION PER GATE:           $830–$1,750
+
+RSU ONGOING MAINTENANCE (Annual Per Gate)
+
+Cellular SIM Data Plan:                $120–$360/gate/year
+Firmware OTA Updates:                  Included in backend hosting
+Hardware Failure / Swap (5%/year):     $20–$45 amortised/gate/year
+On-Site Visit (as needed):             $200–$500 per incident
+
+RSU HARDWARE DESIGN NRE (GAP - NOT YET BUDGETED):
+  Cost: $75,000 – $200,000 (one-time)
+  Covers: Enclosure design, PCB layout, gate-controller firmware, weatherproofing
+
+RSU FCC CERTIFICATION (GAP - NOT YET BUDGETED):
+  Cost: $15,000–$40,000 (pre-certified module)
+        $40,000–$80,000 (custom radio design)
+
+================================================================================
+4. SOFTWARE & CLOUD INFRASTRUCTURE COSTS
+================================================================================
+
+4.1 APP DEVELOPMENT — ONE-TIME NRE COSTS
+
+Infotainment App (OEM Head Unit - QNX/Android Auto):
+  Cost: $80,000 – $200,000
+  Includes: UI/UX design, OEM HMI framework integration, OEM standards compliance
+
+Mobile App (iOS + Android Consumer):
+  Cost: $100,000 – $250,000
+  Includes: Payment flow, live car tracking, push notifications, summon feature
+
+Backend & Recommendation Engine:
+  Cost: $150,000 – $350,000
+  Includes: V2N API, real-time spot data pipeline, ML recommendation model, auth service
+
+Authentication Integrations (Genetec, T2 Systems, Conduent):
+  Cost: $75,000 – $150,000
+  Breakdown: ~$25,000–$50,000 per parking management platform (minimum 3 platforms)
+
+─────────────────────────────────────────────────────────────────────────────
+TOTAL SOFTWARE NRE:                    $405,000 – $950,000
+
+4.2 CLOUD HOSTING — RECURRING ANNUAL COSTS
+
+Service                      Provider/Type              Monthly      Annual
+─────────────────────────────────────────────────────────────────────────────
+API Servers (V2N, backend)   AWS EC2 / GCP Compute      $800–$3k    $9.6k–$36k
+Database (real-time spots)   AWS RDS / DynamoDB         $300–$1.5k  $3.6k–$18k
+Recommendation ML Compute    AWS SageMaker / GCP AI     $200–$1k    $2.4k–$12k
+CDN + Bandwidth              CloudFront / Fastly        $100–$500   $1.2k–$6k
+Security & Monitoring        Datadog, Sentry, WAF       $200–$800   $2.4k–$9.6k
+─────────────────────────────────────────────────────────────────────────────
+TOTAL ANNUAL CLOUD HOSTING:                            $1.6k–$6.8k $19.2k–$81.6k
+
+Scaling Factors:
+  • API Servers scale with active vehicles
+  • Database scales with number of garages + queries
+  • ML Compute scales with inference requests
+  • CDN scales with app user base
+  • Security scales with traffic volume
+
+4.3 APP STORE & DISTRIBUTION FEES
+
+Apple App Store:
+  Annual Developer Membership: $99/year (required)
+  Transaction Commission: 15–30% (if in-app purchases used)
+
+Google Play Store:
+  One-Time Registration: $25 (one-time, permanent)
+  Transaction Commission: 15–30% (if in-app purchases used)
+
+STRATEGY TO MINIMIZE COMMISSIONS:
+  Process parking payments through third-party gateway (e.g., Stripe) 
+  outside the in-app purchase flow. This is standard practice for B2C 
+  parking/mobility apps and avoids 15–30% store commissions.
+
+================================================================================
+5. COST GAPS & UNBUDGETED ITEMS
+================================================================================
+
+5.1 PAYMENT PROCESSING FEES (GAP - NOT YET REFLECTED IN MODEL)
+
+Per-Transaction Processing Costs:
+  Stripe Standard:           2.9% + $0.30 per transaction
+  Stripe Volume:             2.2% + $0.20 per transaction (negotiated)
+  Adyen Enterprise:          Interchange++ (lower at scale, ~$0.40–$0.55/txn)
+
+Example at $15 parking ticket:
+  Stripe Standard:           $0.44 + $0.30 = $0.74 per ticket
+  Stripe Volume:             $0.33 + $0.20 = $0.53 per ticket
+
+Annual Impact at Scale (1M transactions/year):
+  Stripe Standard:           ~$740,000 in processing fees
+  Stripe Volume:             ~$530,000 in processing fees
+
+Additional Compliance:
+  PCI-DSS Compliance Costs:  $5,000 – $20,000/year
+
+CRITICAL: Payment processing MUST be subtracted from AutoPark's net take 
+before calculating unit economics. This is a direct revenue leakage.
+
+5.2 DATA AGGREGATOR API FEES (GAP - NOT YET BUDGETED)
+
+Real-time parking data APIs required for recommendation engine:
+
+Google Maps Platform:
+  Pricing: $0.005–$0.017 per API call
+  Scenario (10k daily active users): ~5 calls/session = 50k calls/day
+  Annual Cost: $91,000 – $310,000/year
+
+HERE Maps:
+  Pricing: Similar to Google Maps
+  Scenario: ~50k calls/day
+  Annual Cost: $80,000 – $250,000/year
+
+Parkopedia (Parking-Specific Database):
+  Pricing: Volume licensing
+  Annual Cost: $30,000 – $100,000/year (estimate)
+
+TOTAL ANNUAL DATA AGGREGATOR COSTS: $80,000 – $310,000/year
+
+STRATEGY: Negotiate free tiers or revenue-share agreements with data 
+providers early to reduce SaaS cost burden.
+
+5.3 NON-RECURRING ENGINEERING (HARDWARE NRE)
+
+One-time engineering costs before first production unit manufactured:
+
+OBU Hardware Design:
+  Cost: $150,000 – $400,000
+  Covers: PCB schematic + layout, firmware development, prototype builds (3–5 runs)
+
+RSU Hardware Design:
+  Cost: $75,000 – $200,000
+  Covers: Enclosure design, PCB, gate-controller firmware, weatherproofing validation
+
+Automotive-Grade Testing:
+  Cost: $50,000 – $150,000
+  Covers: Temperature, vibration, EMC testing to AEC-Q100 standards
+
+─────────────────────────────────────────────────────────────────────────────
+TOTAL HARDWARE NRE:                    $275,000 – $750,000
+
+Amortization Note: Spread across production volume. At 50k units:
+  OBU NRE per unit: $3–$8
+  RSU NRE per unit: $1.50–$4
+
+5.4 REGULATORY CERTIFICATION (GAP - NOT YET BUDGETED)
+
+Wireless devices require FCC, automotive devices require FMVSS & OEM sign-off:
+
+Certification Type                     Applicable To      Cost          Timeline
+─────────────────────────────────────────────────────────────────────────────
+FCC Part 90 (C-V2X Radio)              OBU + RSU          $20k–$50k    3–6 months
+IC (Canada)                            OBU + RSU          $8k–$20k     2–4 months
+AEC-Q100 Automotive Qualification      OBU                $30k–$80k    3–6 months
+FMVSS Compliance Testing               OBU (in-car)       $50k–$150k   6–12 months
+OEM Platform Sign-Off                  OBU (per OEM)      $50k–$200k   Varies
+─────────────────────────────────────────────────────────────────────────────
+TOTAL CERTIFICATION COSTS (ESTIMATE):  $158,000 – $500,000
+
+CRITICAL TIMELINE IMPLICATION:
+  FCC and automotive certifications must begin 6–9 months BEFORE 
+  planned commercial deployment. This is a critical path item.
+
+PILOT STRATEGY:
+  Use Cohda MK6C (pre-FCC certified) to avoid $20k–$50k FCC testing NRE 
+  in pilot phase; initiate certification for production Snapdragon design 
+  in parallel.
+
+================================================================================
+6. MASTER COST SUMMARY TABLE
+================================================================================
+
+Cost Category                      One-Time (NRE)    Per-Unit/Per-Gate    Annual Recurring   Status
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+OBU BOM + Assembly                 —                 $385–$639 (pilot)    —                  Defined
+                                                     $195–$345 (scale)
+
+OBU OEM NRE                        $500k–$2M/OEM     —                    —                  Defined
+                                  per OEM
+
+OBU Factory Install Labour          —                 $40–$100/vehicle     —                  Defined
+
+OBU Model Certification             $50k–$200k       —                    —                  Defined
+                                  per model
+
+OBU Hardware NRE                    $150k–$400k      —                    —                  ⚠ GAP
+
+OBU Certification (FCC+Automotive) $108k–$300k      —                    —                  ⚠ GAP
+
+RSU BOM + Assembly                 —                 $423–$895 (pilot)    —                  Defined
+                                                     $206–$468 (scale)
+
+RSU Site Installation               —                 $830–$1,750/gate     —                  Defined
+
+RSU Maintenance / SIM               —                 —                    $120–$360/gate    Defined
+
+RSU Hardware NRE                    $75k–$200k       —                    —                  ⚠ GAP
+
+RSU FCC Certification               $15k–$80k        —                    —                  ⚠ GAP
+
+Software NRE (All Apps)             $405k–$950k      —                    —                  Defined
+
+Cloud Hosting                       —                 —                    $19.2k–$81.6k     Defined
+
+App Store Fees                      $25 (Google)     —                    $99/yr (Apple)     Defined
+
+Payment Processing                 PCI-DSS $5k–$20k  $0.44–$0.74/txn      —                  ⚠ GAP
+
+Data Aggregator APIs                —                 —                    $80k–$310k/yr     ⚠ GAP
+
+Total Hardware NRE                  $275k–$750k      —                    —                  ⚠ GAP
+
+Total Certification                 $158k–$500k      —                    —                  ⚠ GAP
+
+TOTAL NRE (All Items):              $1.35M–$3.15M    —                    $99.2k–$451.6k    MIXED
+
+Unit Economics Example (Per Transaction):
+  AutoPark Take:                    35% of base price P
+  Less: Payment Processing:         -$0.44–$0.74 (Stripe)
+  Less: Data APIs:                  Variable (need quarterly reconciliation)
+  Net Take:                         ~30–34% after fees (price-dependent)
+
+================================================================================
+7. SCENARIO ANALYSES FROM FINANCIAL MODEL
+================================================================================
+
+UNIT DEPLOYMENT PROJECTIONS (Extracted from XLSX):
+
+Years Covered: 2026–2032
+OBU Deployment Stages:
+  Year 2026: 48, 75, 200 units (3 scenarios: Conservative/Base/Aggressive)
+  Year 2027: 100, 100, 400 units
+  Year 2028: 100, 200, 400 units
+  Year 2029: 75, 100, 300 units
+  Year 2030: 50, 100, 200 units
+  Year 2031: 25, 75, 150 units
+  Year 2032: 25, 75, 150 units
+
+Gate (RSU) Deployment:
+  Year 2026: 8, 15, 25 gates
+  Year 2027: 10, 18, 22 gates (base case)
+
+MARGIN ANALYSIS (Extracted):
+  Gross Margin Targets: 35% (core pricing)
+  Operating Margin estimates in model (varies by year/scenario)
+
+FINANCIAL METRICS IN MODEL:
+  Reference to D indices: 0.35, 0.029, 0.3, 0.02, 0.74, 0.12 
+    (likely demand factors per lot category)
+  
+  Cost multipliers: 0.15, 0.20 (likely cost allocation factors)
+  
+  Daily active vehicle base: 401 (appears in multiple scenarios)
+  
+  Revenue scaling: Formulas reference cumulative unit growth 
+    with transactions per vehicle per year (~365 parking events)
+
+CASH FLOW STRUCTURE:
+  Initial seed: $500,000
+  Multiple NPV scenarios calculated
+  Payback periods modeled across Conservative/Base/Aggressive paths
+
+Note: Complete scenario details require opening XLSX directly with spreadsheet 
+software, as the financial formulas and multi-year projections are complex. 
+The extracted unit counts and margin structures provide the framework.
+
+================================================================================
+8. KEY FINANCIAL ASSUMPTIONS & NOTES
+================================================================================
+
+PRICING STABILITY:
+  • AutoPark take is constant at 35% per transaction (regardless of demand)
+  • Split between lot and user shifts dynamically based on Demand Index D
+  • Ensures predictable unit economics for financial modeling
+
+HARDWARE COST TRAJECTORY:
+  • Pilot (Cohda MK6C): $739.72 OBU + ~$660 RSU = ~$1,400/location
+  • Production (Snapdragon 2150): $212.25 OBU + ~$340 RSU = ~$550/location
+  • Cost reduction: ~60% from pilot to scale (standard semiconductor economics)
+
+CRITICAL PATH ITEMS FOR GO-TO-MARKET:
+  1. FCC + Automotive certification (6–12 months lead time)
+  2. OEM NRE negotiations ($500k–$2M per OEM) — largest B2B cost
+  3. Hardware NRE & prototyping ($275k–$750k) — must begin immediately
+  4. Payment processing integration (PCI-DSS, Stripe/Adyen negotiation)
+  5. Data aggregator API deals (Google Maps, HERE, Parkopedia licensing)
+
+UNBUDGETED ITEMS REQUIRING ATTENTION:
+  ⚠ Payment processing fees ($0.44–$0.74 per transaction)
+  ⚠ Data aggregator APIs ($80k–$310k/year)
+  ⚠ Hardware design NRE ($275k–$750k total)
+  ⚠ Regulatory certification ($158k–$500k)
+  ⚠ PCI-DSS compliance ($5k–$20k/year)
+
+These must be incorporated into the business plan before financial 
+projections can be considered realistic for Summer Competition submission.
+
+MARKET SCALE ASSUMPTIONS:
+  • Pilot: 500 OBUs, 50 RSUs (proof-of-concept)
+  • Phase 2: 5k–10k OBUs, 500+ RSUs (regional)
+  • Phase 3: 50k+ OBUs, 5k+ RSUs (national scale)
+  • Unit economics improve significantly at Phase 3 due to 
+    hardware cost reduction and amortized NRE
+
+================================================================================
+END OF REPORT
+================================================================================

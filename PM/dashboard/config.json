@@ -1,0 +1,20 @@
+{
+    "low_hour_member": 7,
+    "low_hour_lead": 9,
+    "low_hour_weeks": 2,
+    "high_hour_member": 15,
+    "high_hour_lead": 20,
+    "high_hour_weeks": 2,
+    "overdue_critical_days": 7,
+    "stalled_task_days": 14,
+    "on_track_progress": 75,
+    "at_risk_progress": 50,
+    "weeks_historical": 8,
+    "weeks_lookahead": 4,
+    "inactive_member_threshold": 0,
+    "project_id": "4336931",
+    "project_name": "R2Y5",
+    "competition_date": "2026-06-05",
+    "winter_workshop_date": "2026-02-17",
+    "data_source": "live"
+}

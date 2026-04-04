@@ -1,0 +1,2438 @@
+================================================================================
+TeamGantt Actual Hours Population - Role-Based with Academic Calendar
+================================================================================
+Project ID: 4461813
+Mode: LIVE EXECUTION
+
+Loading configurations...
+  ✓ 73 users configured
+  ✓ 17 branches configured
+
+Fetching data from TeamGantt API...
+  Fetching project data from TeamGantt API...
+  ✓ Fetched 187 tasks, 74 users from API
+
+  ✓ Processing 48 weeks (2025-08-04 to 2026-06-29)
+
+Loading task estimates...
+  ✓ Loaded estimates for 224 tasks
+
+Sampling hours for each user by week...
+
+  ✓ Final user count: 73
+
+================================================================================
+SUMMARY
+================================================================================
+
+User                         Role     TG ID        Hours     Tasks   Blocks   Wks   Avg/Wk  
+-----------------------------------------------------------------------------------------------
+Connor Wilson                td       14638981       574.3h     7     15   48   12.0h
+Allen Tao                    td       14668472       569.1h     7     15   48   11.9h
+William Wen                  td       14641060       568.8h     9     22   48   11.9h
+Eric Zhang                   lead     14933984       514.7h    11     63   48   10.7h
+Hankun Lin                   lead     14668990       512.6h    12     65   48   10.7h
+Tulgar Ilhan                 lead     14954502       510.3h    10     45   48   10.6h
+Davis Ko                     lead     14678993       508.4h     8     46   48   10.6h
+Satvick Acharya              lead     14668507       504.8h     3      6   48   10.5h
+Prithvi Seran                lead     14668488       504.1h     8     36   48   10.5h
+Vivian Deng                  lead     14644357       503.3h     3      6   48   10.5h
+Jimin Woo                    lead     14922507       503.0h     6     39   48   10.5h
+Rohan Batchu                 lead     14677882       501.5h     9     44   48   10.4h
+Adrian Liu                   lead     14641057       501.3h    13     66   48   10.4h
+Charles Liu                  lead     14688898       501.0h     9     50   48   10.4h
+Adam                         lead     14928705       500.8h    14     95   48   10.4h
+Tae Kim                      lead     14680250       500.1h    15     61   48   10.4h
+Jaden Stanshall              lead     14964057       498.6h     6     27   48   10.4h
+Abdus Shaikh                 lead     14668505       498.1h     7     35   48   10.4h
+Amanda Liu                   lead     14668500       497.0h     9     38   48   10.4h
+Sarah Xu                     lead     14638987       494.4h    14     58   48   10.3h
+Cecilia Li                   lead     14641118       490.5h    10     60   48   10.2h
+Ketevan Gallagher            lead     14644356       490.2h     6     38   48   10.2h
+Tanmay Patel                 lead     14638992       488.2h     2      3   48   10.2h
+Ammar Vora                   lead     14663167       487.9h     7     38   48   10.2h
+Aiden Wang                   lead     14668486       485.4h    10     49   48   10.1h
+Nabeth Ghazi                 lead     14641059       474.9h     3      6   48    9.9h
+Yiyi Xu                      member   14962442       416.8h     4     16   48    8.7h
+David Xu                     member   14956370       415.7h     2     14   48    8.7h
+Fahad                        member   14961082       412.9h     3     31   48    8.6h
+Lauren Kang                  member   14693233       411.9h     4     25   48    8.6h
+Azure Lin                    member   14956291       410.8h     2     19   48    8.6h
+Gordon Tan                   member   14961087       410.1h     1      3   48    8.5h
+Sebastian Nidoy              member   14955789       409.5h     7     39   48    8.5h
+Ai-Ling Ji                   member   14955890       409.5h     4     20   48    8.5h
+Saad Abdul                   member   14957264       409.3h     7     39   48    8.5h
+Alp                          member   14957532       409.3h     7     39   48    8.5h
+Gerald Wang                  member   14955161       409.1h     5     24   48    8.5h
+Taemin Lee                   member   14688903       409.1h     5     20   48    8.5h
+Nevan Kho                    member   14956953       408.9h     4     20   48    8.5h
+Ken Chen                     member   14964050       408.8h     3     13   48    8.5h
+Mahmoud Anklis               member   14956586       408.1h     5     27   48    8.5h
+Sterling Huang               member   14958663       408.0h     4     16   48    8.5h
+Forest Li                    member   14956954       407.9h     8     40   48    8.5h
+Jaden Dai                    member   14956425       407.9h     8     63   48    8.5h
+Memo Ozdincer                member   14955879       407.7h     7     52   48    8.5h
+Alex You                     member   14947686       407.7h     4     24   48    8.5h
+Raiyann Jacob                member   14956422       407.5h     8     63   48    8.5h
+Saaim Raad                   member   14956424       407.3h     7     49   48    8.5h
+Mirka Katuscakova            member   14965528       406.8h     5     39   48    8.5h
+Imran Aziz                   member   14961078       406.8h     4     24   48    8.5h
+Sunny Wu                     member   14643983       406.2h     5     26   48    8.5h
+Tanay Langhe                 member   14961089       406.0h     1      3   48    8.5h
+Irin Jin                     member   14957043       405.6h     2     27   48    8.4h
+Annie Rong                   member   14668991       405.4h     2     28   48    8.4h
+Raashid Azeem Ahamed         member   14957039       405.3h     2     27   48    8.4h
+Yijie Wang                   member   14638989       405.2h    14     58   48    8.4h
+Syeda Tahiyah                member   14641124       405.1h     4     16   48    8.4h
+Caroline Tian                member   14641117       404.6h     3     30   48    8.4h
+Samuel Chen                  member   14955835       404.2h     1      3   48    8.4h
+Parker Stewart               member   14955198       404.1h     4     21   48    8.4h
+Tsegai Hidru                 member   14702302       403.8h     1     32   48    8.4h
+Austin Lin                   member   14677881       403.2h     5     29   48    8.4h
+Ryan Yang                    member   14962441       402.0h     4     19   48    8.4h
+Kevin Yan                    member   14641145       401.6h     3     25   48    8.4h
+niraaj                       member   14957268       400.3h     3     13   48    8.3h
+Henry Chu                    member   14961090       400.0h     5     39   48    8.3h
+Nicholas Cheng               member   14955151       399.9h     4     27   48    8.3h
+David Daniliuc               member   14958288       397.6h     3     21   48    8.3h
+Jonathan Zhu                 member   14954643       397.0h     6     32   48    8.3h
+Jessica Chen                 member   14957045       395.9h     4     20   48    8.2h
+Ammar Ahmad                  member   14964058       395.3h     4     15   48    8.2h
+Brody Honigman Deltoff       member   14956523       394.7h     4     25   48    8.2h
+Chad Paik                    quit     N/A              0.0h     0      0    0    0.0h
+
+Active users: 72/73 (72 with time blocks)
+Total time blocks: 2281
+Total sampled hours: 31853.7h
+Total hours in time blocks: 14180.9h
+Hours coverage: 44.5% of sampled hours have task assignments
+
+Sample time blocks (first 10):
+User                 Task                                Date         Hours 
+--------------------------------------------------------------------------------
+Allen Tao            Preparation                         2025-08-04    12.7h
+Allen Tao            Preparation                         2025-08-11    15.0h
+Allen Tao            Preparation                         2025-08-18    11.8h
+Allen Tao            Interviews                          2025-09-08    10.1h
+Allen Tao            Interviews                          2025-09-15     4.8h
+Allen Tao            Candidate decision madhouse         2025-09-15     4.8h
+Allen Tao            Write SRS Draft                     2025-11-24    12.6h
+Allen Tao            Write Concept Design Report         2026-04-06    13.2h
+Allen Tao            Write Concept Design Report         2026-04-13    11.1h
+Allen Tao            Write SRS Final                     2026-04-20     7.5h
+... and 2271 more time blocks
+
+================================================================================
+TASK WEIGHTING EXAMPLE
+================================================================================
+
+Hours are distributed based on task size/complexity:
+  - Uses estimated_hours from TeamGantt if available
+  - Falls back to duration × 2h/day if no estimate
+  - Bigger tasks get proportionally more hours
+
+Example:
+  User has 10h this week, 3 tasks assigned:
+    • Task A: 20h estimated → 44% weight → 4.4h this week
+    • Task B: 15h estimated → 33% weight → 3.3h this week
+    • Task C: 10h estimated → 22% weight → 2.2h this week
+  Total: 10h (matches user's weekly allocation)
+
+
+================================================================================
+
+🚀 EXECUTING UPDATES...
+================================================================================
+
+Creating time entries in TeamGantt...
+  [1/2281] Allen Tao - Preparation (12.7h)... ✅
+  [2/2281] Allen Tao - Preparation (15.0h)... ✅
+  [3/2281] Allen Tao - Preparation (11.8h)... ✅
+  [4/2281] Allen Tao - Interviews (10.1h)... ✅
+  [5/2281] Allen Tao - Interviews (4.8h)... ✅
+  [6/2281] Allen Tao - Candidate decision madhouse (4.8h)... ✅
+  [7/2281] Allen Tao - Write SRS Draft (12.6h)... ✅
+  [8/2281] Allen Tao - Write Concept Design Report (13.2h)... ✅
+  [9/2281] Allen Tao - Write Concept Design Report (11.1h)... ✅
+  [10/2281] Allen Tao - Write SRS Final (7.5h)... ✅
+  [11/2281] Allen Tao - Write Concept Design Report (7.5h)... ✅
+  [12/2281] Allen Tao - Write SRS Final (8.4h)... ✅
+  [13/2281] Allen Tao - Concept Design Event Presentat (11.0h)... ✅
+  [14/2281] Allen Tao - Concept Design Event Presentat (9.8h)... ✅
+  [15/2281] Allen Tao - Concept Design Event Presentat (12.2h)... ✅
+  [16/2281] Connor Wilson - Preparation (15.0h)... ✅
+  [17/2281] Connor Wilson - Preparation (15.0h)... ✅
+  [18/2281] Connor Wilson - Preparation (12.7h)... ✅
+  [19/2281] Connor Wilson - Interviews (12.0h)... ✅
+  [20/2281] Connor Wilson - Interviews (5.8h)... ✅
+  [21/2281] Connor Wilson - Candidate decision madhouse (5.8h)... ✅
+  [22/2281] Connor Wilson - Write SRS Draft (9.3h)... ✅
+  [23/2281] Connor Wilson - Write Concept Design Report (11.3h)... ✅
+  [24/2281] Connor Wilson - Write Concept Design Report (13.5h)... ✅
+  [25/2281] Connor Wilson - Write SRS Final (6.3h)... ✅
+  [26/2281] Connor Wilson - Write Concept Design Report (6.3h)... ✅
+  [27/2281] Connor Wilson - Write SRS Final (11.2h)... ✅
+  [28/2281] Connor Wilson - Concept Design Event Presentat (11.8h)... ✅
+  [29/2281] Connor Wilson - Concept Design Event Presentat (14.2h)... ✅
+  [30/2281] Connor Wilson - Concept Design Event Presentat (9.7h)... ✅
+  [31/2281] William Wen - Interviews (11.7h)... ✅
+  [32/2281] William Wen - Interviews (5.9h)... ✅
+  [33/2281] William Wen - Candidate decision madhouse (5.9h)... ✅
+  [34/2281] William Wen - Write SRS Draft (12.5h)... ✅
+  [35/2281] William Wen - Vehicle Rewiring (3.2h)... ✅
+  [36/2281] William Wen - Vehicle Rewiring (11.4h)... ✅
+  [37/2281] William Wen - Vehicle Rewiring (10.8h)... ✅
+  [38/2281] William Wen - Vehicle Rewiring (14.7h)... ✅
+  [39/2281] William Wen - Project Management Presentatio (7.9h)... ✅
+  [40/2281] William Wen - Project Management Presentatio (12.6h)... ✅
+  [41/2281] William Wen - Project Management Presentatio (13.8h)... ✅
+  [42/2281] William Wen - Write Concept Design Report (12.3h)... ✅
+  [43/2281] William Wen - Write Concept Design Report (11.0h)... ✅
+  [44/2281] William Wen - Write SRS Final (6.2h)... ✅
+  [45/2281] William Wen - Write Concept Design Report (6.2h)... ✅
+  [46/2281] William Wen - Write SRS Final (10.5h)... ✅
+  [47/2281] William Wen - Concept Design Event Presentat (5.8h)... ✅
+  [48/2281] William Wen - Final Project Management Prese (5.8h)... ✅
+  [49/2281] William Wen - Concept Design Event Presentat (5.3h)... ✅
+  [50/2281] William Wen - Final Project Management Prese (5.3h)... ✅
+  [51/2281] William Wen - Concept Design Event Presentat (6.7h)... ✅
+  [52/2281] William Wen - Final Project Management Prese (6.7h)... ✅
+  [53/2281] Tae Kim - Preparation (12.5h)... ✅
+  [54/2281] Tae Kim - Preparation (11.6h)... ✅
+  [55/2281] Tae Kim - Preparation (13.0h)... ✅
+  [56/2281] Tae Kim - Interviews (11.8h)... ✅
+  [57/2281] Tae Kim - Interviews (4.7h)... ✅
+  [58/2281] Tae Kim - Candidate decision madhouse (4.7h)... ✅
+  [59/2281] Tae Kim - Create YOLO Trainer (9.3h)... ✅
+  [60/2281] Tae Kim - Create YOLO Trainer (10.3h)... ✅
+  [61/2281] Tae Kim - Create YOLO Trainer (13.0h)... ✅
+  [62/2281] Tae Kim - Create YOLO Trainer (5.0h)... ✅
+  [63/2281] Tae Kim - Create YOLO Validator with per (5.0h)... ✅
+  [64/2281] Tae Kim - Create YOLO Validator with per (8.0h)... ✅
+  [65/2281] Tae Kim - Create YOLO Validator with per (6.2h)... ✅
+  [66/2281] Tae Kim - Create Sign Classifier pipelin (6.2h)... ✅
+  [67/2281] Tae Kim - Create Sign Classifier pipelin (10.3h)... ✅
+  [68/2281] Tae Kim - Create Sign Classifier pipelin (3.7h)... ✅
+  [69/2281] Tae Kim - Train YOLOv10 Static (3.7h)... ✅
+  [70/2281] Tae Kim - Train YOLOv11 Static (3.7h)... ✅
+  [71/2281] Tae Kim - Train YOLOv10 Static (2.3h)... ✅
+  [72/2281] Tae Kim - Train YOLOv11 Static (2.3h)... ✅
+  [73/2281] Tae Kim - Train YOLOv10 Static (1.9h)... ✅
+  [74/2281] Tae Kim - Train YOLOv11 Static (1.9h)... ✅
+  [75/2281] Tae Kim - Create benchmark script (3.5h)... ✅
+  [76/2281] Tae Kim - Train YOLOv10 Static (3.5h)... ✅
+  [77/2281] Tae Kim - Train YOLOv11 Static (3.5h)... ✅
+  [78/2281] Tae Kim - Collect Real Fog Data (5.0h)... ✅
+  [79/2281] Tae Kim - Create benchmark script (5.0h)... ✅
+  [80/2281] Tae Kim - Collect Real Fog Data (3.6h)... ✅
+  [81/2281] Tae Kim - Create benchmark script (3.6h)... ✅
+  [82/2281] Tae Kim - Fix postprocessing for 2DOD No (3.6h)... ✅
+  [83/2281] Tae Kim - Collect Real Fog Data (5.0h)... ✅
+  [84/2281] Tae Kim - Fix postprocessing for 2DOD No (5.0h)... ✅
+  [85/2281] Tae Kim - Collect Real Fog Data (3.6h)... ✅
+  [86/2281] Tae Kim - Fix postprocessing for 2DOD No (3.6h)... ✅
+  [87/2281] Tae Kim - Train YOLO26 Static (3.6h)... ✅
+  [88/2281] Tae Kim - Collect Real Fog Data (3.8h)... ✅
+  [89/2281] Tae Kim - Fix postprocessing for 2DOD No (3.8h)... ✅
+  [90/2281] Tae Kim - Train YOLO26 Static (3.8h)... ✅
+  [91/2281] Tae Kim - Fix postprocessing for 2DOD No (3.7h)... ✅
+  [92/2281] Tae Kim - Train YOLO26 Static (3.7h)... ✅
+  [93/2281] Tae Kim - Train YOLO26 Lights (3.7h)... ✅
+  [94/2281] Tae Kim - Fix postprocessing for 2DOD No (5.3h)... ✅
+  [95/2281] Tae Kim - Train YOLO26 Lights (5.3h)... ✅
+  [96/2281] Tae Kim - Fix postprocessing for 2DOD No (4.9h)... ✅
+  [97/2281] Tae Kim - Train YOLO26 Lights (4.9h)... ✅
+  [98/2281] Tae Kim - Fix postprocessing for 2DOD No (2.2h)... ✅
+  [99/2281] Tae Kim - Model Ensemble (run YOLO + Cla (2.2h)... ✅
+  [100/2281] Tae Kim - Train YOLO26 Lights (2.2h)... ✅
+  [101/2281] Tae Kim - Train YOLO26 Dynamic (2.2h)... ✅
+  [102/2281] Tae Kim - Model Ensemble (run YOLO + Cla (5.7h)... ✅
+  [103/2281] Tae Kim - Train YOLO26 Dynamic (5.7h)... ✅
+  [104/2281] Tae Kim - Model Ensemble (run YOLO + Cla (6.0h)... ✅
+  [105/2281] Tae Kim - Train YOLO26 Dynamic (6.0h)... ✅
+  [106/2281] Tae Kim - Model Ensemble (run YOLO + Cla (4.6h)... ✅
+  [107/2281] Tae Kim - Train YOLO26 Dynamic (4.6h)... ✅
+  [108/2281] Tae Kim - Model Ensemble (run YOLO + Cla (4.5h)... ✅
+  [109/2281] Tae Kim - Train YOLO26 Dynamic (4.5h)... ✅
+  [110/2281] Tae Kim - Model Ensemble (run YOLO + Cla (12.7h)... ✅
+  [111/2281] Tae Kim - Model Ensemble (run YOLO + Cla (9.6h)... ✅
+  [112/2281] Tae Kim - Model Ensemble (run YOLO + Cla (10.8h)... ✅
+  [113/2281] Tae Kim - Model Ensemble (run YOLO + Cla (10.9h)... ✅
+  [114/2281] Abdus Shaikh - Preparation (12.5h)... ✅
+  [115/2281] Abdus Shaikh - Preparation (12.4h)... ✅
+  [116/2281] Abdus Shaikh - Preparation (11.8h)... ✅
+  [117/2281] Abdus Shaikh - Interviews (10.1h)... ✅
+  [118/2281] Abdus Shaikh - Interviews (4.8h)... ✅
+  [119/2281] Abdus Shaikh - Candidate decision madhouse (4.8h)... ✅
+  [120/2281] Abdus Shaikh - Training (13.0h)... ✅
+  [121/2281] Abdus Shaikh - Training (13.0h)... ✅
+  [122/2281] Abdus Shaikh - Training (11.6h)... ✅
+  [123/2281] Abdus Shaikh - Training (10.2h)... ✅
+  [124/2281] Abdus Shaikh - Training (10.0h)... ✅
+  [125/2281] Abdus Shaikh - Training (10.6h)... ✅
+  [126/2281] Abdus Shaikh - Training (2.4h)... ✅
+  [127/2281] Abdus Shaikh - Profile and validation (2.4h)... ✅
+  [128/2281] Abdus Shaikh - Profile and validation (3.1h)... ✅
+  [129/2281] Abdus Shaikh - Profile and validation (11.1h)... ✅
+  [130/2281] Abdus Shaikh - Profile and validation (10.2h)... ✅
+  [131/2281] Abdus Shaikh - Profile and validation (7.5h)... ✅
+  [132/2281] Abdus Shaikh - Profile and validation (5.2h)... ✅
+  [133/2281] Abdus Shaikh - Deployment (5.2h)... ✅
+  [134/2281] Abdus Shaikh - Deployment (11.3h)... ✅
+  [135/2281] Abdus Shaikh - Deployment (10.1h)... ✅
+  [136/2281] Abdus Shaikh - Deployment (10.8h)... ✅
+  [137/2281] Abdus Shaikh - Deployment (8.8h)... ✅
+  [138/2281] Abdus Shaikh - Deployment (6.0h)... ✅
+  [139/2281] Abdus Shaikh - Validation (6.0h)... ✅
+  [140/2281] Abdus Shaikh - Validation (8.1h)... ✅
+  [141/2281] Abdus Shaikh - Validation (10.8h)... ✅
+  [142/2281] Abdus Shaikh - Validation (10.2h)... ✅
+  [143/2281] Abdus Shaikh - Validation (12.3h)... ✅
+  [144/2281] Abdus Shaikh - Validation (8.2h)... ✅
+  [145/2281] Abdus Shaikh - Validation (11.5h)... ✅
+  [146/2281] Abdus Shaikh - Validation (10.3h)... ✅
+  [147/2281] Abdus Shaikh - Validation (11.3h)... ✅
+  [148/2281] Abdus Shaikh - Validation (10.7h)... ✅
+  [149/2281] Satvick Acharya - Preparation (13.0h)... ✅
+  [150/2281] Satvick Acharya - Preparation (13.0h)... ✅
+  [151/2281] Satvick Acharya - Preparation (13.0h)... ✅
+  [152/2281] Satvick Acharya - Interviews (9.2h)... ✅
+  [153/2281] Satvick Acharya - Interviews (6.2h)... ✅
+  [154/2281] Satvick Acharya - Candidate decision madhouse (6.2h)... ✅
+  [155/2281] Charles Liu - Preparation (11.6h)... ✅
+  [156/2281] Charles Liu - Preparation (13.0h)... ✅
+  [157/2281] Charles Liu - Preparation (13.0h)... ✅
+  [158/2281] Charles Liu - Interviews (10.8h)... ✅
+  [159/2281] Charles Liu - Interviews (5.4h)... ✅
+  [160/2281] Charles Liu - Candidate decision madhouse (5.4h)... ✅
+  [161/2281] Charles Liu - Merging Lifecycle Lidar To mai (5.2h)... ✅
+  [162/2281] Charles Liu - Integrating Cam Lifecycle to P (5.2h)... ✅
+  [163/2281] Charles Liu - Merging Lifecycle Lidar To mai (3.0h)... ✅
+  [164/2281] Charles Liu - Integrating Cam Lifecycle to P (3.0h)... ✅
+  [165/2281] Charles Liu - Validate feasibility of subsam (3.0h)... ✅
+  [166/2281] Charles Liu - Merging Lifecycle Lidar To mai (3.8h)... ✅
+  [167/2281] Charles Liu - Integrating Cam Lifecycle to P (3.8h)... ✅
+  [168/2281] Charles Liu - Validate feasibility of subsam (3.8h)... ✅
+  [169/2281] Charles Liu - Merging Lifecycle Lidar To mai (4.3h)... ✅
+  [170/2281] Charles Liu - Integrating Cam Lifecycle to P (4.3h)... ✅
+  [171/2281] Charles Liu - Validate feasibility of subsam (4.3h)... ✅
+  [172/2281] Charles Liu - Merging Lifecycle Lidar To mai (3.8h)... ✅
+  [173/2281] Charles Liu - Integrating Cam Lifecycle to P (3.8h)... ✅
+  [174/2281] Charles Liu - Validate feasibility of subsam (3.8h)... ✅
+  [175/2281] Charles Liu - Merging Lifecycle Lidar To mai (6.5h)... ✅
+  [176/2281] Charles Liu - Integrating Cam Lifecycle to P (6.5h)... ✅
+  [177/2281] Charles Liu - Merging Lifecycle Lidar To mai (4.5h)... ✅
+  [178/2281] Charles Liu - Integrating Cam Lifecycle to P (4.5h)... ✅
+  [179/2281] Charles Liu - Merging Lifecycle Lidar To mai (6.5h)... ✅
+  [180/2281] Charles Liu - Integrating Cam Lifecycle to P (6.5h)... ✅
+  [181/2281] Charles Liu - Merging Lifecycle Lidar To mai (5.2h)... ✅
+  [182/2281] Charles Liu - Integrating Cam Lifecycle to P (5.2h)... ✅
+  [183/2281] Charles Liu - Integrating Cam Lifecycle to P (5.2h)... ✅
+  [184/2281] Charles Liu - Integrating Cam Lifecycle to P (3.5h)... ✅
+  [185/2281] Charles Liu - Integrating Cam Lifecycle to P (12.2h)... ✅
+  [186/2281] Charles Liu - Draft SOTIF (8.4h)... ✅
+  [187/2281] Charles Liu - Draft SOTIF (10.3h)... ✅
+  [188/2281] Charles Liu - Draft SOTIF (8.7h)... ✅
+  [189/2281] Charles Liu - Draft SOTIF (10.0h)... ✅
+  [190/2281] Charles Liu - Draft SOTIF (11.7h)... ✅
+  [191/2281] Charles Liu - Draft SOTIF (9.4h)... ✅
+  [192/2281] Charles Liu - Draft SOTIF (11.9h)... ✅
+  [193/2281] Charles Liu - Draft SOTIF (5.5h)... ✅
+  [194/2281] Charles Liu - SOTIF Finalization (5.5h)... ✅
+  [195/2281] Charles Liu - SOTIF Finalization (10.7h)... ✅
+  [196/2281] Charles Liu - SOTIF Finalization (11.5h)... ✅
+  [197/2281] Charles Liu - SOTIF Finalization (11.5h)... ✅
+  [198/2281] Charles Liu - SOTIF Finalization (4.5h)... ✅
+  [199/2281] Charles Liu - SS Presentation (4.5h)... ✅
+  [200/2281] Charles Liu - SS Presentation (9.4h)... ✅
+  [201/2281] Charles Liu - SS Presentation (10.3h)... ✅
+  [202/2281] Charles Liu - SS Presentation (8.8h)... ✅
+  [203/2281] Charles Liu - SS Presentation (10.9h)... ✅
+  [204/2281] Charles Liu - SS Presentation (9.0h)... ✅
+  [205/2281] Jimin Woo - Preparation (13.0h)... ✅
+  [206/2281] Jimin Woo - Preparation (13.0h)... ✅
+  [207/2281] Jimin Woo - Preparation (13.0h)... ✅
+  [208/2281] Jimin Woo - Environment setup (4.9h)... ✅
+  [209/2281] Jimin Woo - Set up running Foxglove locall (4.9h)... ✅
+  [210/2281] Jimin Woo - Environment setup (5.3h)... ✅
+  [211/2281] Jimin Woo - Set up running Foxglove locall (5.3h)... ✅
+  [212/2281] Jimin Woo - Environment setup (3.1h)... ✅
+  [213/2281] Jimin Woo - Show localization Information (3.1h)... ✅
+  [214/2281] Jimin Woo - Set up running Foxglove locall (3.1h)... ✅
+  [215/2281] Jimin Woo - Show localization Information (4.8h)... ✅
+  [216/2281] Jimin Woo - Set up running Foxglove locall (4.8h)... ✅
+  [217/2281] Jimin Woo - Show localization Information (4.3h)... ✅
+  [218/2281] Jimin Woo - Set up running Foxglove locall (4.3h)... ✅
+  [219/2281] Jimin Woo - Add lanes and 3d tracking boxe (4.3h)... ✅
+  [220/2281] Jimin Woo - Show localization Information (4.4h)... ✅
+  [221/2281] Jimin Woo - Add lanes and 3d tracking boxe (4.4h)... ✅
+  [222/2281] Jimin Woo - Show localization Information (5.2h)... ✅
+  [223/2281] Jimin Woo - Add lanes and 3d tracking boxe (5.2h)... ✅
+  [224/2281] Jimin Woo - Show localization Information (5.1h)... ✅
+  [225/2281] Jimin Woo - Add lanes and 3d tracking boxe (5.1h)... ✅
+  [226/2281] Jimin Woo - Show localization Information (4.0h)... ✅
+  [227/2281] Jimin Woo - Add lanes and 3d tracking boxe (4.0h)... ✅
+  [228/2281] Jimin Woo - Show localization Information (5.2h)... ✅
+  [229/2281] Jimin Woo - Add lanes and 3d tracking boxe (5.2h)... ✅
+  [230/2281] Jimin Woo - Show localization Information (1.8h)... ✅
+  [231/2281] Jimin Woo - 2D Map Feature Integration (1.8h)... ✅
+  [232/2281] Jimin Woo - Add lanes and 3d tracking boxe (1.8h)... ✅
+  [233/2281] Jimin Woo - 2D Map Feature Integration (1.8h)... ✅
+  [234/2281] Jimin Woo - Add lanes and 3d tracking boxe (1.8h)... ✅
+  [235/2281] Jimin Woo - 2D Map Feature Integration (5.0h)... ✅
+  [236/2281] Jimin Woo - Add lanes and 3d tracking boxe (5.0h)... ✅
+  [237/2281] Jimin Woo - 2D Map Feature Integration (5.7h)... ✅
+  [238/2281] Jimin Woo - Add lanes and 3d tracking boxe (5.7h)... ✅
+  [239/2281] Jimin Woo - 2D Map Feature Integration (10.5h)... ✅
+  [240/2281] Jimin Woo - 2D Map Feature Integration (11.6h)... ✅
+  [241/2281] Jimin Woo - 2D Map Feature Integration (10.8h)... ✅
+  [242/2281] Jimin Woo - 2D Map Feature Integration (11.0h)... ✅
+  [243/2281] Jimin Woo - 2D Map Feature Integration (10.8h)... ✅
+  [244/2281] Cecilia Li - Preparation (12.7h)... ✅
+  [245/2281] Cecilia Li - Preparation (11.0h)... ✅
+  [246/2281] Cecilia Li - Preparation (13.0h)... ✅
+  [247/2281] Cecilia Li - Interviews (3.8h)... ✅
+  [248/2281] Cecilia Li - Perform GNSS/IMU Calibration (3.8h)... ✅
+  [249/2281] Cecilia Li - Complete MVP lane localization (3.8h)... ✅
+  [250/2281] Cecilia Li - Interviews (2.6h)... ✅
+  [251/2281] Cecilia Li - Candidate decision madhouse (2.6h)... ✅
+  [252/2281] Cecilia Li - Perform GNSS/IMU Calibration (2.6h)... ✅
+  [253/2281] Cecilia Li - Complete MVP lane localization (2.6h)... ✅
+  [254/2281] Cecilia Li - Perform GNSS/IMU Calibration (5.1h)... ✅
+  [255/2281] Cecilia Li - Complete MVP lane localization (5.1h)... ✅
+  [256/2281] Cecilia Li - Perform GNSS/IMU Calibration (5.1h)... ✅
+  [257/2281] Cecilia Li - Complete MVP lane localization (5.1h)... ✅
+  [258/2281] Cecilia Li - Perform GNSS/IMU Calibration (2.9h)... ✅
+  [259/2281] Cecilia Li - Complete MVP lane localization (2.9h)... ✅
+  [260/2281] Cecilia Li - Fix lat/lon/az to UTM+Yaw conv (2.9h)... ✅
+  [261/2281] Cecilia Li - Perform GNSS/IMU Calibration (2.8h)... ✅
+  [262/2281] Cecilia Li - Complete MVP lane localization (2.8h)... ✅
+  [263/2281] Cecilia Li - Fix lat/lon/az to UTM+Yaw conv (2.8h)... ✅
+  [264/2281] Cecilia Li - Complete MVP lane localization (4.4h)... ✅
+  [265/2281] Cecilia Li - Fix lat/lon/az to UTM+Yaw conv (4.4h)... ✅
+  [266/2281] Cecilia Li - Complete MVP lane localization (5.8h)... ✅
+  [267/2281] Cecilia Li - Fix lat/lon/az to UTM+Yaw conv (5.8h)... ✅
+  [268/2281] Cecilia Li - Complete MVP lane localization (5.2h)... ✅
+  [269/2281] Cecilia Li - Fix lat/lon/az to UTM+Yaw conv (5.2h)... ✅
+  [270/2281] Cecilia Li - Complete MVP lane localization (4.6h)... ✅
+  [271/2281] Cecilia Li - Fix lat/lon/az to UTM+Yaw conv (4.6h)... ✅
+  [272/2281] Cecilia Li - Complete MVP lane localization (5.3h)... ✅
+  [273/2281] Cecilia Li - Fix lat/lon/az to UTM+Yaw conv (5.3h)... ✅
+  [274/2281] Cecilia Li - Complete MVP lane localization (3.3h)... ✅
+  [275/2281] Cecilia Li - Fix lat/lon/az to UTM+Yaw conv (3.3h)... ✅
+  [276/2281] Cecilia Li - Run DLA Node with Complete Loc (3.3h)... ✅
+  [277/2281] Cecilia Li - Complete MVP lane localization (5.2h)... ✅
+  [278/2281] Cecilia Li - Run DLA Node with Complete Loc (5.2h)... ✅
+  [279/2281] Cecilia Li - Complete MVP lane localization (2.9h)... ✅
+  [280/2281] Cecilia Li - Run DLA Node with Complete Loc (2.9h)... ✅
+  [281/2281] Cecilia Li - Complete MVP lane localization (1.4h)... ✅
+  [282/2281] Cecilia Li - Run DLA Node with Complete Loc (1.4h)... ✅
+  [283/2281] Cecilia Li - Complete MVP lane localization (5.3h)... ✅
+  [284/2281] Cecilia Li - Run DLA Node with Complete Loc (5.3h)... ✅
+  [285/2281] Cecilia Li - Complete MVP lane localization (2.7h)... ✅
+  [286/2281] Cecilia Li - C++ Integration (2.7h)... ✅
+  [287/2281] Cecilia Li - MCity Bags Testing (2.7h)... ✅
+  [288/2281] Cecilia Li - Run DLA Node with Complete Loc (2.7h)... ✅
+  [289/2281] Cecilia Li - C++ Integration (4.5h)... ✅
+  [290/2281] Cecilia Li - MCity Bags Testing (4.5h)... ✅
+  [291/2281] Cecilia Li - C++ Integration (5.7h)... ✅
+  [292/2281] Cecilia Li - MCity Bags Testing (5.7h)... ✅
+  [293/2281] Cecilia Li - C++ Integration (11.1h)... ✅
+  [294/2281] Cecilia Li - C++ Integration (9.9h)... ✅
+  [295/2281] Cecilia Li - C++ Integration (4.7h)... ✅
+  [296/2281] Cecilia Li - Lane Loc Validation (4.7h)... ✅
+  [297/2281] Cecilia Li - Lane Loc Validation (11.3h)... ✅
+  [298/2281] Cecilia Li - Lane Loc Validation (11.8h)... ✅
+  [299/2281] Cecilia Li - Lane Loc Validation (10.3h)... ✅
+  [300/2281] Cecilia Li - Lane Loc Validation (8.8h)... ✅
+  [301/2281] Cecilia Li - Lane Loc Validation (11.5h)... ✅
+  [302/2281] Cecilia Li - Lane Loc Validation (10.1h)... ✅
+  [303/2281] Cecilia Li - Lane Loc Validation (11.1h)... ✅
+  [304/2281] Ketevan Gallagher - Preparation (12.5h)... ✅
+  [305/2281] Ketevan Gallagher - Preparation (13.0h)... ✅
+  [306/2281] Ketevan Gallagher - Preparation (13.0h)... ✅
+  [307/2281] Ketevan Gallagher - Interviews (11.3h)... ✅
+  [308/2281] Ketevan Gallagher - Interviews (5.2h)... ✅
+  [309/2281] Ketevan Gallagher - Candidate decision madhouse (5.2h)... ✅
+  [310/2281] Ketevan Gallagher - JSON Deprecation (10.6h)... ✅
+  [311/2281] Ketevan Gallagher - JSON Deprecation (12.4h)... ✅
+  [312/2281] Ketevan Gallagher - JSON Deprecation (11.4h)... ✅
+  [313/2281] Ketevan Gallagher - JSON Deprecation (6.5h)... ✅
+  [314/2281] Ketevan Gallagher - DYOC KML Map (6.5h)... ✅
+  [315/2281] Ketevan Gallagher - JSON Deprecation (5.0h)... ✅
+  [316/2281] Ketevan Gallagher - DYOC KML Map (5.0h)... ✅
+  [317/2281] Ketevan Gallagher - JSON Deprecation (5.8h)... ✅
+  [318/2281] Ketevan Gallagher - DYOC KML Map (5.8h)... ✅
+  [319/2281] Ketevan Gallagher - JSON Deprecation (5.5h)... ✅
+  [320/2281] Ketevan Gallagher - DYOC KML Map (5.5h)... ✅
+  [321/2281] Ketevan Gallagher - JSON Deprecation (3.6h)... ✅
+  [322/2281] Ketevan Gallagher - DYOC KML Map (3.6h)... ✅
+  [323/2281] Ketevan Gallagher - JSON Deprecation (9.8h)... ✅
+  [324/2281] Ketevan Gallagher - JSON Deprecation (5.2h)... ✅
+  [325/2281] Ketevan Gallagher - JSON Deprecation (3.5h)... ✅
+  [326/2281] Ketevan Gallagher - JSON Deprecation (9.8h)... ✅
+  [327/2281] Ketevan Gallagher - JSON Deprecation (3.9h)... ✅
+  [328/2281] Ketevan Gallagher - Mapping GUI Improvements (3.9h)... ✅
+  [329/2281] Ketevan Gallagher - Mapping GUI Improvements (10.5h)... ✅
+  [330/2281] Ketevan Gallagher - Mapping GUI Improvements (10.1h)... ✅
+  [331/2281] Ketevan Gallagher - Mapping GUI Improvements (9.3h)... ✅
+  [332/2281] Ketevan Gallagher - Mapping GUI Improvements (9.7h)... ✅
+  [333/2281] Ketevan Gallagher - Mapping GUI Improvements (10.1h)... ✅
+  [334/2281] Ketevan Gallagher - Mapping GUI Improvements (9.1h)... ✅
+  [335/2281] Ketevan Gallagher - Mapping GUI Improvements (10.5h)... ✅
+  [336/2281] Ketevan Gallagher - Mapping GUI Improvements (11.1h)... ✅
+  [337/2281] Ketevan Gallagher - Mapping GUI Improvements (7.9h)... ✅
+  [338/2281] Ketevan Gallagher - Mapping GUI Improvements (9.4h)... ✅
+  [339/2281] Ketevan Gallagher - Mapping GUI Improvements (10.5h)... ✅
+  [340/2281] Ketevan Gallagher - Mapping GUI Improvements (9.5h)... ✅
+  [341/2281] Ketevan Gallagher - Mapping GUI Improvements (11.7h)... ✅
+  [342/2281] Vivian Deng - Preparation (13.0h)... ✅
+  [343/2281] Vivian Deng - Preparation (13.0h)... ✅
+  [344/2281] Vivian Deng - Preparation (12.7h)... ✅
+  [345/2281] Vivian Deng - Interviews (10.4h)... ✅
+  [346/2281] Vivian Deng - Interviews (6.0h)... ✅
+  [347/2281] Vivian Deng - Candidate decision madhouse (6.0h)... ✅
+  [348/2281] Tulgar Ilhan - Preparation (13.0h)... ✅
+  [349/2281] Tulgar Ilhan - Preparation (13.0h)... ✅
+  [350/2281] Tulgar Ilhan - Preparation (13.0h)... ✅
+  [351/2281] Tulgar Ilhan - Interviews (9.2h)... ✅
+  [352/2281] Tulgar Ilhan - Interviews (6.1h)... ✅
+  [353/2281] Tulgar Ilhan - Candidate decision madhouse (6.1h)... ✅
+  [354/2281] Tulgar Ilhan - Server Rack CAD (10.5h)... ✅
+  [355/2281] Tulgar Ilhan - Server Rack CAD (10.4h)... ✅
+  [356/2281] Tulgar Ilhan - Server Rack CAD (11.3h)... ✅
+  [357/2281] Tulgar Ilhan - Server Rack CAD (9.9h)... ✅
+  [358/2281] Tulgar Ilhan - Server Rack CAD (13.0h)... ✅
+  [359/2281] Tulgar Ilhan - Server Rack CAD (11.3h)... ✅
+  [360/2281] Tulgar Ilhan - Server Rack CAD (4.7h)... ✅
+  [361/2281] Tulgar Ilhan - Server Rack Validation (4.7h)... ✅
+  [362/2281] Tulgar Ilhan - Server Rack Validation (10.8h)... ✅
+  [363/2281] Tulgar Ilhan - Server Rack Validation (10.7h)... ✅
+  [364/2281] Tulgar Ilhan - Server Rack Validation (11.5h)... ✅
+  [365/2281] Tulgar Ilhan - Server Rack Validation (4.3h)... ✅
+  [366/2281] Tulgar Ilhan - Waterproofing of the Sensor Pl (0.9h)... ✅
+  [367/2281] Tulgar Ilhan - Server Rack Validation (0.9h)... ✅
+  [368/2281] Tulgar Ilhan - Server Rack Assembly (0.9h)... ✅
+  [369/2281] Tulgar Ilhan - Waterproofing of the Sensor Pl (5.2h)... ✅
+  [370/2281] Tulgar Ilhan - Server Rack Assembly (5.2h)... ✅
+  [371/2281] Tulgar Ilhan - Waterproofing of the Sensor Pl (3.9h)... ✅
+  [372/2281] Tulgar Ilhan - Server Rack Assembly (3.9h)... ✅
+  [373/2281] Tulgar Ilhan - Server Rack Plexiglass Order (3.9h)... ✅
+  [374/2281] Tulgar Ilhan - Waterproofing of the Sensor Pl (6.2h)... ✅
+  [375/2281] Tulgar Ilhan - Server Rack Plexiglass Order (6.2h)... ✅
+  [376/2281] Tulgar Ilhan - Waterproofing of the Sensor Pl (6.5h)... ✅
+  [377/2281] Tulgar Ilhan - Server Rack Plexiglass Order (6.5h)... ✅
+  [378/2281] Tulgar Ilhan - Waterproofing of the Sensor Pl (5.7h)... ✅
+  [379/2281] Tulgar Ilhan - Server Rack Plexiglass Order (5.7h)... ✅
+  [380/2281] Tulgar Ilhan - Waterproofing of the Sensor Pl (4.5h)... ✅
+  [381/2281] Tulgar Ilhan - Server Rack Plexiglass Order (4.5h)... ✅
+  [382/2281] Tulgar Ilhan - Server Rack Plexiglass Order (4.8h)... ✅
+  [383/2281] Tulgar Ilhan - Server Rack Plexiglass Assembl (4.8h)... ✅
+  [384/2281] Tulgar Ilhan - Server Rack Plexiglass Assembl (11.4h)... ✅
+  [385/2281] Tulgar Ilhan - Server Rack Plexiglass Assembl (11.0h)... ✅
+  [386/2281] Tulgar Ilhan - Server Rack Plexiglass Assembl (9.2h)... ✅
+  [387/2281] Tulgar Ilhan - Server Rack Plexiglass Assembl (4.5h)... ✅
+  [388/2281] Tulgar Ilhan - Airflow System Assembly (4.5h)... ✅
+  [389/2281] Tulgar Ilhan - Airflow System Assembly (11.5h)... ✅
+  [390/2281] Tulgar Ilhan - Airflow System Assembly (11.8h)... ✅
+  [391/2281] Tulgar Ilhan - Airflow System Assembly (9.9h)... ✅
+  [392/2281] Tulgar Ilhan - Airflow System Assembly (8.7h)... ✅
+  [393/2281] Amanda Liu - Preparation (11.3h)... ✅
+  [394/2281] Amanda Liu - Preparation (13.0h)... ✅
+  [395/2281] Amanda Liu - Preparation (13.0h)... ✅
+  [396/2281] Amanda Liu - Interviews (10.3h)... ✅
+  [397/2281] Amanda Liu - Interviews (4.4h)... ✅
+  [398/2281] Amanda Liu - Candidate decision madhouse (4.4h)... ✅
+  [399/2281] Amanda Liu - Research (10.1h)... ✅
+  [400/2281] Amanda Liu - Research (10.8h)... ✅
+  [401/2281] Amanda Liu - Research (9.1h)... ✅
+  [402/2281] Amanda Liu - Research (10.6h)... ✅
+  [403/2281] Amanda Liu - Topic proposal (6.0h)... ✅
+  [404/2281] Amanda Liu - Research (6.0h)... ✅
+  [405/2281] Amanda Liu - Topic proposal (6.5h)... ✅
+  [406/2281] Amanda Liu - Research (6.5h)... ✅
+  [407/2281] Amanda Liu - Topic proposal (5.0h)... ✅
+  [408/2281] Amanda Liu - Research (5.0h)... ✅
+  [409/2281] Amanda Liu - Topic proposal (12.3h)... ✅
+  [410/2281] Amanda Liu - AutoPark Pitch Deck (5.0h)... ✅
+  [411/2281] Amanda Liu - Formal Presentation Slides (5.0h)... ✅
+  [412/2281] Amanda Liu - AutoPark Pitch Deck (4.7h)... ✅
+  [413/2281] Amanda Liu - Formal Presentation Slides (4.7h)... ✅
+  [414/2281] Amanda Liu - AutoPark Pitch Deck (5.8h)... ✅
+  [415/2281] Amanda Liu - Formal Presentation Slides (5.8h)... ✅
+  [416/2281] Amanda Liu - AutoPark Pitch Deck (2.2h)... ✅
+  [417/2281] Amanda Liu - Formal Presentation Slides (2.2h)... ✅
+  [418/2281] Amanda Liu - AutoPark Pitch Deck (1.8h)... ✅
+  [419/2281] Amanda Liu - Formal Presentation Slides (1.8h)... ✅
+  [420/2281] Amanda Liu - AutoPark Pitch Deck (5.2h)... ✅
+  [421/2281] Amanda Liu - Formal Presentation Slides (5.2h)... ✅
+  [422/2281] Amanda Liu - AutoPark Pitch Deck (5.5h)... ✅
+  [423/2281] Amanda Liu - Formal Presentation Slides (5.5h)... ✅
+  [424/2281] Amanda Liu - AutoPark Pitch Deck (4.6h)... ✅
+  [425/2281] Amanda Liu - Formal Presentation Slides (4.6h)... ✅
+  [426/2281] Amanda Liu - Practice presenting (10.4h)... ✅
+  [427/2281] Amanda Liu - Practice presenting (11.1h)... ✅
+  [428/2281] Amanda Liu - Perfecting script (11.6h)... ✅
+  [429/2281] Amanda Liu - Perfecting script (11.8h)... ✅
+  [430/2281] Amanda Liu - Perfecting script (9.3h)... ✅
+  [431/2281] Jaden Stanshall - Preparation (11.2h)... ✅
+  [432/2281] Jaden Stanshall - Preparation (13.0h)... ✅
+  [433/2281] Jaden Stanshall - Preparation (13.0h)... ✅
+  [434/2281] Jaden Stanshall - Understand existing codebase a (11.9h)... ✅
+  [435/2281] Jaden Stanshall - Understand existing codebase a (5.7h)... ✅
+  [436/2281] Jaden Stanshall - Implement safety cost into the (5.7h)... ✅
+  [437/2281] Jaden Stanshall - Understand existing codebase a (5.2h)... ✅
+  [438/2281] Jaden Stanshall - Implement safety cost into the (5.2h)... ✅
+  [439/2281] Jaden Stanshall - Understand existing codebase a (4.3h)... ✅
+  [440/2281] Jaden Stanshall - Integrate profiling into plann (4.3h)... ✅
+  [441/2281] Jaden Stanshall - Implement safety cost into the (4.3h)... ✅
+  [442/2281] Jaden Stanshall - Integrate profiling into plann (5.5h)... ✅
+  [443/2281] Jaden Stanshall - Implement safety cost into the (5.5h)... ✅
+  [444/2281] Jaden Stanshall - Integrate profiling into plann (9.9h)... ✅
+  [445/2281] Jaden Stanshall - Integrate profiling into plann (10.9h)... ✅
+  [446/2281] Jaden Stanshall - Integrate profiling into plann (11.3h)... ✅
+  [447/2281] Jaden Stanshall - Parking Light Implementation (11.4h)... ✅
+  [448/2281] Jaden Stanshall - Parking Light Implementation (10.2h)... ✅
+  [449/2281] Jaden Stanshall - Parking Light Implementation (10.4h)... ✅
+  [450/2281] Jaden Stanshall - Parking Light Implementation (4.9h)... ✅
+  [451/2281] Jaden Stanshall - Fix Parking (4.9h)... ✅
+  [452/2281] Jaden Stanshall - Fix Parking (10.0h)... ✅
+  [453/2281] Jaden Stanshall - Fix Parking (10.9h)... ✅
+  [454/2281] Jaden Stanshall - Fix Parking (9.6h)... ✅
+  [455/2281] Jaden Stanshall - Fix Parking (10.7h)... ✅
+  [456/2281] Jaden Stanshall - Fix Parking (11.0h)... ✅
+  [457/2281] Jaden Stanshall - Fix Parking (8.8h)... ✅
+  [458/2281] Rohan Batchu - Preparation (11.6h)... ✅
+  [459/2281] Rohan Batchu - Preparation (13.0h)... ✅
+  [460/2281] Rohan Batchu - Preparation (13.0h)... ✅
+  [461/2281] Rohan Batchu - Set up test cases to showcase  (10.2h)... ✅
+  [462/2281] Rohan Batchu - Set up test cases to showcase  (5.4h)... ✅
+  [463/2281] Rohan Batchu - Graph optimization MVP (5.4h)... ✅
+  [464/2281] Rohan Batchu - Set up test cases to showcase  (5.5h)... ✅
+  [465/2281] Rohan Batchu - Graph optimization MVP (5.5h)... ✅
+  [466/2281] Rohan Batchu - Set up test cases to showcase  (4.3h)... ✅
+  [467/2281] Rohan Batchu - Safety analysis on current pla (4.3h)... ✅
+  [468/2281] Rohan Batchu - Graph optimization MVP (4.3h)... ✅
+  [469/2281] Rohan Batchu - Safety analysis on current pla (6.0h)... ✅
+  [470/2281] Rohan Batchu - Graph optimization MVP (6.0h)... ✅
+  [471/2281] Rohan Batchu - Safety analysis on current pla (3.8h)... ✅
+  [472/2281] Rohan Batchu - Explore solutions and implemen (3.8h)... ✅
+  [473/2281] Rohan Batchu - Graph optimization MVP (3.8h)... ✅
+  [474/2281] Rohan Batchu - Explore solutions and implemen (4.6h)... ✅
+  [475/2281] Rohan Batchu - Graph optimization MVP (4.6h)... ✅
+  [476/2281] Rohan Batchu - Explore solutions and implemen (5.3h)... ✅
+  [477/2281] Rohan Batchu - Graph optimization MVP (5.3h)... ✅
+  [478/2281] Rohan Batchu - Explore solutions and implemen (4.5h)... ✅
+  [479/2281] Rohan Batchu - Graph optimization MVP (4.5h)... ✅
+  [480/2281] Rohan Batchu - Explore solutions and implemen (1.8h)... ✅
+  [481/2281] Rohan Batchu - Test Planner on DYOC Map (1.8h)... ✅
+  [482/2281] Rohan Batchu - Graph optimization MVP (1.8h)... ✅
+  [483/2281] Rohan Batchu - Test Planner on DYOC Map (1.6h)... ✅
+  [484/2281] Rohan Batchu - Graph optimization MVP (1.6h)... ✅
+  [485/2281] Rohan Batchu - Test Planner on DYOC Map (4.9h)... ✅
+  [486/2281] Rohan Batchu - Graph optimization MVP (4.9h)... ✅
+  [487/2281] Rohan Batchu - Test Planner on DYOC Map (3.7h)... ✅
+  [488/2281] Rohan Batchu - Fix Crashes due to Map (3.7h)... ✅
+  [489/2281] Rohan Batchu - Graph optimization MVP (3.7h)... ✅
+  [490/2281] Rohan Batchu - Fix Crashes due to Map (3.4h)... ✅
+  [491/2281] Rohan Batchu - Graph optimization MVP (3.4h)... ✅
+  [492/2281] Rohan Batchu - Publish Route info to GUI (3.4h)... ✅
+  [493/2281] Rohan Batchu - Graph optimization MVP (6.3h)... ✅
+  [494/2281] Rohan Batchu - Publish Route info to GUI (6.3h)... ✅
+  [495/2281] Rohan Batchu - Graph optimization MVP (3.7h)... ✅
+  [496/2281] Rohan Batchu - C++ Conversion and Integration (3.7h)... ✅
+  [497/2281] Rohan Batchu - Publish Route info to GUI (3.7h)... ✅
+  [498/2281] Rohan Batchu - C++ Conversion and Integration (4.6h)... ✅
+  [499/2281] Rohan Batchu - Publish Route info to GUI (4.6h)... ✅
+  [500/2281] Rohan Batchu - C++ Conversion and Integration (10.3h)... ✅
+  [501/2281] Rohan Batchu - C++ Conversion and Integration (10.8h)... ✅
+  [502/2281] Tanmay Patel - Interviews (10.8h)... ✅
+  [503/2281] Tanmay Patel - Interviews (6.1h)... ✅
+  [504/2281] Tanmay Patel - Candidate decision madhouse (6.1h)... ✅
+  [505/2281] Sarah Xu - Preparation (12.6h)... ✅
+  [506/2281] Sarah Xu - Preparation (13.0h)... ✅
+  [507/2281] Sarah Xu - Preparation (13.0h)... ✅
+  [508/2281] Sarah Xu - Interviews (11.2h)... ✅
+  [509/2281] Sarah Xu - Interviews (4.8h)... ✅
+  [510/2281] Sarah Xu - Candidate decision madhouse (4.8h)... ✅
+  [511/2281] Sarah Xu - Integrate CARLA with aUToSenso (3.0h)... ✅
+  [512/2281] Sarah Xu - Set up Gitlab CI with Sim test (3.0h)... ✅
+  [513/2281] Sarah Xu - Implement 14 DOF vehicle model (3.0h)... ✅
+  [514/2281] Sarah Xu - Integrate CARLA with aUToSenso (3.8h)... ✅
+  [515/2281] Sarah Xu - Set up Gitlab CI with Sim test (3.8h)... ✅
+  [516/2281] Sarah Xu - Implement 14 DOF vehicle model (3.8h)... ✅
+  [517/2281] Sarah Xu - Integrate CARLA with aUToSenso (3.4h)... ✅
+  [518/2281] Sarah Xu - Set up Gitlab CI with Sim test (3.4h)... ✅
+  [519/2281] Sarah Xu - Implement 14 DOF vehicle model (3.4h)... ✅
+  [520/2281] Sarah Xu - Integrate CARLA with aUToSenso (2.4h)... ✅
+  [521/2281] Sarah Xu - Set up Gitlab CI with Sim test (2.4h)... ✅
+  [522/2281] Sarah Xu - Configure CI alerts (2.4h)... ✅
+  [523/2281] Sarah Xu - Implement 14 DOF vehicle model (2.4h)... ✅
+  [524/2281] Sarah Xu - Integrate CARLA with aUToSenso (4.3h)... ✅
+  [525/2281] Sarah Xu - Configure CI alerts (4.3h)... ✅
+  [526/2281] Sarah Xu - Implement 14 DOF vehicle model (4.3h)... ✅
+  [527/2281] Sarah Xu - Integrate CARLA with aUToSenso (2.7h)... ✅
+  [528/2281] Sarah Xu - Configure CI alerts (2.7h)... ✅
+  [529/2281] Sarah Xu - Implement 14 DOF vehicle model (2.7h)... ✅
+  [530/2281] Sarah Xu - Tune 14 DOF vehicle model (2.7h)... ✅
+  [531/2281] Sarah Xu - Integrate CARLA with aUToSenso (2.7h)... ✅
+  [532/2281] Sarah Xu - Configure CI alerts (2.7h)... ✅
+  [533/2281] Sarah Xu - CI Dashboard for results (2.7h)... ✅
+  [534/2281] Sarah Xu - Tune 14 DOF vehicle model (2.7h)... ✅
+  [535/2281] Sarah Xu - Integrate CARLA with aUToSenso (4.0h)... ✅
+  [536/2281] Sarah Xu - CI Dashboard for results (4.0h)... ✅
+  [537/2281] Sarah Xu - Tune 14 DOF vehicle model (4.0h)... ✅
+  [538/2281] Sarah Xu - Integrate CARLA with aUToSenso (2.2h)... ✅
+  [539/2281] Sarah Xu - CI Dashboard for results (2.2h)... ✅
+  [540/2281] Sarah Xu - Tune 14 DOF vehicle model (2.2h)... ✅
+  [541/2281] Sarah Xu - Design controller simulation a (2.2h)... ✅
+  [542/2281] Sarah Xu - CI Dashboard for results (3.9h)... ✅
+  [543/2281] Sarah Xu - Design controller simulation a (3.9h)... ✅
+  [544/2281] Sarah Xu - Create Simulation Video (3.9h)... ✅
+  [545/2281] Sarah Xu - Design controller simulation a (3.0h)... ✅
+  [546/2281] Sarah Xu - Create Simulation Video (3.0h)... ✅
+  [547/2281] Sarah Xu - Design controller simulation a (1.2h)... ✅
+  [548/2281] Sarah Xu - Add low-traction simulation sc (1.2h)... ✅
+  [549/2281] Sarah Xu - Create Simulation Video (1.2h)... ✅
+  [550/2281] Sarah Xu - aUToScheduler and other CI opt (3.0h)... ✅
+  [551/2281] Sarah Xu - Add low-traction simulation sc (3.0h)... ✅
+  [552/2281] Sarah Xu - Create Simulation Video (3.0h)... ✅
+  [553/2281] Sarah Xu - aUToScheduler and other CI opt (3.5h)... ✅
+  [554/2281] Sarah Xu - Add low-traction simulation sc (3.5h)... ✅
+  [555/2281] Sarah Xu - Create Simulation Video (3.5h)... ✅
+  [556/2281] Sarah Xu - aUToScheduler and other CI opt (4.8h)... ✅
+  [557/2281] Sarah Xu - Add low-traction simulation sc (4.8h)... ✅
+  [558/2281] Sarah Xu - aUToScheduler and other CI opt (3.3h)... ✅
+  [559/2281] Sarah Xu - Add low-traction simulation sc (3.3h)... ✅
+  [560/2281] Sarah Xu - Create Simulation Presentation (3.3h)... ✅
+  [561/2281] Sarah Xu - Create Simulation Presentation (12.1h)... ✅
+  [562/2281] Sarah Xu - Create Simulation Presentation (9.6h)... ✅
+  [563/2281] Davis Ko - Preparation (13.0h)... ✅
+  [564/2281] Davis Ko - Preparation (12.2h)... ✅
+  [565/2281] Davis Ko - Preparation (13.0h)... ✅
+  [566/2281] Davis Ko - Interviews (9.9h)... ✅
+  [567/2281] Davis Ko - Interviews (4.2h)... ✅
+  [568/2281] Davis Ko - Candidate decision madhouse (4.2h)... ✅
+  [569/2281] Davis Ko - Meet With Leads (10.3h)... ✅
+  [570/2281] Davis Ko - Meet With Leads (9.8h)... ✅
+  [571/2281] Davis Ko - Meet With Leads (11.0h)... ✅
+  [572/2281] Davis Ko - Meet With Leads (10.1h)... ✅
+  [573/2281] Davis Ko - Meet With Leads (13.0h)... ✅
+  [574/2281] Davis Ko - Meet With Leads (12.4h)... ✅
+  [575/2281] Davis Ko - Meet With Leads (12.9h)... ✅
+  [576/2281] Davis Ko - Meet With Leads (10.9h)... ✅
+  [577/2281] Davis Ko - Meet With Leads (5.8h)... ✅
+  [578/2281] Davis Ko - Perform Validation Tests (5.8h)... ✅
+  [579/2281] Davis Ko - Perform Validation Tests (12.8h)... ✅
+  [580/2281] Davis Ko - Perform Validation Tests (5.1h)... ✅
+  [581/2281] Davis Ko - Perform Validation Tests (2.8h)... ✅
+  [582/2281] Davis Ko - Perform Validation Tests (10.5h)... ✅
+  [583/2281] Davis Ko - Perform Validation Tests (12.1h)... ✅
+  [584/2281] Davis Ko - Perform Validation Tests (5.7h)... ✅
+  [585/2281] Davis Ko - Draft SOTIF (5.7h)... ✅
+  [586/2281] Davis Ko - Perform Validation Tests (5.2h)... ✅
+  [587/2281] Davis Ko - Draft SOTIF (5.2h)... ✅
+  [588/2281] Davis Ko - Perform Validation Tests (5.5h)... ✅
+  [589/2281] Davis Ko - Draft SOTIF (5.5h)... ✅
+  [590/2281] Davis Ko - Perform Validation Tests (5.8h)... ✅
+  [591/2281] Davis Ko - Draft SOTIF (5.8h)... ✅
+  [592/2281] Davis Ko - Perform Validation Tests (4.3h)... ✅
+  [593/2281] Davis Ko - Draft SOTIF (4.3h)... ✅
+  [594/2281] Davis Ko - Perform Validation Tests (6.0h)... ✅
+  [595/2281] Davis Ko - Draft SOTIF (6.0h)... ✅
+  [596/2281] Davis Ko - Draft SOTIF (9.5h)... ✅
+  [597/2281] Davis Ko - Draft SOTIF (4.4h)... ✅
+  [598/2281] Davis Ko - SOTIF Finalization (4.4h)... ✅
+  [599/2281] Davis Ko - SOTIF Finalization (10.8h)... ✅
+  [600/2281] Davis Ko - SOTIF Finalization (9.2h)... ✅
+  [601/2281] Davis Ko - SOTIF Finalization (10.6h)... ✅
+  [602/2281] Davis Ko - SOTIF Finalization (4.5h)... ✅
+  [603/2281] Davis Ko - SS Presentation (4.5h)... ✅
+  [604/2281] Davis Ko - SS Presentation (9.2h)... ✅
+  [605/2281] Davis Ko - SS Presentation (12.4h)... ✅
+  [606/2281] Davis Ko - SS Presentation (11.2h)... ✅
+  [607/2281] Davis Ko - SS Presentation (8.8h)... ✅
+  [608/2281] Davis Ko - SS Presentation (9.3h)... ✅
+  [609/2281] Aiden Wang - Preparation (12.3h)... ✅
+  [610/2281] Aiden Wang - Preparation (12.1h)... ✅
+  [611/2281] Aiden Wang - Preparation (13.0h)... ✅
+  [612/2281] Aiden Wang - Interviews (8.7h)... ✅
+  [613/2281] Aiden Wang - Interviews (5.2h)... ✅
+  [614/2281] Aiden Wang - Candidate decision madhouse (5.2h)... ✅
+  [615/2281] Aiden Wang - Environment Setup (9.6h)... ✅
+  [616/2281] Aiden Wang - Environment Setup (6.1h)... ✅
+  [617/2281] Aiden Wang - Pipeline + Code Walk through (6.1h)... ✅
+  [618/2281] Aiden Wang - Pipeline + Code Walk through (11.7h)... ✅
+  [619/2281] Aiden Wang - Pipeline + Code Walk through (8.5h)... ✅
+  [620/2281] Aiden Wang - Pipeline + Code Walk through (6.5h)... ✅
+  [621/2281] Aiden Wang - Sliding Window KF (6.5h)... ✅
+  [622/2281] Aiden Wang - Sliding Window KF (9.7h)... ✅
+  [623/2281] Aiden Wang - Sliding Window KF (9.9h)... ✅
+  [624/2281] Aiden Wang - Sliding Window KF (9.2h)... ✅
+  [625/2281] Aiden Wang - Sliding Window KF (8.8h)... ✅
+  [626/2281] Aiden Wang - Sliding Window KF (9.6h)... ✅
+  [627/2281] Aiden Wang - Sliding Window KF (2.5h)... ✅
+  [628/2281] Aiden Wang - BEV Tracking Pipeline w/o Map- (2.5h)... ✅
+  [629/2281] Aiden Wang - BEV Tracking Pipeline w/o Map- (2.7h)... ✅
+  [630/2281] Aiden Wang - BEV Tracking Pipeline w/o Map- (9.4h)... ✅
+  [631/2281] Aiden Wang - BEV Tracking Pipeline w/o Map- (10.7h)... ✅
+  [632/2281] Aiden Wang - BEV Tracking Pipeline w/o Map- (11.5h)... ✅
+  [633/2281] Aiden Wang - BEV Tracking Pipeline w/o Map- (10.2h)... ✅
+  [634/2281] Aiden Wang - BEV Tracking Pipeline w/o Map- (9.7h)... ✅
+  [635/2281] Aiden Wang - Sliding Window Testing (3.6h)... ✅
+  [636/2281] Aiden Wang - BEV Tracking Pipeline w/o Map- (3.6h)... ✅
+  [637/2281] Aiden Wang - BEV Tracking Pipeline w/ Map-S (3.6h)... ✅
+  [638/2281] Aiden Wang - Sliding Window Testing (5.3h)... ✅
+  [639/2281] Aiden Wang - BEV Tracking Pipeline w/ Map-S (5.3h)... ✅
+  [640/2281] Aiden Wang - Sliding Window Testing (6.0h)... ✅
+  [641/2281] Aiden Wang - BEV Tracking Pipeline w/ Map-S (6.0h)... ✅
+  [642/2281] Aiden Wang - Sliding Window Testing (5.2h)... ✅
+  [643/2281] Aiden Wang - BEV Tracking Pipeline w/ Map-S (5.2h)... ✅
+  [644/2281] Aiden Wang - Sliding Window Testing (3.9h)... ✅
+  [645/2281] Aiden Wang - BEV Tracking Pipeline w/ Map-S (3.9h)... ✅
+  [646/2281] Aiden Wang - BEV Tracking Pipeline Validati (3.9h)... ✅
+  [647/2281] Aiden Wang - Sliding Window Testing (5.3h)... ✅
+  [648/2281] Aiden Wang - BEV Tracking Pipeline Validati (5.3h)... ✅
+  [649/2281] Aiden Wang - Sliding Window Testing (4.9h)... ✅
+  [650/2281] Aiden Wang - BEV Tracking Pipeline Validati (4.9h)... ✅
+  [651/2281] Aiden Wang - BEV Tracking Pipeline Validati (11.3h)... ✅
+  [652/2281] Aiden Wang - BEV Tracking Pipeline Validati (8.3h)... ✅
+  [653/2281] Aiden Wang - BEV Tracking Pipeline Validati (10.5h)... ✅
+  [654/2281] Aiden Wang - BEV Tracking Pipeline Validati (7.8h)... ✅
+  [655/2281] Aiden Wang - BEV Tracking Pipeline Validati (10.6h)... ✅
+  [656/2281] Aiden Wang - BEV Tracking Pipeline Validati (10.3h)... ✅
+  [657/2281] Aiden Wang - BEV Tracking Pipeline Validati (10.7h)... ✅
+  [658/2281] Eric Zhang - Preparation (13.0h)... ✅
+  [659/2281] Eric Zhang - Preparation (12.2h)... ✅
+  [660/2281] Eric Zhang - Preparation (12.8h)... ✅
+  [661/2281] Eric Zhang - DYOC Message Failure Fix (3.4h)... ✅
+  [662/2281] Eric Zhang - Wheel Encoder Bringup (3.4h)... ✅
+  [663/2281] Eric Zhang - RPi Specification (3.4h)... ✅
+  [664/2281] Eric Zhang - DYOC Message Failure Fix (3.3h)... ✅
+  [665/2281] Eric Zhang - Wheel Encoder Bringup (3.3h)... ✅
+  [666/2281] Eric Zhang - RPi Specification (3.3h)... ✅
+  [667/2281] Eric Zhang - DYOC Message Failure Fix (4.0h)... ✅
+  [668/2281] Eric Zhang - Wheel Encoder Bringup (4.0h)... ✅
+  [669/2281] Eric Zhang - RPi Specification (4.0h)... ✅
+  [670/2281] Eric Zhang - DYOC Message Failure Fix (6.5h)... ✅
+  [671/2281] Eric Zhang - Wheel Encoder Bringup (6.5h)... ✅
+  [672/2281] Eric Zhang - DYOC Message Failure Fix (4.3h)... ✅
+  [673/2281] Eric Zhang - Wheel Encoder Bringup (4.3h)... ✅
+  [674/2281] Eric Zhang - RPi Environment Setup (4.3h)... ✅
+  [675/2281] Eric Zhang - Wheel Encoder Bringup (5.2h)... ✅
+  [676/2281] Eric Zhang - RPi Environment Setup (5.2h)... ✅
+  [677/2281] Eric Zhang - Wheel Encoder Bringup (4.3h)... ✅
+  [678/2281] Eric Zhang - RPi Environment Setup (4.3h)... ✅
+  [679/2281] Eric Zhang - RPi Performance Testing (4.3h)... ✅
+  [680/2281] Eric Zhang - Wheel Encoder Bringup (4.8h)... ✅
+  [681/2281] Eric Zhang - RPi Performance Testing (4.8h)... ✅
+  [682/2281] Eric Zhang - Wheel Encoder Bringup (3.6h)... ✅
+  [683/2281] Eric Zhang - Wheel Encoder Fix (3.6h)... ✅
+  [684/2281] Eric Zhang - RPi Performance Testing (3.6h)... ✅
+  [685/2281] Eric Zhang - Wheel Encoder Fix (6.1h)... ✅
+  [686/2281] Eric Zhang - RPi Performance Testing (6.1h)... ✅
+  [687/2281] Eric Zhang - Wheel Encoder Fix (1.8h)... ✅
+  [688/2281] Eric Zhang - RPi Performance Testing (1.8h)... ✅
+  [689/2281] Eric Zhang - Wheel Encoder Fix (1.4h)... ✅
+  [690/2281] Eric Zhang - RPi Performance Testing (1.4h)... ✅
+  [691/2281] Eric Zhang - Wheel Encoder Fix (5.0h)... ✅
+  [692/2281] Eric Zhang - RPi Performance Testing (5.0h)... ✅
+  [693/2281] Eric Zhang - Wheel Encoder Fix (2.0h)... ✅
+  [694/2281] Eric Zhang - RPi Performance Testing (2.0h)... ✅
+  [695/2281] Eric Zhang - Laptop Performance Testing (2.0h)... ✅
+  [696/2281] Eric Zhang - Traffic Light <> RSU (2.0h)... ✅
+  [697/2281] Eric Zhang - Wheel Encoder Fix (3.3h)... ✅
+  [698/2281] Eric Zhang - Laptop Performance Testing (3.3h)... ✅
+  [699/2281] Eric Zhang - Traffic Light <> RSU (3.3h)... ✅
+  [700/2281] Eric Zhang - Wheel Encoder Fix (3.7h)... ✅
+  [701/2281] Eric Zhang - Laptop Performance Testing (3.7h)... ✅
+  [702/2281] Eric Zhang - Traffic Light <> RSU (3.7h)... ✅
+  [703/2281] Eric Zhang - Laptop Performance Testing (5.8h)... ✅
+  [704/2281] Eric Zhang - Traffic Light <> RSU (5.8h)... ✅
+  [705/2281] Eric Zhang - Laptop Performance Testing (5.4h)... ✅
+  [706/2281] Eric Zhang - Traffic Light <> RSU (5.4h)... ✅
+  [707/2281] Eric Zhang - Traffic Light <> RSU (11.8h)... ✅
+  [708/2281] Eric Zhang - Traffic Light <> RSU (11.8h)... ✅
+  [709/2281] Eric Zhang - Traffic Light <> RSU (5.8h)... ✅
+  [710/2281] Eric Zhang - RSU <> PC (5.8h)... ✅
+  [711/2281] Eric Zhang - RSU <> PC (11.7h)... ✅
+  [712/2281] Eric Zhang - RSU <> PC (9.6h)... ✅
+  [713/2281] Eric Zhang - RSU <> PC (11.3h)... ✅
+  [714/2281] Eric Zhang - RSU <> PC (6.4h)... ✅
+  [715/2281] Eric Zhang - V2X Integration (6.4h)... ✅
+  [716/2281] Eric Zhang - V2X Integration (11.8h)... ✅
+  [717/2281] Eric Zhang - V2X Integration (13.0h)... ✅
+  [718/2281] Eric Zhang - V2X Integration (9.2h)... ✅
+  [719/2281] Eric Zhang - V2X Integration (9.8h)... ✅
+  [720/2281] Eric Zhang - V2X Integration (11.6h)... ✅
+  [721/2281] Annie Rong - Research augmentation methods (9.7h)... ✅
+  [722/2281] Annie Rong - Research augmentation methods (6.5h)... ✅
+  [723/2281] Annie Rong - Research augmentation methods (10.0h)... ✅
+  [724/2281] Annie Rong - Research augmentation methods (9.3h)... ✅
+  [725/2281] Annie Rong - Research augmentation methods (8.3h)... ✅
+  [726/2281] Annie Rong - Research augmentation methods (8.7h)... ✅
+  [727/2281] Annie Rong - Research augmentation methods (8.5h)... ✅
+  [728/2281] Annie Rong - Research augmentation methods (9.2h)... ✅
+  [729/2281] Annie Rong - Research augmentation methods (4.1h)... ✅
+  [730/2281] Annie Rong - Research augmentation methods (2.8h)... ✅
+  [731/2281] Annie Rong - Research augmentation methods (8.6h)... ✅
+  [732/2281] Annie Rong - Research augmentation methods (8.3h)... ✅
+  [733/2281] Annie Rong - Research augmentation methods (9.2h)... ✅
+  [734/2281] Annie Rong - Research augmentation methods (8.2h)... ✅
+  [735/2281] Annie Rong - Research augmentation methods (9.6h)... ✅
+  [736/2281] Annie Rong - Research augmentation methods (8.2h)... ✅
+  [737/2281] Annie Rong - Research augmentation methods (8.4h)... ✅
+  [738/2281] Annie Rong - Research augmentation methods (7.3h)... ✅
+  [739/2281] Annie Rong - Research augmentation methods (8.0h)... ✅
+  [740/2281] Annie Rong - Research augmentation methods (4.2h)... ✅
+  [741/2281] Annie Rong - Add light condition augmentati (4.2h)... ✅
+  [742/2281] Annie Rong - Add light condition augmentati (8.8h)... ✅
+  [743/2281] Annie Rong - Add light condition augmentati (8.8h)... ✅
+  [744/2281] Annie Rong - Add light condition augmentati (8.8h)... ✅
+  [745/2281] Annie Rong - Add light condition augmentati (8.8h)... ✅
+  [746/2281] Annie Rong - Add light condition augmentati (6.4h)... ✅
+  [747/2281] Annie Rong - Add light condition augmentati (7.6h)... ✅
+  [748/2281] Annie Rong - Add light condition augmentati (7.1h)... ✅
+  [749/2281] Azure Lin - Graph optimization MVP (9.1h)... ✅
+  [750/2281] Azure Lin - Graph optimization MVP (9.2h)... ✅
+  [751/2281] Azure Lin - Graph optimization MVP (10.0h)... ✅
+  [752/2281] Azure Lin - Graph optimization MVP (8.3h)... ✅
+  [753/2281] Azure Lin - Graph optimization MVP (9.1h)... ✅
+  [754/2281] Azure Lin - Graph optimization MVP (7.9h)... ✅
+  [755/2281] Azure Lin - Graph optimization MVP (7.1h)... ✅
+  [756/2281] Azure Lin - Graph optimization MVP (8.3h)... ✅
+  [757/2281] Azure Lin - Graph optimization MVP (4.3h)... ✅
+  [758/2281] Azure Lin - Graph optimization MVP (2.6h)... ✅
+  [759/2281] Azure Lin - Graph optimization MVP (8.7h)... ✅
+  [760/2281] Azure Lin - Graph optimization MVP (8.8h)... ✅
+  [761/2281] Azure Lin - Graph optimization MVP (8.9h)... ✅
+  [762/2281] Azure Lin - Graph optimization MVP (8.3h)... ✅
+  [763/2281] Azure Lin - Graph optimization MVP (4.5h)... ✅
+  [764/2281] Azure Lin - C++ Conversion and Integration (4.5h)... ✅
+  [765/2281] Azure Lin - C++ Conversion and Integration (8.6h)... ✅
+  [766/2281] Azure Lin - C++ Conversion and Integration (8.7h)... ✅
+  [767/2281] Azure Lin - C++ Conversion and Integration (8.7h)... ✅
+  [768/2281] Caroline Tian - Complete MVP lane localization (9.6h)... ✅
+  [769/2281] Caroline Tian - Complete MVP lane localization (8.0h)... ✅
+  [770/2281] Caroline Tian - Complete MVP lane localization (9.2h)... ✅
+  [771/2281] Caroline Tian - Complete MVP lane localization (9.1h)... ✅
+  [772/2281] Caroline Tian - Complete MVP lane localization (8.8h)... ✅
+  [773/2281] Caroline Tian - Complete MVP lane localization (9.6h)... ✅
+  [774/2281] Caroline Tian - Complete MVP lane localization (7.7h)... ✅
+  [775/2281] Caroline Tian - Complete MVP lane localization (10.0h)... ✅
+  [776/2281] Caroline Tian - Complete MVP lane localization (7.7h)... ✅
+  [777/2281] Caroline Tian - Complete MVP lane localization (8.5h)... ✅
+  [778/2281] Caroline Tian - Complete MVP lane localization (8.4h)... ✅
+  [779/2281] Caroline Tian - Complete MVP lane localization (7.9h)... ✅
+  [780/2281] Caroline Tian - Complete MVP lane localization (9.5h)... ✅
+  [781/2281] Caroline Tian - Complete MVP lane localization (3.3h)... ✅
+  [782/2281] Caroline Tian - Complete MVP lane localization (2.5h)... ✅
+  [783/2281] Caroline Tian - Complete MVP lane localization (9.7h)... ✅
+  [784/2281] Caroline Tian - Complete MVP lane localization (4.2h)... ✅
+  [785/2281] Caroline Tian - Develop Particle Filter (4.2h)... ✅
+  [786/2281] Caroline Tian - Develop Particle Filter (9.0h)... ✅
+  [787/2281] Caroline Tian - Develop Particle Filter (8.4h)... ✅
+  [788/2281] Caroline Tian - Develop Particle Filter (8.8h)... ✅
+  [789/2281] Caroline Tian - Develop Particle Filter (8.1h)... ✅
+  [790/2281] Caroline Tian - Lane Loc Validation (7.0h)... ✅
+  [791/2281] Caroline Tian - Lane Loc Validation (8.3h)... ✅
+  [792/2281] Caroline Tian - Lane Loc Validation (8.8h)... ✅
+  [793/2281] Caroline Tian - Lane Loc Validation (7.8h)... ✅
+  [794/2281] Caroline Tian - Lane Loc Validation (9.7h)... ✅
+  [795/2281] Caroline Tian - Lane Loc Validation (8.7h)... ✅
+  [796/2281] Caroline Tian - Lane Loc Validation (7.8h)... ✅
+  [797/2281] Caroline Tian - Lane Loc Validation (7.7h)... ✅
+  [798/2281] David Daniliuc - Environment setup (8.2h)... ✅
+  [799/2281] David Daniliuc - Environment setup (8.0h)... ✅
+  [800/2281] David Daniliuc - Environment setup (3.9h)... ✅
+  [801/2281] David Daniliuc - Handle multiple address points (3.9h)... ✅
+  [802/2281] David Daniliuc - Handle multiple address points (8.5h)... ✅
+  [803/2281] David Daniliuc - Handle multiple address points (10.0h)... ✅
+  [804/2281] David Daniliuc - Handle multiple address points (8.8h)... ✅
+  [805/2281] David Daniliuc - Handle multiple address points (8.9h)... ✅
+  [806/2281] David Daniliuc - Handle multiple address points (8.1h)... ✅
+  [807/2281] David Daniliuc - Handle multiple address points (8.7h)... ✅
+  [808/2281] David Daniliuc - Handle multiple address points (8.3h)... ✅
+  [809/2281] David Daniliuc - Handle multiple address points (2.0h)... ✅
+  [810/2281] David Daniliuc - 2D Map Feature Integration (2.0h)... ✅
+  [811/2281] David Daniliuc - 2D Map Feature Integration (2.3h)... ✅
+  [812/2281] David Daniliuc - 2D Map Feature Integration (7.7h)... ✅
+  [813/2281] David Daniliuc - 2D Map Feature Integration (9.0h)... ✅
+  [814/2281] David Daniliuc - 2D Map Feature Integration (7.7h)... ✅
+  [815/2281] David Daniliuc - 2D Map Feature Integration (9.3h)... ✅
+  [816/2281] David Daniliuc - 2D Map Feature Integration (7.5h)... ✅
+  [817/2281] David Daniliuc - 2D Map Feature Integration (8.0h)... ✅
+  [818/2281] David Daniliuc - 2D Map Feature Integration (7.2h)... ✅
+  [819/2281] David Xu - PDMS V2.1 Design (8.9h)... ✅
+  [820/2281] David Xu - PDMS V2.1 Design (9.8h)... ✅
+  [821/2281] David Xu - PDMS V2.1 Design (9.4h)... ✅
+  [822/2281] David Xu - PDMS V2.1 Design (9.3h)... ✅
+  [823/2281] David Xu - PDMS V2.1 Design (10.0h)... ✅
+  [824/2281] David Xu - PDMS V2.1 Design (9.2h)... ✅
+  [825/2281] David Xu - PDMS V2.1 Design (9.6h)... ✅
+  [826/2281] David Xu - PDMS V2.1 Design (9.6h)... ✅
+  [827/2281] David Xu - PDMS V2.1 Design (8.4h)... ✅
+  [828/2281] David Xu - PDMS V2.1 Design (7.6h)... ✅
+  [829/2281] David Xu - PDMS V2.1 Testing (10.0h)... ✅
+  [830/2281] David Xu - PDMS V2.1 Testing (8.8h)... ✅
+  [831/2281] David Xu - PDMS V2.1 Testing (9.0h)... ✅
+  [832/2281] David Xu - PDMS V2.1 Testing (8.1h)... ✅
+  [833/2281] Fahad - Environment Setup (9.1h)... ✅
+  [834/2281] Fahad - Environment Setup (8.7h)... ✅
+  [835/2281] Fahad - Environment Setup (3.8h)... ✅
+  [836/2281] Fahad - Research augmentation methods (3.8h)... ✅
+  [837/2281] Fahad - Research augmentation methods (8.6h)... ✅
+  [838/2281] Fahad - Research augmentation methods (10.0h)... ✅
+  [839/2281] Fahad - Research augmentation methods (9.0h)... ✅
+  [840/2281] Fahad - Research augmentation methods (9.2h)... ✅
+  [841/2281] Fahad - Research augmentation methods (8.7h)... ✅
+  [842/2281] Fahad - Research augmentation methods (9.0h)... ✅
+  [843/2281] Fahad - Research augmentation methods (9.6h)... ✅
+  [844/2281] Fahad - Research augmentation methods (3.7h)... ✅
+  [845/2281] Fahad - Research augmentation methods (2.4h)... ✅
+  [846/2281] Fahad - Research augmentation methods (9.7h)... ✅
+  [847/2281] Fahad - Research augmentation methods (7.9h)... ✅
+  [848/2281] Fahad - Research augmentation methods (8.9h)... ✅
+  [849/2281] Fahad - Research augmentation methods (8.4h)... ✅
+  [850/2281] Fahad - Research augmentation methods (8.8h)... ✅
+  [851/2281] Fahad - Research augmentation methods (8.4h)... ✅
+  [852/2281] Fahad - Research augmentation methods (8.0h)... ✅
+  [853/2281] Fahad - Research augmentation methods (9.5h)... ✅
+  [854/2281] Fahad - Research augmentation methods (7.4h)... ✅
+  [855/2281] Fahad - Research augmentation methods (4.7h)... ✅
+  [856/2281] Fahad - Add light condition augmentati (4.7h)... ✅
+  [857/2281] Fahad - Add light condition augmentati (9.0h)... ✅
+  [858/2281] Fahad - Add light condition augmentati (8.8h)... ✅
+  [859/2281] Fahad - Add light condition augmentati (8.1h)... ✅
+  [860/2281] Fahad - Add light condition augmentati (9.2h)... ✅
+  [861/2281] Fahad - Add light condition augmentati (8.3h)... ✅
+  [862/2281] Fahad - Add light condition augmentati (9.1h)... ✅
+  [863/2281] Fahad - Add light condition augmentati (8.2h)... ✅
+  [864/2281] Forest Li - Research (8.9h)... ✅
+  [865/2281] Forest Li - Research (9.3h)... ✅
+  [866/2281] Forest Li - Research (7.6h)... ✅
+  [867/2281] Forest Li - Research (9.4h)... ✅
+  [868/2281] Forest Li - Topic proposal (4.7h)... ✅
+  [869/2281] Forest Li - Research (4.7h)... ✅
+  [870/2281] Forest Li - Topic proposal (5.0h)... ✅
+  [871/2281] Forest Li - Research (5.0h)... ✅
+  [872/2281] Forest Li - Topic proposal (3.5h)... ✅
+  [873/2281] Forest Li - Research (3.5h)... ✅
+  [874/2281] Forest Li - Topic proposal (9.7h)... ✅
+  [875/2281] Forest Li - AutoPark Pitch Deck (3.6h)... ✅
+  [876/2281] Forest Li - Formal Presentation Slides (3.6h)... ✅
+  [877/2281] Forest Li - AutoPark Pitch Deck (4.0h)... ✅
+  [878/2281] Forest Li - Formal Presentation Slides (4.0h)... ✅
+  [879/2281] Forest Li - AutoPark Pitch Deck (3.8h)... ✅
+  [880/2281] Forest Li - Formal Presentation Slides (3.8h)... ✅
+  [881/2281] Forest Li - AutoPark Pitch Deck (2.4h)... ✅
+  [882/2281] Forest Li - Formal Presentation Slides (2.4h)... ✅
+  [883/2281] Forest Li - AutoPark Pitch Deck (1.4h)... ✅
+  [884/2281] Forest Li - Formal Presentation Slides (1.4h)... ✅
+  [885/2281] Forest Li - AutoPark Pitch Deck (3.6h)... ✅
+  [886/2281] Forest Li - Formal Presentation Slides (3.6h)... ✅
+  [887/2281] Forest Li - AutoPark Pitch Deck (4.3h)... ✅
+  [888/2281] Forest Li - Formal Presentation Slides (4.3h)... ✅
+  [889/2281] Forest Li - AutoPark Pitch Deck (4.7h)... ✅
+  [890/2281] Forest Li - Formal Presentation Slides (4.7h)... ✅
+  [891/2281] Forest Li - AutoPark Business Plan (9.5h)... ✅
+  [892/2281] Forest Li - AutoPark Business Plan (8.5h)... ✅
+  [893/2281] Forest Li - Project Management Presentatio (2.9h)... ✅
+  [894/2281] Forest Li - AutoPark Business Plan (2.9h)... ✅
+  [895/2281] Forest Li - Perfecting script (2.9h)... ✅
+  [896/2281] Forest Li - Project Management Presentatio (3.3h)... ✅
+  [897/2281] Forest Li - AutoPark Business Plan (3.3h)... ✅
+  [898/2281] Forest Li - Perfecting script (3.3h)... ✅
+  [899/2281] Forest Li - Project Management Presentatio (4.8h)... ✅
+  [900/2281] Forest Li - Perfecting script (4.8h)... ✅
+  [901/2281] Forest Li - Final Project Management Prese (7.5h)... ✅
+  [902/2281] Forest Li - Final Project Management Prese (8.9h)... ✅
+  [903/2281] Forest Li - Final Project Management Prese (9.5h)... ✅
+  [904/2281] Gerald Wang - Environment Set-up (8.0h)... ✅
+  [905/2281] Gerald Wang - Environment Set-up (7.9h)... ✅
+  [906/2281] Gerald Wang - Environment Set-up (3.7h)... ✅
+  [907/2281] Gerald Wang - Adding serial package to ROS  (3.7h)... ✅
+  [908/2281] Gerald Wang - Adding serial package to ROS  (4.3h)... ✅
+  [909/2281] Gerald Wang - Server side sensor power-toggl (4.3h)... ✅
+  [910/2281] Gerald Wang - Server side sensor power-toggl (9.0h)... ✅
+  [911/2281] Gerald Wang - Server side sensor power-toggl (10.0h)... ✅
+  [912/2281] Gerald Wang - Finish recovery strategies and (4.2h)... ✅
+  [913/2281] Gerald Wang - Add ability to toggle autonomy (4.2h)... ✅
+  [914/2281] Gerald Wang - Finish recovery strategies and (3.9h)... ✅
+  [915/2281] Gerald Wang - Add ability to toggle autonomy (3.9h)... ✅
+  [916/2281] Gerald Wang - Finish recovery strategies and (4.1h)... ✅
+  [917/2281] Gerald Wang - Add ability to toggle autonomy (4.1h)... ✅
+  [918/2281] Gerald Wang - Finish recovery strategies and (4.2h)... ✅
+  [919/2281] Gerald Wang - Add ability to toggle autonomy (4.2h)... ✅
+  [920/2281] Gerald Wang - Finish recovery strategies and (4.7h)... ✅
+  [921/2281] Gerald Wang - Add ability to toggle autonomy (4.7h)... ✅
+  [922/2281] Gerald Wang - Finish recovery strategies and (4.0h)... ✅
+  [923/2281] Gerald Wang - Add ability to toggle autonomy (4.0h)... ✅
+  [924/2281] Gerald Wang - Finish recovery strategies and (4.3h)... ✅
+  [925/2281] Gerald Wang - Add ability to toggle autonomy (4.3h)... ✅
+  [926/2281] Gerald Wang - Finish recovery strategies and (8.4h)... ✅
+  [927/2281] Gerald Wang - Finish recovery strategies and (6.5h)... ✅
+  [928/2281] Gordon Tan - Environment Setup (8.7h)... ✅
+  [929/2281] Gordon Tan - Environment Setup (7.9h)... ✅
+  [930/2281] Gordon Tan - Environment Setup (8.5h)... ✅
+  [931/2281] Hankun Lin - Preparation (11.6h)... ✅
+  [932/2281] Hankun Lin - Preparation (10.5h)... ✅
+  [933/2281] Hankun Lin - Preparation (13.0h)... ✅
+  [934/2281] Hankun Lin - Interviews (13.0h)... ✅
+  [935/2281] Hankun Lin - Interviews (5.5h)... ✅
+  [936/2281] Hankun Lin - Candidate decision madhouse (5.5h)... ✅
+  [937/2281] Hankun Lin - CAN Isolation Board Redesign (2.7h)... ✅
+  [938/2281] Hankun Lin - Manufacture Spare V2.0 (2.7h)... ✅
+  [939/2281] Hankun Lin - PDMS V2.1 Design (2.7h)... ✅
+  [940/2281] Hankun Lin - CAN Isolation Board Redesign (4.3h)... ✅
+  [941/2281] Hankun Lin - Manufacture Spare V2.0 (4.3h)... ✅
+  [942/2281] Hankun Lin - PDMS V2.1 Design (4.3h)... ✅
+  [943/2281] Hankun Lin - CAN Isolation Board Redesign (3.8h)... ✅
+  [944/2281] Hankun Lin - Manufacture Spare V2.0 (3.8h)... ✅
+  [945/2281] Hankun Lin - PDMS V2.1 Design (3.8h)... ✅
+  [946/2281] Hankun Lin - CAN Isolation Board Redesign (3.7h)... ✅
+  [947/2281] Hankun Lin - Manufacture Spare V2.0 (3.7h)... ✅
+  [948/2281] Hankun Lin - PDMS V2.1 Design (3.7h)... ✅
+  [949/2281] Hankun Lin - Rewiring Parts Order (3.2h)... ✅
+  [950/2281] Hankun Lin - CAN Isolation Board Redesign (3.2h)... ✅
+  [951/2281] Hankun Lin - Manufacture Spare V2.0 (3.2h)... ✅
+  [952/2281] Hankun Lin - PDMS V2.1 Design (3.2h)... ✅
+  [953/2281] Hankun Lin - Rewiring Parts Order (2.8h)... ✅
+  [954/2281] Hankun Lin - CAN Isolation Board Redesign (2.8h)... ✅
+  [955/2281] Hankun Lin - Manufacture Spare V2.0 (2.8h)... ✅
+  [956/2281] Hankun Lin - PDMS V2.1 Design (2.8h)... ✅
+  [957/2281] Hankun Lin - Rewiring Parts Order (2.8h)... ✅
+  [958/2281] Hankun Lin - CAN Isolation Board Redesign (2.8h)... ✅
+  [959/2281] Hankun Lin - Manufacture Spare V2.0 (2.8h)... ✅
+  [960/2281] Hankun Lin - PDMS V2.1 Design (2.8h)... ✅
+  [961/2281] Hankun Lin - Rewiring Parts Order (2.6h)... ✅
+  [962/2281] Hankun Lin - CAN Isolation Board Redesign (2.6h)... ✅
+  [963/2281] Hankun Lin - Manufacture Spare V2.0 (2.6h)... ✅
+  [964/2281] Hankun Lin - PDMS V2.1 Design (2.6h)... ✅
+  [965/2281] Hankun Lin - CAN Isolation Board Redesign (2.0h)... ✅
+  [966/2281] Hankun Lin - Manufacture CAN Isolation Boar (2.0h)... ✅
+  [967/2281] Hankun Lin - Manufacture Spare V2.0 (2.0h)... ✅
+  [968/2281] Hankun Lin - Spare V2.0 Testing (2.0h)... ✅
+  [969/2281] Hankun Lin - PDMS V2.1 Design (2.0h)... ✅
+  [970/2281] Hankun Lin - Manufacture CAN Isolation Boar (4.2h)... ✅
+  [971/2281] Hankun Lin - Spare V2.0 Testing (4.2h)... ✅
+  [972/2281] Hankun Lin - PDMS V2.1 Design (4.2h)... ✅
+  [973/2281] Hankun Lin - Manufacture CAN Isolation Boar (2.5h)... ✅
+  [974/2281] Hankun Lin - Spare V2.0 Testing (2.5h)... ✅
+  [975/2281] Hankun Lin - Vehicle Rewiring (1.4h)... ✅
+  [976/2281] Hankun Lin - Manufacture CAN Isolation Boar (1.4h)... ✅
+  [977/2281] Hankun Lin - Vehicle Rewiring (5.8h)... ✅
+  [978/2281] Hankun Lin - Manufacture CAN Isolation Boar (5.8h)... ✅
+  [979/2281] Hankun Lin - Vehicle Rewiring (3.5h)... ✅
+  [980/2281] Hankun Lin - Manufacture CAN Isolation Boar (3.5h)... ✅
+  [981/2281] Hankun Lin - Manufacture V2.1 (3.5h)... ✅
+  [982/2281] Hankun Lin - Vehicle Rewiring (3.8h)... ✅
+  [983/2281] Hankun Lin - Manufacture CAN Isolation Boar (3.8h)... ✅
+  [984/2281] Hankun Lin - Manufacture V2.1 (3.8h)... ✅
+  [985/2281] Hankun Lin - Manufacture CAN Isolation Boar (5.5h)... ✅
+  [986/2281] Hankun Lin - Manufacture V2.1 (5.5h)... ✅
+  [987/2281] Hankun Lin - Manufacture V2.1 (8.9h)... ✅
+  [988/2281] Hankun Lin - Manufacture V2.1 (8.6h)... ✅
+  [989/2281] Hankun Lin - Manufacture V2.1 (12.1h)... ✅
+  [990/2281] Hankun Lin - Manufacture V2.1 (9.9h)... ✅
+  [991/2281] Hankun Lin - Manufacture V2.1 (5.4h)... ✅
+  [992/2281] Hankun Lin - PDMS V2.1 Testing (5.4h)... ✅
+  [993/2281] Hankun Lin - PDMS V2.1 Testing (10.7h)... ✅
+  [994/2281] Hankun Lin - PDMS V2.1 Testing (11.5h)... ✅
+  [995/2281] Hankun Lin - PDMS V2.1 Testing (10.2h)... ✅
+  [996/2281] Henry Chu - Environment Setup (8.5h)... ✅
+  [997/2281] Henry Chu - Environment Setup (9.1h)... ✅
+  [998/2281] Henry Chu - Environment Setup (8.6h)... ✅
+  [999/2281] Henry Chu - Add Fog Augmentation (2.9h)... ✅
+  [1000/2281] Henry Chu - Add Fog Preprocessing Step usi (2.9h)... ✅
+  [1001/2281] Henry Chu - Add Rain Augmentation (2.9h)... ✅
+  [1002/2281] Henry Chu - Add Fog Augmentation (2.9h)... ✅
+  [1003/2281] Henry Chu - Add Fog Preprocessing Step usi (2.9h)... ✅
+  [1004/2281] Henry Chu - Add Rain Augmentation (2.9h)... ✅
+  [1005/2281] Henry Chu - Add Fog Augmentation (3.3h)... ✅
+  [1006/2281] Henry Chu - Add Fog Preprocessing Step usi (3.3h)... ✅
+  [1007/2281] Henry Chu - Add Rain Augmentation (3.3h)... ✅
+  [1008/2281] Henry Chu - Add Fog Augmentation (2.5h)... ✅
+  [1009/2281] Henry Chu - Add Fog Preprocessing Step usi (2.5h)... ✅
+  [1010/2281] Henry Chu - Add Rain Augmentation (2.5h)... ✅
+  [1011/2281] Henry Chu - Add Fog Augmentation (2.5h)... ✅
+  [1012/2281] Henry Chu - Add Fog Preprocessing Step usi (2.5h)... ✅
+  [1013/2281] Henry Chu - Add Rain Augmentation (2.5h)... ✅
+  [1014/2281] Henry Chu - Add Fog Augmentation (2.7h)... ✅
+  [1015/2281] Henry Chu - Add Fog Preprocessing Step usi (2.7h)... ✅
+  [1016/2281] Henry Chu - Add Rain Augmentation (2.7h)... ✅
+  [1017/2281] Henry Chu - Add Fog Augmentation (3.0h)... ✅
+  [1018/2281] Henry Chu - Add Fog Preprocessing Step usi (3.0h)... ✅
+  [1019/2281] Henry Chu - Add Rain Augmentation (3.0h)... ✅
+  [1020/2281] Henry Chu - Add Fog Augmentation (3.2h)... ✅
+  [1021/2281] Henry Chu - Add Fog Preprocessing Step usi (3.2h)... ✅
+  [1022/2281] Henry Chu - Add Rain Augmentation (3.2h)... ✅
+  [1023/2281] Henry Chu - Add Fog Augmentation (1.9h)... ✅
+  [1024/2281] Henry Chu - Add Fog Preprocessing Step usi (1.9h)... ✅
+  [1025/2281] Henry Chu - Add Rain Augmentation (1.9h)... ✅
+  [1026/2281] Henry Chu - Validate Weather Augmentation (1.9h)... ✅
+  [1027/2281] Henry Chu - Validate Weather Augmentation (8.3h)... ✅
+  [1028/2281] Henry Chu - Validate Weather Augmentation (7.7h)... ✅
+  [1029/2281] Henry Chu - Validate Weather Augmentation (7.0h)... ✅
+  [1030/2281] Henry Chu - Validate Weather Augmentation (8.2h)... ✅
+  [1031/2281] Henry Chu - Validate Weather Augmentation (7.6h)... ✅
+  [1032/2281] Henry Chu - Validate Weather Augmentation (10.0h)... ✅
+  [1033/2281] Henry Chu - Validate Weather Augmentation (7.3h)... ✅
+  [1034/2281] Henry Chu - Validate Weather Augmentation (7.9h)... ✅
+  [1035/2281] Imran Aziz - Environment setup (7.1h)... ✅
+  [1036/2281] Imran Aziz - Environment setup (9.1h)... ✅
+  [1037/2281] Imran Aziz - Environment setup (4.4h)... ✅
+  [1038/2281] Imran Aziz - Display Global Planned Path (4.4h)... ✅
+  [1039/2281] Imran Aziz - Display Global Planned Path (9.6h)... ✅
+  [1040/2281] Imran Aziz - Display Global Planned Path (10.0h)... ✅
+  [1041/2281] Imran Aziz - Display Global Planned Path (8.4h)... ✅
+  [1042/2281] Imran Aziz - Display Global Planned Path (8.9h)... ✅
+  [1043/2281] Imran Aziz - Display Global Planned Path (8.7h)... ✅
+  [1044/2281] Imran Aziz - Display Global Planned Path (8.0h)... ✅
+  [1045/2281] Imran Aziz - Display Global Planned Path (7.9h)... ✅
+  [1046/2281] Imran Aziz - Display Global Planned Path (2.2h)... ✅
+  [1047/2281] Imran Aziz - 2D Map Feature Integration (2.2h)... ✅
+  [1048/2281] Imran Aziz - 2D Map Feature Integration (2.4h)... ✅
+  [1049/2281] Imran Aziz - 2D Map Feature Integration (8.6h)... ✅
+  [1050/2281] Imran Aziz - 2D Map Feature Integration (7.9h)... ✅
+  [1051/2281] Imran Aziz - 2D Map Feature Integration (8.9h)... ✅
+  [1052/2281] Imran Aziz - 2D Map Feature Integration (8.3h)... ✅
+  [1053/2281] Imran Aziz - 2D Map Feature Integration (4.5h)... ✅
+  [1054/2281] Imran Aziz - Refactor 3D Lane Flickering (4.5h)... ✅
+  [1055/2281] Imran Aziz - 2D Map Feature Integration (4.2h)... ✅
+  [1056/2281] Imran Aziz - Refactor 3D Lane Flickering (4.2h)... ✅
+  [1057/2281] Imran Aziz - 2D Map Feature Integration (4.5h)... ✅
+  [1058/2281] Imran Aziz - Refactor 3D Lane Flickering (4.5h)... ✅
+  [1059/2281] Irin Jin - JSON Deprecation (9.9h)... ✅
+  [1060/2281] Irin Jin - JSON Deprecation (8.6h)... ✅
+  [1061/2281] Irin Jin - JSON Deprecation (8.3h)... ✅
+  [1062/2281] Irin Jin - JSON Deprecation (10.0h)... ✅
+  [1063/2281] Irin Jin - JSON Deprecation (8.2h)... ✅
+  [1064/2281] Irin Jin - JSON Deprecation (7.7h)... ✅
+  [1065/2281] Irin Jin - JSON Deprecation (9.1h)... ✅
+  [1066/2281] Irin Jin - JSON Deprecation (8.7h)... ✅
+  [1067/2281] Irin Jin - JSON Deprecation (7.8h)... ✅
+  [1068/2281] Irin Jin - JSON Deprecation (4.5h)... ✅
+  [1069/2281] Irin Jin - JSON Deprecation (2.4h)... ✅
+  [1070/2281] Irin Jin - JSON Deprecation (8.4h)... ✅
+  [1071/2281] Irin Jin - JSON Deprecation (4.5h)... ✅
+  [1072/2281] Irin Jin - Mapping GUI Improvements (4.5h)... ✅
+  [1073/2281] Irin Jin - Mapping GUI Improvements (9.2h)... ✅
+  [1074/2281] Irin Jin - Mapping GUI Improvements (7.9h)... ✅
+  [1075/2281] Irin Jin - Mapping GUI Improvements (8.5h)... ✅
+  [1076/2281] Irin Jin - Mapping GUI Improvements (9.2h)... ✅
+  [1077/2281] Irin Jin - Mapping GUI Improvements (9.1h)... ✅
+  [1078/2281] Irin Jin - Mapping GUI Improvements (9.2h)... ✅
+  [1079/2281] Irin Jin - Mapping GUI Improvements (7.9h)... ✅
+  [1080/2281] Irin Jin - Mapping GUI Improvements (7.8h)... ✅
+  [1081/2281] Irin Jin - Mapping GUI Improvements (8.5h)... ✅
+  [1082/2281] Irin Jin - Mapping GUI Improvements (8.3h)... ✅
+  [1083/2281] Irin Jin - Mapping GUI Improvements (8.2h)... ✅
+  [1084/2281] Irin Jin - Mapping GUI Improvements (9.1h)... ✅
+  [1085/2281] Irin Jin - Mapping GUI Improvements (8.0h)... ✅
+  [1086/2281] Jaden Dai - Environment setup (9.6h)... ✅
+  [1087/2281] Jaden Dai - Environment setup (4.8h)... ✅
+  [1088/2281] Jaden Dai - Understanding PointPillars (4.8h)... ✅
+  [1089/2281] Jaden Dai - Understanding model framework (5.0h)... ✅
+  [1090/2281] Jaden Dai - Understanding PointPillars (5.0h)... ✅
+  [1091/2281] Jaden Dai - Understanding model framework (4.3h)... ✅
+  [1092/2281] Jaden Dai - Understanding PointPillars (4.3h)... ✅
+  [1093/2281] Jaden Dai - Understanding model framework (3.3h)... ✅
+  [1094/2281] Jaden Dai - Rain (3.3h)... ✅
+  [1095/2281] Jaden Dai - Snow (3.3h)... ✅
+  [1096/2281] Jaden Dai - Rain (4.4h)... ✅
+  [1097/2281] Jaden Dai - Snow (4.4h)... ✅
+  [1098/2281] Jaden Dai - Rain (4.8h)... ✅
+  [1099/2281] Jaden Dai - Snow (4.8h)... ✅
+  [1100/2281] Jaden Dai - Rain (4.6h)... ✅
+  [1101/2281] Jaden Dai - Snow (4.6h)... ✅
+  [1102/2281] Jaden Dai - Rain (4.5h)... ✅
+  [1103/2281] Jaden Dai - Snow (4.5h)... ✅
+  [1104/2281] Jaden Dai - Rain (4.0h)... ✅
+  [1105/2281] Jaden Dai - Snow (4.0h)... ✅
+  [1106/2281] Jaden Dai - Rain (1.5h)... ✅
+  [1107/2281] Jaden Dai - Snow (1.5h)... ✅
+  [1108/2281] Jaden Dai - Data collection (1.5h)... ✅
+  [1109/2281] Jaden Dai - Rain (0.9h)... ✅
+  [1110/2281] Jaden Dai - Snow (0.9h)... ✅
+  [1111/2281] Jaden Dai - Data collection (0.9h)... ✅
+  [1112/2281] Jaden Dai - Rain (3.0h)... ✅
+  [1113/2281] Jaden Dai - Snow (3.0h)... ✅
+  [1114/2281] Jaden Dai - Data collection (3.0h)... ✅
+  [1115/2281] Jaden Dai - Rain (2.6h)... ✅
+  [1116/2281] Jaden Dai - Snow (2.6h)... ✅
+  [1117/2281] Jaden Dai - Data collection (2.6h)... ✅
+  [1118/2281] Jaden Dai - Rain (2.5h)... ✅
+  [1119/2281] Jaden Dai - Snow (2.5h)... ✅
+  [1120/2281] Jaden Dai - Data collection (2.5h)... ✅
+  [1121/2281] Jaden Dai - Rain (2.6h)... ✅
+  [1122/2281] Jaden Dai - Snow (2.6h)... ✅
+  [1123/2281] Jaden Dai - Data collection (2.6h)... ✅
+  [1124/2281] Jaden Dai - Rain (2.8h)... ✅
+  [1125/2281] Jaden Dai - Snow (2.8h)... ✅
+  [1126/2281] Jaden Dai - Data collection (2.8h)... ✅
+  [1127/2281] Jaden Dai - Rain (2.2h)... ✅
+  [1128/2281] Jaden Dai - Snow (2.2h)... ✅
+  [1129/2281] Jaden Dai - Weather Integration (2.2h)... ✅
+  [1130/2281] Jaden Dai - Data collection (2.2h)... ✅
+  [1131/2281] Jaden Dai - Weather Integration (4.0h)... ✅
+  [1132/2281] Jaden Dai - Data collection (4.0h)... ✅
+  [1133/2281] Jaden Dai - Weather Integration (4.4h)... ✅
+  [1134/2281] Jaden Dai - Data collection (4.4h)... ✅
+  [1135/2281] Jaden Dai - Weather Integration (3.7h)... ✅
+  [1136/2281] Jaden Dai - Data collection (3.7h)... ✅
+  [1137/2281] Jaden Dai - Weather Integration (4.2h)... ✅
+  [1138/2281] Jaden Dai - Data collection (4.2h)... ✅
+  [1139/2281] Jaden Dai - Weather Integration (9.6h)... ✅
+  [1140/2281] Jaden Dai - Weather Integration (9.9h)... ✅
+  [1141/2281] Jaden Dai - Weather Integration (4.3h)... ✅
+  [1142/2281] Jaden Dai - Weather Testing (4.3h)... ✅
+  [1143/2281] Jaden Dai - Weather Testing (7.6h)... ❌ (Command '['curl', '-)
+  [1144/2281] Jaden Dai - Weather Testing (7.9h)... ❌ (Command '['curl', '-)
+  [1145/2281] Jaden Dai - Weather Testing (7.7h)... ❌ (Command '['curl', '-)
+  [1146/2281] Jaden Dai - Weather Testing (8.9h)... ❌ (Command '['curl', '-)
+  [1147/2281] Jaden Dai - Weather Testing (7.7h)... ✅
+  [1148/2281] Jaden Dai - Weather Testing (8.2h)... ✅
+  [1149/2281] Ken Chen - Understand and profile existin (7.8h)... ✅
+  [1150/2281] Ken Chen - Understand and profile existin (8.9h)... ✅
+  [1151/2281] Ken Chen - Understand and profile existin (4.5h)... ✅
+  [1152/2281] Ken Chen - Implement optimizations (4.5h)... ✅
+  [1153/2281] Ken Chen - Implement optimizations (10.0h)... ✅
+  [1154/2281] Ken Chen - Implement optimizations (9.0h)... ✅
+  [1155/2281] Ken Chen - Implement optimizations (8.2h)... ✅
+  [1156/2281] Ken Chen - Implement optimizations (8.5h)... ✅
+  [1157/2281] Ken Chen - Implement optimizations (8.0h)... ✅
+  [1158/2281] Ken Chen - Publish Route info to GUI (8.7h)... ✅
+  [1159/2281] Ken Chen - Publish Route info to GUI (9.7h)... ✅
+  [1160/2281] Ken Chen - Publish Route info to GUI (7.7h)... ✅
+  [1161/2281] Ken Chen - Publish Route info to GUI (8.9h)... ✅
+  [1162/2281] Kevin Yan - CAN Isolation Board Redesign (8.2h)... ✅
+  [1163/2281] Kevin Yan - CAN Isolation Board Redesign (8.7h)... ✅
+  [1164/2281] Kevin Yan - CAN Isolation Board Redesign (9.6h)... ✅
+  [1165/2281] Kevin Yan - CAN Isolation Board Redesign (8.4h)... ✅
+  [1166/2281] Kevin Yan - CAN Isolation Board Redesign (10.0h)... ✅
+  [1167/2281] Kevin Yan - CAN Isolation Board Redesign (8.7h)... ✅
+  [1168/2281] Kevin Yan - CAN Isolation Board Redesign (7.0h)... ✅
+  [1169/2281] Kevin Yan - CAN Isolation Board Redesign (9.3h)... ✅
+  [1170/2281] Kevin Yan - CAN Isolation Board Redesign (4.5h)... ✅
+  [1171/2281] Kevin Yan - Manufacture CAN Isolation Boar (4.5h)... ✅
+  [1172/2281] Kevin Yan - Manufacture CAN Isolation Boar (7.7h)... ✅
+  [1173/2281] Kevin Yan - Manufacture CAN Isolation Boar (4.5h)... ✅
+  [1174/2281] Kevin Yan - Manufacture CAN Isolation Boar (2.7h)... ✅
+  [1175/2281] Kevin Yan - Manufacture CAN Isolation Boar (7.5h)... ✅
+  [1176/2281] Kevin Yan - Manufacture CAN Isolation Boar (4.2h)... ✅
+  [1177/2281] Kevin Yan - Manufacture V2.1 (4.2h)... ✅
+  [1178/2281] Kevin Yan - Manufacture CAN Isolation Boar (3.5h)... ✅
+  [1179/2281] Kevin Yan - Manufacture V2.1 (3.5h)... ✅
+  [1180/2281] Kevin Yan - Manufacture CAN Isolation Boar (4.5h)... ✅
+  [1181/2281] Kevin Yan - Manufacture V2.1 (4.5h)... ✅
+  [1182/2281] Kevin Yan - Manufacture V2.1 (8.9h)... ✅
+  [1183/2281] Kevin Yan - Manufacture V2.1 (8.2h)... ✅
+  [1184/2281] Kevin Yan - Manufacture V2.1 (8.0h)... ✅
+  [1185/2281] Kevin Yan - Manufacture V2.1 (9.2h)... ✅
+  [1186/2281] Kevin Yan - Manufacture V2.1 (9.0h)... ✅
+  [1187/2281] Lauren Kang - Environment setup (9.6h)... ✅
+  [1188/2281] Lauren Kang - Environment setup (9.5h)... ✅
+  [1189/2281] Lauren Kang - Environment setup (4.7h)... ✅
+  [1190/2281] Lauren Kang - Refactor the 2D Map Layout (4.7h)... ✅
+  [1191/2281] Lauren Kang - Refactor the 2D Map Layout (10.0h)... ✅
+  [1192/2281] Lauren Kang - Refactor the 2D Map Layout (10.0h)... ✅
+  [1193/2281] Lauren Kang - Refactor the 2D Map Layout (7.6h)... ✅
+  [1194/2281] Lauren Kang - Refactor the 2D Map Layout (9.1h)... ✅
+  [1195/2281] Lauren Kang - Refactor the 2D Map Layout (8.8h)... ✅
+  [1196/2281] Lauren Kang - Refactor the 2D Map Layout (9.5h)... ✅
+  [1197/2281] Lauren Kang - Refactor the 2D Map Layout (8.4h)... ✅
+  [1198/2281] Lauren Kang - Refactor the 2D Map Layout (2.4h)... ✅
+  [1199/2281] Lauren Kang - 2D Map Feature Integration (2.4h)... ✅
+  [1200/2281] Lauren Kang - 2D Map Feature Integration (2.4h)... ✅
+  [1201/2281] Lauren Kang - 2D Map Feature Integration (7.7h)... ✅
+  [1202/2281] Lauren Kang - 2D Map Feature Integration (4.5h)... ✅
+  [1203/2281] Lauren Kang - Create and implement 3D glb me (4.5h)... ✅
+  [1204/2281] Lauren Kang - 2D Map Feature Integration (4.0h)... ✅
+  [1205/2281] Lauren Kang - Create and implement 3D glb me (4.0h)... ✅
+  [1206/2281] Lauren Kang - 2D Map Feature Integration (4.2h)... ✅
+  [1207/2281] Lauren Kang - Create and implement 3D glb me (4.2h)... ✅
+  [1208/2281] Lauren Kang - 2D Map Feature Integration (4.1h)... ✅
+  [1209/2281] Lauren Kang - Create and implement 3D glb me (4.1h)... ✅
+  [1210/2281] Lauren Kang - 2D Map Feature Integration (8.9h)... ✅
+  [1211/2281] Lauren Kang - 2D Map Feature Integration (7.4h)... ✅
+  [1212/2281] Memo Ozdincer - Environment Setup (9.8h)... ✅
+  [1213/2281] Memo Ozdincer - Environment Setup (8.5h)... ✅
+  [1214/2281] Memo Ozdincer - Environment Setup (3.8h)... ✅
+  [1215/2281] Memo Ozdincer - Run YOLOpv2 Model on our Datas (3.8h)... ✅
+  [1216/2281] Memo Ozdincer - Run YOLOpv2 Model on our Datas (9.2h)... ✅
+  [1217/2281] Memo Ozdincer - Run YOLOpv2 Model on our Datas (9.8h)... ✅
+  [1218/2281] Memo Ozdincer - Run YOLOpv2 Model on our Datas (10.0h)... ✅
+  [1219/2281] Memo Ozdincer - Run YOLOpv2 Model on our Datas (4.5h)... ✅
+  [1220/2281] Memo Ozdincer - Run TwinLiteNetPlus on our Dat (4.5h)... ✅
+  [1221/2281] Memo Ozdincer - Run TwinLiteNetPlus on our Dat (8.8h)... ✅
+  [1222/2281] Memo Ozdincer - Run TwinLiteNetPlus on our Dat (7.5h)... ✅
+  [1223/2281] Memo Ozdincer - Run TwinLiteNetPlus on our Dat (8.4h)... ✅
+  [1224/2281] Memo Ozdincer - Run TwinLiteNetPlus on our Dat (5.0h)... ✅
+  [1225/2281] Memo Ozdincer - Fine-tune YOLO26 Lights (2.8h)... ✅
+  [1226/2281] Memo Ozdincer - Fine-tune YOLO26 Dynamic (2.8h)... ✅
+  [1227/2281] Memo Ozdincer - Fine-tune YOLO26 Static (2.8h)... ✅
+  [1228/2281] Memo Ozdincer - Fine-tune YOLO26 Lights (2.7h)... ✅
+  [1229/2281] Memo Ozdincer - Fine-tune YOLO26 Dynamic (2.7h)... ✅
+  [1230/2281] Memo Ozdincer - Fine-tune YOLO26 Static (2.7h)... ✅
+  [1231/2281] Memo Ozdincer - Fine-tune YOLO26 Lights (2.9h)... ✅
+  [1232/2281] Memo Ozdincer - Fine-tune YOLO26 Dynamic (2.9h)... ✅
+  [1233/2281] Memo Ozdincer - Fine-tune YOLO26 Static (2.9h)... ✅
+  [1234/2281] Memo Ozdincer - Fine-tune YOLO26 Lights (3.0h)... ✅
+  [1235/2281] Memo Ozdincer - Fine-tune YOLO26 Dynamic (3.0h)... ✅
+  [1236/2281] Memo Ozdincer - Fine-tune YOLO26 Static (3.0h)... ✅
+  [1237/2281] Memo Ozdincer - Fine-tune YOLO26 Lights (2.7h)... ✅
+  [1238/2281] Memo Ozdincer - Fine-tune YOLO26 Dynamic (2.7h)... ✅
+  [1239/2281] Memo Ozdincer - Fine-tune YOLO26 Static (2.7h)... ✅
+  [1240/2281] Memo Ozdincer - Fine-tune YOLO26 Lights (2.2h)... ✅
+  [1241/2281] Memo Ozdincer - Fine-tune YOLO26 Dynamic (2.2h)... ✅
+  [1242/2281] Memo Ozdincer - Fine-tune YOLO26 Static (2.2h)... ✅
+  [1243/2281] Memo Ozdincer - Fine-tune YOLO26 Lights (2.9h)... ✅
+  [1244/2281] Memo Ozdincer - Fine-tune YOLO26 Dynamic (2.9h)... ✅
+  [1245/2281] Memo Ozdincer - Fine-tune YOLO26 Static (2.9h)... ✅
+  [1246/2281] Memo Ozdincer - Fine-tune YOLO26 Lights (3.3h)... ✅
+  [1247/2281] Memo Ozdincer - Fine-tune YOLO26 Dynamic (3.3h)... ✅
+  [1248/2281] Memo Ozdincer - Fine-tune YOLO26 Static (3.3h)... ✅
+  [1249/2281] Memo Ozdincer - Fine-tune YOLO26 Lights (2.7h)... ✅
+  [1250/2281] Memo Ozdincer - Fine-tune YOLO26 Dynamic (2.7h)... ✅
+  [1251/2281] Memo Ozdincer - Fine-tune YOLO26 Static (2.7h)... ✅
+  [1252/2281] Memo Ozdincer - Fine-tune YOLO26 Lights (2.1h)... ✅
+  [1253/2281] Memo Ozdincer - Fine-tune YOLO26 Dynamic (2.1h)... ✅
+  [1254/2281] Memo Ozdincer - Fine-tune YOLO26 Static (2.1h)... ✅
+  [1255/2281] Memo Ozdincer - Tune IoU and confidence score  (2.1h)... ✅
+  [1256/2281] Memo Ozdincer - Tune IoU and confidence score  (9.6h)... ✅
+  [1257/2281] Memo Ozdincer - Tune IoU and confidence score  (9.5h)... ✅
+  [1258/2281] Memo Ozdincer - Tune IoU and confidence score  (8.7h)... ✅
+  [1259/2281] Memo Ozdincer - Tune IoU and confidence score  (7.6h)... ✅
+  [1260/2281] Memo Ozdincer - Tune IoU and confidence score  (8.2h)... ✅
+  [1261/2281] Memo Ozdincer - Tune IoU and confidence score  (7.8h)... ✅
+  [1262/2281] Memo Ozdincer - Tune IoU and confidence score  (8.7h)... ✅
+  [1263/2281] Memo Ozdincer - Tune IoU and confidence score  (8.2h)... ✅
+  [1264/2281] Mirka Katuscakova - Explore Atmospheric Scattering (9.2h)... ✅
+  [1265/2281] Mirka Katuscakova - Explore Atmospheric Scattering (7.1h)... ✅
+  [1266/2281] Mirka Katuscakova - Explore Atmospheric Scattering (10.0h)... ✅
+  [1267/2281] Mirka Katuscakova - Explore Atmospheric Scattering (9.3h)... ✅
+  [1268/2281] Mirka Katuscakova - Explore Atmospheric Scattering (9.0h)... ✅
+  [1269/2281] Mirka Katuscakova - Explore Atmospheric Scattering (9.1h)... ✅
+  [1270/2281] Mirka Katuscakova - Explore Atmospheric Scattering (8.7h)... ✅
+  [1271/2281] Mirka Katuscakova - Explore Atmospheric Scattering (4.5h)... ✅
+  [1272/2281] Mirka Katuscakova - Test YOLOv8 on KITTI dataset u (4.5h)... ✅
+  [1273/2281] Mirka Katuscakova - Test YOLOv8 on KITTI dataset u (3.8h)... ✅
+  [1274/2281] Mirka Katuscakova - Test YOLOv8 on KITTI dataset u (2.5h)... ✅
+  [1275/2281] Mirka Katuscakova - Test YOLOv8 on KITTI dataset u (8.6h)... ✅
+  [1276/2281] Mirka Katuscakova - Add Fog Augmentation (4.5h)... ✅
+  [1277/2281] Mirka Katuscakova - Add Fog Preprocessing Step usi (4.5h)... ✅
+  [1278/2281] Mirka Katuscakova - Add Fog Augmentation (4.5h)... ✅
+  [1279/2281] Mirka Katuscakova - Add Fog Preprocessing Step usi (4.5h)... ✅
+  [1280/2281] Mirka Katuscakova - Add Fog Augmentation (4.5h)... ✅
+  [1281/2281] Mirka Katuscakova - Add Fog Preprocessing Step usi (4.5h)... ✅
+  [1282/2281] Mirka Katuscakova - Add Fog Augmentation (3.9h)... ✅
+  [1283/2281] Mirka Katuscakova - Add Fog Preprocessing Step usi (3.9h)... ✅
+  [1284/2281] Mirka Katuscakova - Add Fog Augmentation (4.2h)... ✅
+  [1285/2281] Mirka Katuscakova - Add Fog Preprocessing Step usi (4.2h)... ✅
+  [1286/2281] Mirka Katuscakova - Add Fog Augmentation (4.2h)... ✅
+  [1287/2281] Mirka Katuscakova - Add Fog Preprocessing Step usi (4.2h)... ✅
+  [1288/2281] Mirka Katuscakova - Add Fog Augmentation (5.0h)... ✅
+  [1289/2281] Mirka Katuscakova - Add Fog Preprocessing Step usi (5.0h)... ✅
+  [1290/2281] Mirka Katuscakova - Add Fog Augmentation (4.2h)... ✅
+  [1291/2281] Mirka Katuscakova - Add Fog Preprocessing Step usi (4.2h)... ✅
+  [1292/2281] Mirka Katuscakova - Add Fog Augmentation (2.7h)... ✅
+  [1293/2281] Mirka Katuscakova - Add Fog Preprocessing Step usi (2.7h)... ✅
+  [1294/2281] Mirka Katuscakova - Validate Weather Augmentation (2.7h)... ✅
+  [1295/2281] Mirka Katuscakova - Validate Weather Augmentation (8.1h)... ✅
+  [1296/2281] Mirka Katuscakova - Validate Weather Augmentation (8.9h)... ✅
+  [1297/2281] Mirka Katuscakova - Validate Weather Augmentation (9.3h)... ✅
+  [1298/2281] Mirka Katuscakova - Validate Weather Augmentation (8.7h)... ✅
+  [1299/2281] Mirka Katuscakova - Validate Weather Augmentation (7.3h)... ✅
+  [1300/2281] Mirka Katuscakova - Validate Weather Augmentation (8.3h)... ✅
+  [1301/2281] Mirka Katuscakova - Validate Weather Augmentation (9.6h)... ✅
+  [1302/2281] Mirka Katuscakova - Validate Weather Augmentation (7.7h)... ✅
+  [1303/2281] Nabeth Ghazi - Preparation (13.0h)... ✅
+  [1304/2281] Nabeth Ghazi - Preparation (13.0h)... ✅
+  [1305/2281] Nabeth Ghazi - Preparation (11.6h)... ✅
+  [1306/2281] Nabeth Ghazi - Interviews (11.9h)... ✅
+  [1307/2281] Nabeth Ghazi - Interviews (4.3h)... ✅
+  [1308/2281] Nabeth Ghazi - Candidate decision madhouse (4.3h)... ✅
+  [1309/2281] Nevan Kho - Research (9.0h)... ✅
+  [1310/2281] Nevan Kho - Research (8.7h)... ✅
+  [1311/2281] Nevan Kho - Research (8.5h)... ✅
+  [1312/2281] Nevan Kho - Research (7.6h)... ✅
+  [1313/2281] Nevan Kho - Research (7.6h)... ✅
+  [1314/2281] Nevan Kho - Research (10.0h)... ✅
+  [1315/2281] Nevan Kho - Research (8.4h)... ✅
+  [1316/2281] Nevan Kho - Formal Presentation Slides (9.2h)... ✅
+  [1317/2281] Nevan Kho - Formal Presentation Slides (10.0h)... ✅
+  [1318/2281] Nevan Kho - Formal Presentation Slides (8.9h)... ✅
+  [1319/2281] Nevan Kho - Formal Presentation Slides (4.0h)... ✅
+  [1320/2281] Nevan Kho - Formal Presentation Slides (2.4h)... ✅
+  [1321/2281] Nevan Kho - Formal Presentation Slides (9.1h)... ✅
+  [1322/2281] Nevan Kho - Formal Presentation Slides (8.7h)... ✅
+  [1323/2281] Nevan Kho - Formal Presentation Slides (9.1h)... ✅
+  [1324/2281] Nevan Kho - Practice presenting (9.3h)... ✅
+  [1325/2281] Nevan Kho - Practice presenting (9.5h)... ✅
+  [1326/2281] Nevan Kho - Perfecting script (9.5h)... ✅
+  [1327/2281] Nevan Kho - Perfecting script (8.3h)... ✅
+  [1328/2281] Nevan Kho - Perfecting script (8.0h)... ✅
+  [1329/2281] Nicholas Cheng - Environment Set-up (10.0h)... ✅
+  [1330/2281] Nicholas Cheng - Environment Set-up (8.0h)... ✅
+  [1331/2281] Nicholas Cheng - Environment Set-up (4.7h)... ✅
+  [1332/2281] Nicholas Cheng - Merging Lifecycle Lidar To mai (4.7h)... ✅
+  [1333/2281] Nicholas Cheng - Merging Lifecycle Lidar To mai (8.4h)... ✅
+  [1334/2281] Nicholas Cheng - Merging Lifecycle Lidar To mai (7.8h)... ✅
+  [1335/2281] Nicholas Cheng - Merging Lifecycle Lidar To mai (10.0h)... ✅
+  [1336/2281] Nicholas Cheng - Merging Lifecycle Lidar To mai (8.9h)... ✅
+  [1337/2281] Nicholas Cheng - Merging Lifecycle Lidar To mai (8.5h)... ✅
+  [1338/2281] Nicholas Cheng - Integrating Lidar Lifecycle to (3.6h)... ✅
+  [1339/2281] Nicholas Cheng - Merging Lifecycle Lidar To mai (3.6h)... ✅
+  [1340/2281] Nicholas Cheng - Integrating Lidar Lifecycle to (4.0h)... ✅
+  [1341/2281] Nicholas Cheng - Merging Lifecycle Lidar To mai (4.0h)... ✅
+  [1342/2281] Nicholas Cheng - Integrating Lidar Lifecycle to (4.5h)... ✅
+  [1343/2281] Nicholas Cheng - Merging Lifecycle Lidar To mai (4.5h)... ✅
+  [1344/2281] Nicholas Cheng - Integrating Lidar Lifecycle to (4.2h)... ✅
+  [1345/2281] Nicholas Cheng - Integrating Lidar Lifecycle to (2.0h)... ✅
+  [1346/2281] Nicholas Cheng - Integrating Lidar Lifecycle to (7.8h)... ✅
+  [1347/2281] Nicholas Cheng - Integrate topic statistic subs (8.6h)... ✅
+  [1348/2281] Nicholas Cheng - Integrate topic statistic subs (8.0h)... ✅
+  [1349/2281] Nicholas Cheng - Integrate topic statistic subs (8.6h)... ✅
+  [1350/2281] Nicholas Cheng - Integrate topic statistic subs (8.8h)... ✅
+  [1351/2281] Nicholas Cheng - Integrate topic statistic subs (7.9h)... ✅
+  [1352/2281] Nicholas Cheng - Integrate topic statistic subs (8.5h)... ✅
+  [1353/2281] Nicholas Cheng - Integrate topic statistic subs (8.6h)... ✅
+  [1354/2281] Nicholas Cheng - Integrate topic statistic subs (8.1h)... ✅
+  [1355/2281] Nicholas Cheng - Integrate topic statistic subs (9.1h)... ✅
+  [1356/2281] Prithvi Seran - Preparation (13.0h)... ✅
+  [1357/2281] Prithvi Seran - Preparation (13.0h)... ✅
+  [1358/2281] Prithvi Seran - Preparation (13.0h)... ✅
+  [1359/2281] Prithvi Seran - Interviews (12.2h)... ✅
+  [1360/2281] Prithvi Seran - Interviews (6.5h)... ✅
+  [1361/2281] Prithvi Seran - Candidate decision madhouse (6.5h)... ✅
+  [1362/2281] Prithvi Seran - Research (9.7h)... ✅
+  [1363/2281] Prithvi Seran - Research (10.5h)... ✅
+  [1364/2281] Prithvi Seran - Research (9.1h)... ✅
+  [1365/2281] Prithvi Seran - Research (8.4h)... ✅
+  [1366/2281] Prithvi Seran - Research (12.3h)... ✅
+  [1367/2281] Prithvi Seran - Research (13.0h)... ✅
+  [1368/2281] Prithvi Seran - Research (11.2h)... ✅
+  [1369/2281] Prithvi Seran - AutoPark Pitch Deck (5.6h)... ✅
+  [1370/2281] Prithvi Seran - Formal Presentation Slides (5.6h)... ✅
+  [1371/2281] Prithvi Seran - AutoPark Pitch Deck (4.3h)... ✅
+  [1372/2281] Prithvi Seran - Formal Presentation Slides (4.3h)... ✅
+  [1373/2281] Prithvi Seran - AutoPark Pitch Deck (4.7h)... ✅
+  [1374/2281] Prithvi Seran - Formal Presentation Slides (4.7h)... ✅
+  [1375/2281] Prithvi Seran - AutoPark Pitch Deck (2.6h)... ✅
+  [1376/2281] Prithvi Seran - Formal Presentation Slides (2.6h)... ✅
+  [1377/2281] Prithvi Seran - AutoPark Pitch Deck (1.4h)... ✅
+  [1378/2281] Prithvi Seran - Formal Presentation Slides (1.4h)... ✅
+  [1379/2281] Prithvi Seran - AutoPark Pitch Deck (5.0h)... ✅
+  [1380/2281] Prithvi Seran - Formal Presentation Slides (5.0h)... ✅
+  [1381/2281] Prithvi Seran - AutoPark Pitch Deck (4.5h)... ✅
+  [1382/2281] Prithvi Seran - Formal Presentation Slides (4.5h)... ✅
+  [1383/2281] Prithvi Seran - AutoPark Pitch Deck (4.2h)... ✅
+  [1384/2281] Prithvi Seran - Formal Presentation Slides (4.2h)... ✅
+  [1385/2281] Prithvi Seran - AutoPark Business Plan (10.4h)... ✅
+  [1386/2281] Prithvi Seran - AutoPark Business Plan (11.8h)... ✅
+  [1387/2281] Prithvi Seran - AutoPark Business Plan (4.8h)... ✅
+  [1388/2281] Prithvi Seran - Perfecting script (4.8h)... ✅
+  [1389/2281] Prithvi Seran - AutoPark Business Plan (5.5h)... ✅
+  [1390/2281] Prithvi Seran - Perfecting script (5.5h)... ✅
+  [1391/2281] Prithvi Seran - Perfecting script (10.3h)... ✅
+  [1392/2281] Raashid Azeem Ahamed - JSON Deprecation (8.2h)... ✅
+  [1393/2281] Raashid Azeem Ahamed - JSON Deprecation (9.0h)... ✅
+  [1394/2281] Raashid Azeem Ahamed - JSON Deprecation (8.7h)... ✅
+  [1395/2281] Raashid Azeem Ahamed - JSON Deprecation (10.0h)... ✅
+  [1396/2281] Raashid Azeem Ahamed - JSON Deprecation (8.0h)... ✅
+  [1397/2281] Raashid Azeem Ahamed - JSON Deprecation (8.1h)... ✅
+  [1398/2281] Raashid Azeem Ahamed - JSON Deprecation (8.3h)... ✅
+  [1399/2281] Raashid Azeem Ahamed - JSON Deprecation (9.7h)... ✅
+  [1400/2281] Raashid Azeem Ahamed - JSON Deprecation (7.8h)... ✅
+  [1401/2281] Raashid Azeem Ahamed - JSON Deprecation (4.2h)... ✅
+  [1402/2281] Raashid Azeem Ahamed - JSON Deprecation (2.4h)... ✅
+  [1403/2281] Raashid Azeem Ahamed - JSON Deprecation (8.4h)... ✅
+  [1404/2281] Raashid Azeem Ahamed - JSON Deprecation (4.0h)... ✅
+  [1405/2281] Raashid Azeem Ahamed - Mapping GUI Improvements (4.0h)... ✅
+  [1406/2281] Raashid Azeem Ahamed - Mapping GUI Improvements (8.5h)... ✅
+  [1407/2281] Raashid Azeem Ahamed - Mapping GUI Improvements (8.1h)... ✅
+  [1408/2281] Raashid Azeem Ahamed - Mapping GUI Improvements (8.6h)... ✅
+  [1409/2281] Raashid Azeem Ahamed - Mapping GUI Improvements (7.8h)... ✅
+  [1410/2281] Raashid Azeem Ahamed - Mapping GUI Improvements (7.1h)... ✅
+  [1411/2281] Raashid Azeem Ahamed - Mapping GUI Improvements (10.0h)... ✅
+  [1412/2281] Raashid Azeem Ahamed - Mapping GUI Improvements (8.6h)... ✅
+  [1413/2281] Raashid Azeem Ahamed - Mapping GUI Improvements (9.7h)... ✅
+  [1414/2281] Raashid Azeem Ahamed - Mapping GUI Improvements (9.3h)... ✅
+  [1415/2281] Raashid Azeem Ahamed - Mapping GUI Improvements (8.1h)... ✅
+  [1416/2281] Raashid Azeem Ahamed - Mapping GUI Improvements (7.8h)... ✅
+  [1417/2281] Raashid Azeem Ahamed - Mapping GUI Improvements (8.7h)... ✅
+  [1418/2281] Raashid Azeem Ahamed - Mapping GUI Improvements (10.0h)... ✅
+  [1419/2281] Raiyann Jacob - Environment setup (8.7h)... ✅
+  [1420/2281] Raiyann Jacob - Environment setup (4.3h)... ✅
+  [1421/2281] Raiyann Jacob - Understanding PointPillars (4.3h)... ✅
+  [1422/2281] Raiyann Jacob - Understanding model framework (4.0h)... ✅
+  [1423/2281] Raiyann Jacob - Understanding PointPillars (4.0h)... ✅
+  [1424/2281] Raiyann Jacob - Understanding model framework (4.4h)... ✅
+  [1425/2281] Raiyann Jacob - Understanding PointPillars (4.4h)... ✅
+  [1426/2281] Raiyann Jacob - Understanding model framework (3.3h)... ✅
+  [1427/2281] Raiyann Jacob - Rain (3.3h)... ✅
+  [1428/2281] Raiyann Jacob - Snow (3.3h)... ✅
+  [1429/2281] Raiyann Jacob - Rain (4.0h)... ✅
+  [1430/2281] Raiyann Jacob - Snow (4.0h)... ✅
+  [1431/2281] Raiyann Jacob - Rain (3.9h)... ✅
+  [1432/2281] Raiyann Jacob - Snow (3.9h)... ✅
+  [1433/2281] Raiyann Jacob - Rain (3.8h)... ✅
+  [1434/2281] Raiyann Jacob - Snow (3.8h)... ✅
+  [1435/2281] Raiyann Jacob - Rain (3.9h)... ✅
+  [1436/2281] Raiyann Jacob - Snow (3.9h)... ✅
+  [1437/2281] Raiyann Jacob - Rain (3.7h)... ✅
+  [1438/2281] Raiyann Jacob - Snow (3.7h)... ✅
+  [1439/2281] Raiyann Jacob - Rain (1.3h)... ✅
+  [1440/2281] Raiyann Jacob - Snow (1.3h)... ✅
+  [1441/2281] Raiyann Jacob - Data collection (1.3h)... ✅
+  [1442/2281] Raiyann Jacob - Rain (0.7h)... ✅
+  [1443/2281] Raiyann Jacob - Snow (0.7h)... ✅
+  [1444/2281] Raiyann Jacob - Data collection (0.7h)... ✅
+  [1445/2281] Raiyann Jacob - Rain (2.8h)... ✅
+  [1446/2281] Raiyann Jacob - Snow (2.8h)... ✅
+  [1447/2281] Raiyann Jacob - Data collection (2.8h)... ✅
+  [1448/2281] Raiyann Jacob - Rain (3.1h)... ✅
+  [1449/2281] Raiyann Jacob - Snow (3.1h)... ✅
+  [1450/2281] Raiyann Jacob - Data collection (3.1h)... ✅
+  [1451/2281] Raiyann Jacob - Rain (2.8h)... ✅
+  [1452/2281] Raiyann Jacob - Snow (2.8h)... ✅
+  [1453/2281] Raiyann Jacob - Data collection (2.8h)... ✅
+  [1454/2281] Raiyann Jacob - Rain (3.0h)... ✅
+  [1455/2281] Raiyann Jacob - Snow (3.0h)... ✅
+  [1456/2281] Raiyann Jacob - Data collection (3.0h)... ✅
+  [1457/2281] Raiyann Jacob - Rain (2.8h)... ✅
+  [1458/2281] Raiyann Jacob - Snow (2.8h)... ✅
+  [1459/2281] Raiyann Jacob - Data collection (2.8h)... ✅
+  [1460/2281] Raiyann Jacob - Rain (2.3h)... ✅
+  [1461/2281] Raiyann Jacob - Snow (2.3h)... ✅
+  [1462/2281] Raiyann Jacob - Weather Integration (2.3h)... ✅
+  [1463/2281] Raiyann Jacob - Data collection (2.3h)... ✅
+  [1464/2281] Raiyann Jacob - Weather Integration (5.0h)... ✅
+  [1465/2281] Raiyann Jacob - Data collection (5.0h)... ✅
+  [1466/2281] Raiyann Jacob - Weather Integration (4.2h)... ✅
+  [1467/2281] Raiyann Jacob - Data collection (4.2h)... ✅
+  [1468/2281] Raiyann Jacob - Weather Integration (4.1h)... ✅
+  [1469/2281] Raiyann Jacob - Data collection (4.1h)... ✅
+  [1470/2281] Raiyann Jacob - Weather Integration (4.6h)... ✅
+  [1471/2281] Raiyann Jacob - Data collection (4.6h)... ✅
+  [1472/2281] Raiyann Jacob - Weather Integration (8.4h)... ✅
+  [1473/2281] Raiyann Jacob - Weather Integration (9.0h)... ✅
+  [1474/2281] Raiyann Jacob - Weather Integration (4.1h)... ✅
+  [1475/2281] Raiyann Jacob - Weather Testing (4.1h)... ✅
+  [1476/2281] Raiyann Jacob - Weather Testing (9.3h)... ✅
+  [1477/2281] Raiyann Jacob - Weather Testing (9.2h)... ✅
+  [1478/2281] Raiyann Jacob - Weather Testing (9.5h)... ✅
+  [1479/2281] Raiyann Jacob - Weather Testing (8.4h)... ✅
+  [1480/2281] Raiyann Jacob - Weather Testing (8.6h)... ✅
+  [1481/2281] Raiyann Jacob - Weather Testing (7.6h)... ✅
+  [1482/2281] Saaim Raad - Environment setup (7.3h)... ✅
+  [1483/2281] Saaim Raad - Environment setup (4.2h)... ✅
+  [1484/2281] Saaim Raad - Understanding PointPillars (4.2h)... ✅
+  [1485/2281] Saaim Raad - Understanding model framework (4.0h)... ✅
+  [1486/2281] Saaim Raad - Understanding PointPillars (4.0h)... ✅
+  [1487/2281] Saaim Raad - Understanding model framework (4.4h)... ✅
+  [1488/2281] Saaim Raad - Understanding PointPillars (4.4h)... ✅
+  [1489/2281] Saaim Raad - Understanding model framework (5.0h)... ✅
+  [1490/2281] Saaim Raad - Fog (5.0h)... ✅
+  [1491/2281] Saaim Raad - Fog (8.4h)... ✅
+  [1492/2281] Saaim Raad - Fog (8.9h)... ✅
+  [1493/2281] Saaim Raad - Fog (8.3h)... ✅
+  [1494/2281] Saaim Raad - Fog (9.1h)... ✅
+  [1495/2281] Saaim Raad - Fog (8.9h)... ✅
+  [1496/2281] Saaim Raad - Fog (2.4h)... ✅
+  [1497/2281] Saaim Raad - Data collection (2.4h)... ✅
+  [1498/2281] Saaim Raad - Fog (1.2h)... ✅
+  [1499/2281] Saaim Raad - Data collection (1.2h)... ✅
+  [1500/2281] Saaim Raad - Fog (4.1h)... ✅
+  [1501/2281] Saaim Raad - Data collection (4.1h)... ✅
+  [1502/2281] Saaim Raad - Fog (4.0h)... ✅
+  [1503/2281] Saaim Raad - Data collection (4.0h)... ✅
+  [1504/2281] Saaim Raad - Fog (5.0h)... ✅
+  [1505/2281] Saaim Raad - Data collection (5.0h)... ✅
+  [1506/2281] Saaim Raad - Fog (4.7h)... ✅
+  [1507/2281] Saaim Raad - Data collection (4.7h)... ✅
+  [1508/2281] Saaim Raad - Fog (4.6h)... ✅
+  [1509/2281] Saaim Raad - Data collection (4.6h)... ✅
+  [1510/2281] Saaim Raad - Fog (2.4h)... ✅
+  [1511/2281] Saaim Raad - Weather Integration (2.4h)... ✅
+  [1512/2281] Saaim Raad - Data collection (2.4h)... ✅
+  [1513/2281] Saaim Raad - Weather Integration (4.0h)... ✅
+  [1514/2281] Saaim Raad - Data collection (4.0h)... ✅
+  [1515/2281] Saaim Raad - Weather Integration (4.9h)... ✅
+  [1516/2281] Saaim Raad - Data collection (4.9h)... ✅
+  [1517/2281] Saaim Raad - Weather Integration (3.9h)... ✅
+  [1518/2281] Saaim Raad - Data collection (3.9h)... ✅
+  [1519/2281] Saaim Raad - Weather Integration (4.0h)... ✅
+  [1520/2281] Saaim Raad - Data collection (4.0h)... ✅
+  [1521/2281] Saaim Raad - Weather Integration (7.6h)... ✅
+  [1522/2281] Saaim Raad - Weather Integration (8.5h)... ✅
+  [1523/2281] Saaim Raad - Weather Integration (4.2h)... ✅
+  [1524/2281] Saaim Raad - Weather Testing (4.2h)... ✅
+  [1525/2281] Saaim Raad - Weather Testing (8.6h)... ✅
+  [1526/2281] Saaim Raad - Weather Testing (7.7h)... ✅
+  [1527/2281] Saaim Raad - Weather Testing (8.3h)... ✅
+  [1528/2281] Saaim Raad - Weather Testing (8.7h)... ✅
+  [1529/2281] Saaim Raad - Weather Testing (9.1h)... ✅
+  [1530/2281] Saaim Raad - Weather Testing (8.0h)... ✅
+  [1531/2281] Samuel Chen - Environment Setup (8.9h)... ✅
+  [1532/2281] Samuel Chen - Environment Setup (9.2h)... ✅
+  [1533/2281] Samuel Chen - Environment Setup (7.1h)... ✅
+  [1534/2281] Sunny Wu - Environment setup (8.6h)... ✅
+  [1535/2281] Sunny Wu - Environment setup (4.5h)... ✅
+  [1536/2281] Sunny Wu - Understanding PointPillars (4.5h)... ✅
+  [1537/2281] Sunny Wu - Understanding model framework (4.2h)... ✅
+  [1538/2281] Sunny Wu - Understanding PointPillars (4.2h)... ✅
+  [1539/2281] Sunny Wu - Understanding model framework (4.7h)... ✅
+  [1540/2281] Sunny Wu - Understanding PointPillars (4.7h)... ✅
+  [1541/2281] Sunny Wu - Understanding model framework (10.0h)... ✅
+  [1542/2281] Sunny Wu - Lidar-to-lidar calibration (7.8h)... ✅
+  [1543/2281] Sunny Wu - Lidar-to-lidar calibration (9.1h)... ✅
+  [1544/2281] Sunny Wu - Lidar-to-lidar calibration (8.3h)... ✅
+  [1545/2281] Sunny Wu - Lidar-to-lidar calibration (8.6h)... ✅
+  [1546/2281] Sunny Wu - Lidar-to-lidar calibration (8.7h)... ✅
+  [1547/2281] Sunny Wu - Lidar-to-lidar calibration (2.2h)... ✅
+  [1548/2281] Sunny Wu - Data collection (2.2h)... ✅
+  [1549/2281] Sunny Wu - Data collection (2.3h)... ✅
+  [1550/2281] Sunny Wu - Data collection (8.0h)... ✅
+  [1551/2281] Sunny Wu - Data collection (9.4h)... ✅
+  [1552/2281] Sunny Wu - Data collection (8.7h)... ✅
+  [1553/2281] Sunny Wu - Data collection (7.6h)... ✅
+  [1554/2281] Sunny Wu - Data collection (8.7h)... ✅
+  [1555/2281] Sunny Wu - Data collection (8.6h)... ✅
+  [1556/2281] Sunny Wu - Data collection (8.8h)... ✅
+  [1557/2281] Sunny Wu - Data collection (8.4h)... ✅
+  [1558/2281] Sunny Wu - Data collection (8.6h)... ✅
+  [1559/2281] Sunny Wu - Data collection (9.5h)... ✅
+  [1560/2281] Taemin Lee - Teensy board set-up  (9.0h)... ✅
+  [1561/2281] Taemin Lee - Teensy board set-up  (4.1h)... ✅
+  [1562/2281] Taemin Lee - Teensy side power-toggling end (4.1h)... ✅
+  [1563/2281] Taemin Lee - Teensy side power-toggling end (9.3h)... ✅
+  [1564/2281] Taemin Lee - Teensy side power-toggling end (5.0h)... ✅
+  [1565/2281] Taemin Lee - Integrate PDMS Interface Node  (5.0h)... ✅
+  [1566/2281] Taemin Lee - Integrate PDMS Interface Node  (7.8h)... ✅
+  [1567/2281] Taemin Lee - Integrate PDMS Interface Node  (8.4h)... ✅
+  [1568/2281] Taemin Lee - Integrate PDMS Interface Node  (4.5h)... ✅
+  [1569/2281] Taemin Lee - Decouple PDMS interface node p (4.5h)... ✅
+  [1570/2281] Taemin Lee - Decouple PDMS interface node p (8.6h)... ✅
+  [1571/2281] Taemin Lee - Integrate watchdog with PDMS c (7.4h)... ✅
+  [1572/2281] Taemin Lee - Integrate watchdog with PDMS c (9.1h)... ✅
+  [1573/2281] Taemin Lee - Integrate watchdog with PDMS c (8.1h)... ✅
+  [1574/2281] Taemin Lee - Integrate watchdog with PDMS c (9.6h)... ✅
+  [1575/2281] Taemin Lee - Integrate watchdog with PDMS c (9.3h)... ✅
+  [1576/2281] Taemin Lee - Integrate watchdog with PDMS c (9.2h)... ✅
+  [1577/2281] Taemin Lee - Integrate watchdog with PDMS c (9.4h)... ✅
+  [1578/2281] Taemin Lee - Integrate watchdog with PDMS c (9.7h)... ✅
+  [1579/2281] Taemin Lee - Integrate watchdog with PDMS c (9.1h)... ✅
+  [1580/2281] Tanay Langhe - Environment Setup (7.4h)... ✅
+  [1581/2281] Tanay Langhe - Environment Setup (8.8h)... ✅
+  [1582/2281] Tanay Langhe - Environment Setup (8.3h)... ✅
+  [1583/2281] Tsegai Hidru - MEng CAN Project (8.3h)... ✅
+  [1584/2281] Tsegai Hidru - MEng CAN Project (9.0h)... ✅
+  [1585/2281] Tsegai Hidru - MEng CAN Project (8.2h)... ✅
+  [1586/2281] Tsegai Hidru - MEng CAN Project (7.7h)... ✅
+  [1587/2281] Tsegai Hidru - MEng CAN Project (8.2h)... ✅
+  [1588/2281] Tsegai Hidru - MEng CAN Project (10.0h)... ✅
+  [1589/2281] Tsegai Hidru - MEng CAN Project (7.8h)... ✅
+  [1590/2281] Tsegai Hidru - MEng CAN Project (7.6h)... ✅
+  [1591/2281] Tsegai Hidru - MEng CAN Project (9.0h)... ✅
+  [1592/2281] Tsegai Hidru - MEng CAN Project (8.7h)... ✅
+  [1593/2281] Tsegai Hidru - MEng CAN Project (9.0h)... ✅
+  [1594/2281] Tsegai Hidru - MEng CAN Project (4.8h)... ✅
+  [1595/2281] Tsegai Hidru - MEng CAN Project (2.7h)... ✅
+  [1596/2281] Tsegai Hidru - MEng CAN Project (8.7h)... ✅
+  [1597/2281] Tsegai Hidru - MEng CAN Project (9.1h)... ✅
+  [1598/2281] Tsegai Hidru - MEng CAN Project (7.5h)... ✅
+  [1599/2281] Tsegai Hidru - MEng CAN Project (8.4h)... ✅
+  [1600/2281] Tsegai Hidru - MEng CAN Project (8.8h)... ✅
+  [1601/2281] Tsegai Hidru - MEng CAN Project (8.9h)... ✅
+  [1602/2281] Tsegai Hidru - MEng CAN Project (9.8h)... ✅
+  [1603/2281] Tsegai Hidru - MEng CAN Project (7.5h)... ✅
+  [1604/2281] Tsegai Hidru - MEng CAN Project (7.6h)... ✅
+  [1605/2281] Tsegai Hidru - MEng CAN Project (8.7h)... ✅
+  [1606/2281] Tsegai Hidru - MEng CAN Project (8.1h)... ✅
+  [1607/2281] Tsegai Hidru - MEng CAN Project (9.1h)... ✅
+  [1608/2281] Tsegai Hidru - MEng CAN Project (7.7h)... ✅
+  [1609/2281] Tsegai Hidru - MEng CAN Project (10.0h)... ✅
+  [1610/2281] Tsegai Hidru - MEng CAN Project (8.6h)... ✅
+  [1611/2281] Tsegai Hidru - MEng CAN Project (8.9h)... ✅
+  [1612/2281] Tsegai Hidru - MEng CAN Project (8.7h)... ✅
+  [1613/2281] Tsegai Hidru - MEng CAN Project (7.5h)... ✅
+  [1614/2281] Tsegai Hidru - MEng CAN Project (8.6h)... ✅
+  [1615/2281] Yijie Wang - Preparation (10.0h)... ✅
+  [1616/2281] Yijie Wang - Preparation (10.0h)... ✅
+  [1617/2281] Yijie Wang - Preparation (10.0h)... ✅
+  [1618/2281] Yijie Wang - Interviews (8.0h)... ✅
+  [1619/2281] Yijie Wang - Interviews (4.5h)... ✅
+  [1620/2281] Yijie Wang - Candidate decision madhouse (4.5h)... ✅
+  [1621/2281] Yijie Wang - Integrate CARLA with aUToSenso (3.1h)... ✅
+  [1622/2281] Yijie Wang - Set up Gitlab CI with Sim test (3.1h)... ✅
+  [1623/2281] Yijie Wang - Implement 14 DOF vehicle model (3.1h)... ✅
+  [1624/2281] Yijie Wang - Integrate CARLA with aUToSenso (2.8h)... ✅
+  [1625/2281] Yijie Wang - Set up Gitlab CI with Sim test (2.8h)... ✅
+  [1626/2281] Yijie Wang - Implement 14 DOF vehicle model (2.8h)... ✅
+  [1627/2281] Yijie Wang - Integrate CARLA with aUToSenso (2.6h)... ✅
+  [1628/2281] Yijie Wang - Set up Gitlab CI with Sim test (2.6h)... ✅
+  [1629/2281] Yijie Wang - Implement 14 DOF vehicle model (2.6h)... ✅
+  [1630/2281] Yijie Wang - Integrate CARLA with aUToSenso (2.4h)... ✅
+  [1631/2281] Yijie Wang - Set up Gitlab CI with Sim test (2.4h)... ✅
+  [1632/2281] Yijie Wang - Configure CI alerts (2.4h)... ✅
+  [1633/2281] Yijie Wang - Implement 14 DOF vehicle model (2.4h)... ✅
+  [1634/2281] Yijie Wang - Integrate CARLA with aUToSenso (3.3h)... ✅
+  [1635/2281] Yijie Wang - Configure CI alerts (3.3h)... ✅
+  [1636/2281] Yijie Wang - Implement 14 DOF vehicle model (3.3h)... ✅
+  [1637/2281] Yijie Wang - Integrate CARLA with aUToSenso (1.9h)... ✅
+  [1638/2281] Yijie Wang - Configure CI alerts (1.9h)... ✅
+  [1639/2281] Yijie Wang - Implement 14 DOF vehicle model (1.9h)... ✅
+  [1640/2281] Yijie Wang - Tune 14 DOF vehicle model (1.9h)... ✅
+  [1641/2281] Yijie Wang - Integrate CARLA with aUToSenso (1.9h)... ✅
+  [1642/2281] Yijie Wang - Configure CI alerts (1.9h)... ✅
+  [1643/2281] Yijie Wang - CI Dashboard for results (1.9h)... ✅
+  [1644/2281] Yijie Wang - Tune 14 DOF vehicle model (1.9h)... ✅
+  [1645/2281] Yijie Wang - Integrate CARLA with aUToSenso (3.2h)... ✅
+  [1646/2281] Yijie Wang - CI Dashboard for results (3.2h)... ✅
+  [1647/2281] Yijie Wang - Tune 14 DOF vehicle model (3.2h)... ✅
+  [1648/2281] Yijie Wang - Integrate CARLA with aUToSenso (2.3h)... ✅
+  [1649/2281] Yijie Wang - CI Dashboard for results (2.3h)... ✅
+  [1650/2281] Yijie Wang - Tune 14 DOF vehicle model (2.3h)... ✅
+  [1651/2281] Yijie Wang - Design controller simulation a (2.3h)... ✅
+  [1652/2281] Yijie Wang - CI Dashboard for results (3.0h)... ✅
+  [1653/2281] Yijie Wang - Design controller simulation a (3.0h)... ✅
+  [1654/2281] Yijie Wang - Create Simulation Video (3.0h)... ✅
+  [1655/2281] Yijie Wang - Design controller simulation a (2.0h)... ✅
+  [1656/2281] Yijie Wang - Create Simulation Video (2.0h)... ✅
+  [1657/2281] Yijie Wang - Design controller simulation a (0.8h)... ✅
+  [1658/2281] Yijie Wang - Add low-traction simulation sc (0.8h)... ✅
+  [1659/2281] Yijie Wang - Create Simulation Video (0.8h)... ✅
+  [1660/2281] Yijie Wang - aUToScheduler and other CI opt (2.4h)... ✅
+  [1661/2281] Yijie Wang - Add low-traction simulation sc (2.4h)... ✅
+  [1662/2281] Yijie Wang - Create Simulation Video (2.4h)... ✅
+  [1663/2281] Yijie Wang - aUToScheduler and other CI opt (2.6h)... ✅
+  [1664/2281] Yijie Wang - Add low-traction simulation sc (2.6h)... ✅
+  [1665/2281] Yijie Wang - Create Simulation Video (2.6h)... ✅
+  [1666/2281] Yijie Wang - aUToScheduler and other CI opt (5.0h)... ✅
+  [1667/2281] Yijie Wang - Add low-traction simulation sc (5.0h)... ✅
+  [1668/2281] Yijie Wang - aUToScheduler and other CI opt (2.9h)... ✅
+  [1669/2281] Yijie Wang - Add low-traction simulation sc (2.9h)... ✅
+  [1670/2281] Yijie Wang - Create Simulation Presentation (2.9h)... ✅
+  [1671/2281] Yijie Wang - Create Simulation Presentation (8.9h)... ✅
+  [1672/2281] Yijie Wang - Create Simulation Presentation (7.8h)... ✅
+  [1673/2281] niraaj - Understand existing codebase a (7.0h)... ✅
+  [1674/2281] niraaj - Understand existing codebase a (4.5h)... ✅
+  [1675/2281] niraaj - Implement safety cost into the (4.5h)... ✅
+  [1676/2281] niraaj - Understand existing codebase a (4.0h)... ✅
+  [1677/2281] niraaj - Implement safety cost into the (4.0h)... ✅
+  [1678/2281] niraaj - Understand existing codebase a (3.3h)... ✅
+  [1679/2281] niraaj - Integrate profiling into plann (3.3h)... ✅
+  [1680/2281] niraaj - Implement safety cost into the (3.3h)... ✅
+  [1681/2281] niraaj - Integrate profiling into plann (4.3h)... ✅
+  [1682/2281] niraaj - Implement safety cost into the (4.3h)... ✅
+  [1683/2281] niraaj - Integrate profiling into plann (8.3h)... ✅
+  [1684/2281] niraaj - Integrate profiling into plann (8.4h)... ✅
+  [1685/2281] niraaj - Integrate profiling into plann (9.8h)... ✅
+  [1686/2281] Adrian Liu - Preparation (13.0h)... ✅
+  [1687/2281] Adrian Liu - Preparation (13.0h)... ✅
+  [1688/2281] Adrian Liu - Preparation (13.0h)... ✅
+  [1689/2281] Adrian Liu - Interviews (11.6h)... ✅
+  [1690/2281] Adrian Liu - Interviews (5.3h)... ✅
+  [1691/2281] Adrian Liu - Candidate decision madhouse (5.3h)... ✅
+  [1692/2281] Adrian Liu - DYOC Message Failure Fix (2.9h)... ✅
+  [1693/2281] Adrian Liu - Wheel Encoder Bringup (2.9h)... ✅
+  [1694/2281] Adrian Liu - RPi Specification (2.9h)... ✅
+  [1695/2281] Adrian Liu - DYOC Message Failure Fix (3.4h)... ✅
+  [1696/2281] Adrian Liu - Wheel Encoder Bringup (3.4h)... ✅
+  [1697/2281] Adrian Liu - RPi Specification (3.4h)... ✅
+  [1698/2281] Adrian Liu - DYOC Message Failure Fix (3.3h)... ✅
+  [1699/2281] Adrian Liu - Wheel Encoder Bringup (3.3h)... ✅
+  [1700/2281] Adrian Liu - RPi Specification (3.3h)... ✅
+  [1701/2281] Adrian Liu - DYOC Message Failure Fix (4.5h)... ✅
+  [1702/2281] Adrian Liu - Wheel Encoder Bringup (4.5h)... ✅
+  [1703/2281] Adrian Liu - DYOC Message Failure Fix (4.3h)... ✅
+  [1704/2281] Adrian Liu - Wheel Encoder Bringup (4.3h)... ✅
+  [1705/2281] Adrian Liu - RPi Environment Setup (4.3h)... ✅
+  [1706/2281] Adrian Liu - Wheel Encoder Bringup (4.7h)... ✅
+  [1707/2281] Adrian Liu - RPi Environment Setup (4.7h)... ✅
+  [1708/2281] Adrian Liu - Wheel Encoder Bringup (3.5h)... ✅
+  [1709/2281] Adrian Liu - RPi Environment Setup (3.5h)... ✅
+  [1710/2281] Adrian Liu - RPi Performance Testing (3.5h)... ✅
+  [1711/2281] Adrian Liu - Wheel Encoder Bringup (4.8h)... ✅
+  [1712/2281] Adrian Liu - RPi Performance Testing (4.8h)... ✅
+  [1713/2281] Adrian Liu - Wheel Encoder Bringup (3.7h)... ✅
+  [1714/2281] Adrian Liu - Wheel Encoder Fix (3.7h)... ✅
+  [1715/2281] Adrian Liu - RPi Performance Testing (3.7h)... ✅
+  [1716/2281] Adrian Liu - Wheel Encoder Fix (5.7h)... ✅
+  [1717/2281] Adrian Liu - RPi Performance Testing (5.7h)... ✅
+  [1718/2281] Adrian Liu - Wheel Encoder Fix (2.5h)... ✅
+  [1719/2281] Adrian Liu - RPi Performance Testing (2.5h)... ✅
+  [1720/2281] Adrian Liu - Wheel Encoder Fix (1.8h)... ✅
+  [1721/2281] Adrian Liu - RPi Performance Testing (1.8h)... ✅
+  [1722/2281] Adrian Liu - Wheel Encoder Fix (5.8h)... ✅
+  [1723/2281] Adrian Liu - RPi Performance Testing (5.8h)... ✅
+  [1724/2281] Adrian Liu - Wheel Encoder Fix (2.0h)... ✅
+  [1725/2281] Adrian Liu - RPi Performance Testing (2.0h)... ✅
+  [1726/2281] Adrian Liu - Laptop Performance Testing (2.0h)... ✅
+  [1727/2281] Adrian Liu - Traffic Light <> RSU (2.0h)... ✅
+  [1728/2281] Adrian Liu - Wheel Encoder Fix (3.5h)... ✅
+  [1729/2281] Adrian Liu - Laptop Performance Testing (3.5h)... ✅
+  [1730/2281] Adrian Liu - Traffic Light <> RSU (3.5h)... ✅
+  [1731/2281] Adrian Liu - Wheel Encoder Fix (2.7h)... ✅
+  [1732/2281] Adrian Liu - Laptop Performance Testing (2.7h)... ✅
+  [1733/2281] Adrian Liu - Traffic Light <> RSU (2.7h)... ✅
+  [1734/2281] Adrian Liu - Laptop Performance Testing (5.8h)... ✅
+  [1735/2281] Adrian Liu - Traffic Light <> RSU (5.8h)... ✅
+  [1736/2281] Adrian Liu - Laptop Performance Testing (5.7h)... ✅
+  [1737/2281] Adrian Liu - Traffic Light <> RSU (5.7h)... ✅
+  [1738/2281] Adrian Liu - Traffic Light <> RSU (10.0h)... ✅
+  [1739/2281] Adrian Liu - Traffic Light <> RSU (9.6h)... ✅
+  [1740/2281] Adrian Liu - Traffic Light <> RSU (4.5h)... ✅
+  [1741/2281] Adrian Liu - RSU <> PC (4.5h)... ✅
+  [1742/2281] Adrian Liu - RSU <> PC (10.3h)... ✅
+  [1743/2281] Adrian Liu - RSU <> PC (11.0h)... ✅
+  [1744/2281] Adrian Liu - RSU <> PC (11.0h)... ✅
+  [1745/2281] Adrian Liu - RSU <> PC (5.0h)... ✅
+  [1746/2281] Adrian Liu - V2X Integration (5.0h)... ✅
+  [1747/2281] Adrian Liu - V2X Integration (10.2h)... ✅
+  [1748/2281] Adrian Liu - V2X Integration (11.9h)... ✅
+  [1749/2281] Adrian Liu - V2X Integration (11.8h)... ✅
+  [1750/2281] Adrian Liu - V2X Integration (12.1h)... ✅
+  [1751/2281] Adrian Liu - V2X Integration (9.6h)... ✅
+  [1752/2281] Ammar Ahmad - Profile IntializeDestination i (8.5h)... ✅
+  [1753/2281] Ammar Ahmad - Profile IntializeDestination i (8.5h)... ✅
+  [1754/2281] Ammar Ahmad - Profile IntializeDestination i (4.1h)... ✅
+  [1755/2281] Ammar Ahmad - Implement InitializeDestinatio (4.1h)... ✅
+  [1756/2281] Ammar Ahmad - Implement InitializeDestinatio (10.0h)... ✅
+  [1757/2281] Ammar Ahmad - Implement InitializeDestinatio (8.2h)... ✅
+  [1758/2281] Ammar Ahmad - Explore solutions and implemen (9.6h)... ✅
+  [1759/2281] Ammar Ahmad - Explore solutions and implemen (9.1h)... ✅
+  [1760/2281] Ammar Ahmad - Explore solutions and implemen (8.8h)... ✅
+  [1761/2281] Ammar Ahmad - Explore solutions and implemen (8.1h)... ✅
+  [1762/2281] Ammar Ahmad - Explore solutions and implemen (4.0h)... ✅
+  [1763/2281] Ammar Ahmad - Parking Light Implementation (8.4h)... ✅
+  [1764/2281] Ammar Ahmad - Parking Light Implementation (7.3h)... ✅
+  [1765/2281] Ammar Ahmad - Parking Light Implementation (6.9h)... ✅
+  [1766/2281] Ammar Ahmad - Parking Light Implementation (7.2h)... ✅
+  [1767/2281] Ammar Vora - Preparation (13.0h)... ✅
+  [1768/2281] Ammar Vora - Preparation (4.8h)... ✅
+  [1769/2281] Ammar Vora - Optimize planning loop (4.8h)... ✅
+  [1770/2281] Ammar Vora - Preparation (6.5h)... ✅
+  [1771/2281] Ammar Vora - Optimize planning loop (6.5h)... ✅
+  [1772/2281] Ammar Vora - Optimize planning loop (13.0h)... ✅
+  [1773/2281] Ammar Vora - Optimize planning loop (11.7h)... ✅
+  [1774/2281] Ammar Vora - Interviews (6.5h)... ✅
+  [1775/2281] Ammar Vora - Optimize planning loop (6.5h)... ✅
+  [1776/2281] Ammar Vora - Interviews (4.3h)... ✅
+  [1777/2281] Ammar Vora - Candidate decision madhouse (4.3h)... ✅
+  [1778/2281] Ammar Vora - Optimize planning loop (4.3h)... ✅
+  [1779/2281] Ammar Vora - Optimize planning loop (10.6h)... ✅
+  [1780/2281] Ammar Vora - Optimize planning loop (9.5h)... ✅
+  [1781/2281] Ammar Vora - Optimize planning loop (4.8h)... ✅
+  [1782/2281] Ammar Vora - Set up test cases to showcase  (4.8h)... ✅
+  [1783/2281] Ammar Vora - Set up test cases to showcase  (4.1h)... ✅
+  [1784/2281] Ammar Vora - Graph optimization MVP (4.1h)... ✅
+  [1785/2281] Ammar Vora - Implement safety cost into the (4.1h)... ✅
+  [1786/2281] Ammar Vora - Set up test cases to showcase  (3.5h)... ✅
+  [1787/2281] Ammar Vora - Graph optimization MVP (3.5h)... ✅
+  [1788/2281] Ammar Vora - Implement safety cost into the (3.5h)... ✅
+  [1789/2281] Ammar Vora - Set up test cases to showcase  (4.3h)... ✅
+  [1790/2281] Ammar Vora - Graph optimization MVP (4.3h)... ✅
+  [1791/2281] Ammar Vora - Implement safety cost into the (4.3h)... ✅
+  [1792/2281] Ammar Vora - Graph optimization MVP (5.5h)... ✅
+  [1793/2281] Ammar Vora - Implement safety cost into the (5.5h)... ✅
+  [1794/2281] Ammar Vora - Graph optimization MVP (11.0h)... ✅
+  [1795/2281] Ammar Vora - Graph optimization MVP (8.6h)... ✅
+  [1796/2281] Ammar Vora - Graph optimization MVP (8.6h)... ✅
+  [1797/2281] Ammar Vora - Graph optimization MVP (8.2h)... ✅
+  [1798/2281] Ammar Vora - Graph optimization MVP (5.2h)... ✅
+  [1799/2281] Ammar Vora - Graph optimization MVP (3.1h)... ✅
+  [1800/2281] Ammar Vora - Graph optimization MVP (10.7h)... ✅
+  [1801/2281] Ammar Vora - Graph optimization MVP (12.8h)... ✅
+  [1802/2281] Ammar Vora - Graph optimization MVP (7.6h)... ✅
+  [1803/2281] Ammar Vora - Graph optimization MVP (10.4h)... ✅
+  [1804/2281] Ammar Vora - Graph optimization MVP (11.7h)... ✅
+  [1805/2281] Alex You - Manufacture Spare V2.0 (9.0h)... ✅
+  [1806/2281] Alex You - Manufacture Spare V2.0 (9.2h)... ✅
+  [1807/2281] Alex You - Manufacture Spare V2.0 (7.9h)... ✅
+  [1808/2281] Alex You - Manufacture Spare V2.0 (8.6h)... ✅
+  [1809/2281] Alex You - Manufacture Spare V2.0 (10.0h)... ✅
+  [1810/2281] Alex You - Manufacture Spare V2.0 (8.0h)... ✅
+  [1811/2281] Alex You - Manufacture Spare V2.0 (9.4h)... ✅
+  [1812/2281] Alex You - Manufacture Spare V2.0 (7.9h)... ✅
+  [1813/2281] Alex You - Manufacture Spare V2.0 (4.4h)... ✅
+  [1814/2281] Alex You - Spare V2.0 Testing (4.4h)... ✅
+  [1815/2281] Alex You - Spare V2.0 Testing (7.7h)... ✅
+  [1816/2281] Alex You - Spare V2.0 Testing (4.1h)... ✅
+  [1817/2281] Alex You - Manufacture V2.1 (9.4h)... ✅
+  [1818/2281] Alex You - Manufacture V2.1 (7.4h)... ✅
+  [1819/2281] Alex You - Manufacture V2.1 (8.4h)... ✅
+  [1820/2281] Alex You - Manufacture V2.1 (8.1h)... ✅
+  [1821/2281] Alex You - Manufacture V2.1 (8.2h)... ✅
+  [1822/2281] Alex You - Manufacture V2.1 (8.1h)... ✅
+  [1823/2281] Alex You - Manufacture V2.1 (8.6h)... ✅
+  [1824/2281] Alex You - Manufacture V2.1 (4.5h)... ✅
+  [1825/2281] Alex You - PDMS V2.1 Testing (4.5h)... ✅
+  [1826/2281] Alex You - PDMS V2.1 Testing (8.9h)... ✅
+  [1827/2281] Alex You - PDMS V2.1 Testing (8.8h)... ✅
+  [1828/2281] Alex You - PDMS V2.1 Testing (7.5h)... ✅
+  [1829/2281] Adam - Preparation (13.0h)... ✅
+  [1830/2281] Adam - Preparation (12.6h)... ✅
+  [1831/2281] Adam - Preparation (13.0h)... ✅
+  [1832/2281] Adam - Interviews (13.0h)... ✅
+  [1833/2281] Adam - Interviews (3.6h)... ✅
+  [1834/2281] Adam - Candidate decision madhouse (3.6h)... ✅
+  [1835/2281] Adam - Explore Atmospheric Scattering (9.5h)... ✅
+  [1836/2281] Adam - Explore Atmospheric Scattering (11.4h)... ✅
+  [1837/2281] Adam - Explore Atmospheric Scattering (13.0h)... ✅
+  [1838/2281] Adam - Explore Atmospheric Scattering (10.5h)... ✅
+  [1839/2281] Adam - Explore Atmospheric Scattering (13.0h)... ✅
+  [1840/2281] Adam - Explore Atmospheric Scattering (9.2h)... ✅
+  [1841/2281] Adam - Explore Atmospheric Scattering (9.8h)... ✅
+  [1842/2281] Adam - Add Proper Caching in YOLO Tra (5.1h)... ✅
+  [1843/2281] Adam - Explore Atmospheric Scattering (5.1h)... ✅
+  [1844/2281] Adam - Add Proper Caching in YOLO Tra (5.0h)... ✅
+  [1845/2281] Adam - Add Proper Caching in YOLO Tra (3.2h)... ✅
+  [1846/2281] Adam - Add Proper Caching in YOLO Tra (2.1h)... ✅
+  [1847/2281] Adam - Fine-tune YOLO26 Lights (2.1h)... ✅
+  [1848/2281] Adam - Fine-tune YOLO26 Dynamic (2.1h)... ✅
+  [1849/2281] Adam - Fine-tune YOLO26 Static (2.1h)... ✅
+  [1850/2281] Adam - Add Fog Augmentation (1.6h)... ✅
+  [1851/2281] Adam - Add Fog Preprocessing Step usi (1.6h)... ✅
+  [1852/2281] Adam - Add Rain Augmentation (1.6h)... ✅
+  [1853/2281] Adam - Fine-tune YOLO26 Lights (1.6h)... ✅
+  [1854/2281] Adam - Fine-tune YOLO26 Dynamic (1.6h)... ✅
+  [1855/2281] Adam - Fine-tune YOLO26 Static (1.6h)... ✅
+  [1856/2281] Adam - Add Fog Augmentation (2.0h)... ✅
+  [1857/2281] Adam - Add Fog Preprocessing Step usi (2.0h)... ✅
+  [1858/2281] Adam - Add Rain Augmentation (2.0h)... ✅
+  [1859/2281] Adam - Fine-tune YOLO26 Lights (2.0h)... ✅
+  [1860/2281] Adam - Fine-tune YOLO26 Dynamic (2.0h)... ✅
+  [1861/2281] Adam - Fine-tune YOLO26 Static (2.0h)... ✅
+  [1862/2281] Adam - Add Fog Augmentation (1.5h)... ✅
+  [1863/2281] Adam - Add Fog Preprocessing Step usi (1.5h)... ✅
+  [1864/2281] Adam - Add Rain Augmentation (1.5h)... ✅
+  [1865/2281] Adam - Fine-tune YOLO26 Lights (1.5h)... ✅
+  [1866/2281] Adam - Fine-tune YOLO26 Dynamic (1.5h)... ✅
+  [1867/2281] Adam - Fine-tune YOLO26 Static (1.5h)... ✅
+  [1868/2281] Adam - Add Fog Augmentation (1.9h)... ✅
+  [1869/2281] Adam - Add Fog Preprocessing Step usi (1.9h)... ✅
+  [1870/2281] Adam - Add Rain Augmentation (1.9h)... ✅
+  [1871/2281] Adam - Fine-tune YOLO26 Lights (1.9h)... ✅
+  [1872/2281] Adam - Fine-tune YOLO26 Dynamic (1.9h)... ✅
+  [1873/2281] Adam - Fine-tune YOLO26 Static (1.9h)... ✅
+  [1874/2281] Adam - Add Fog Augmentation (1.6h)... ✅
+  [1875/2281] Adam - Add Fog Preprocessing Step usi (1.6h)... ✅
+  [1876/2281] Adam - Add Rain Augmentation (1.6h)... ✅
+  [1877/2281] Adam - Fine-tune YOLO26 Lights (1.6h)... ✅
+  [1878/2281] Adam - Fine-tune YOLO26 Dynamic (1.6h)... ✅
+  [1879/2281] Adam - Fine-tune YOLO26 Static (1.6h)... ✅
+  [1880/2281] Adam - Add MuSGD optimizer (1.6h)... ✅
+  [1881/2281] Adam - Add Fog Augmentation (1.3h)... ✅
+  [1882/2281] Adam - Add Fog Preprocessing Step usi (1.3h)... ✅
+  [1883/2281] Adam - Add Rain Augmentation (1.3h)... ✅
+  [1884/2281] Adam - Fine-tune YOLO26 Lights (1.3h)... ✅
+  [1885/2281] Adam - Fine-tune YOLO26 Dynamic (1.3h)... ✅
+  [1886/2281] Adam - Fine-tune YOLO26 Static (1.3h)... ✅
+  [1887/2281] Adam - Add MuSGD optimizer (1.3h)... ✅
+  [1888/2281] Adam - Add Fog Augmentation (1.7h)... ✅
+  [1889/2281] Adam - Add Fog Preprocessing Step usi (1.7h)... ✅
+  [1890/2281] Adam - Add Rain Augmentation (1.7h)... ✅
+  [1891/2281] Adam - Fine-tune YOLO26 Lights (1.7h)... ✅
+  [1892/2281] Adam - Fine-tune YOLO26 Dynamic (1.7h)... ✅
+  [1893/2281] Adam - Fine-tune YOLO26 Static (1.7h)... ✅
+  [1894/2281] Adam - Add Fog Augmentation (1.6h)... ✅
+  [1895/2281] Adam - Add Fog Preprocessing Step usi (1.6h)... ✅
+  [1896/2281] Adam - Add Rain Augmentation (1.6h)... ✅
+  [1897/2281] Adam - Fine-tune YOLO26 Lights (1.6h)... ✅
+  [1898/2281] Adam - Fine-tune YOLO26 Dynamic (1.6h)... ✅
+  [1899/2281] Adam - Fine-tune YOLO26 Static (1.6h)... ✅
+  [1900/2281] Adam - Add Fog Augmentation (1.1h)... ✅
+  [1901/2281] Adam - Add Fog Preprocessing Step usi (1.1h)... ✅
+  [1902/2281] Adam - Add Rain Augmentation (1.1h)... ✅
+  [1903/2281] Adam - Validate Weather Augmentation (1.1h)... ✅
+  [1904/2281] Adam - Fine-tune YOLO26 Lights (1.1h)... ✅
+  [1905/2281] Adam - Fine-tune YOLO26 Dynamic (1.1h)... ✅
+  [1906/2281] Adam - Fine-tune YOLO26 Static (1.1h)... ✅
+  [1907/2281] Adam - Tune IoU and confidence score  (1.1h)... ✅
+  [1908/2281] Adam - Validate Weather Augmentation (5.3h)... ✅
+  [1909/2281] Adam - Tune IoU and confidence score  (5.3h)... ✅
+  [1910/2281] Adam - Validate Weather Augmentation (6.0h)... ✅
+  [1911/2281] Adam - Tune IoU and confidence score  (6.0h)... ✅
+  [1912/2281] Adam - Validate Weather Augmentation (5.5h)... ✅
+  [1913/2281] Adam - Tune IoU and confidence score  (5.5h)... ✅
+  [1914/2281] Adam - Validate Weather Augmentation (4.5h)... ✅
+  [1915/2281] Adam - Tune IoU and confidence score  (4.5h)... ✅
+  [1916/2281] Adam - Validate Weather Augmentation (5.2h)... ✅
+  [1917/2281] Adam - Tune IoU and confidence score  (5.2h)... ✅
+  [1918/2281] Adam - Validate Weather Augmentation (5.2h)... ✅
+  [1919/2281] Adam - Tune IoU and confidence score  (5.2h)... ✅
+  [1920/2281] Adam - Validate Weather Augmentation (5.8h)... ✅
+  [1921/2281] Adam - Tune IoU and confidence score  (5.8h)... ✅
+  [1922/2281] Adam - Validate Weather Augmentation (5.3h)... ✅
+  [1923/2281] Adam - Tune IoU and confidence score  (5.3h)... ✅
+  [1924/2281] Ai-Ling Ji - Research (9.7h)... ✅
+  [1925/2281] Ai-Ling Ji - Research (9.2h)... ✅
+  [1926/2281] Ai-Ling Ji - Research (8.6h)... ✅
+  [1927/2281] Ai-Ling Ji - Research (8.1h)... ✅
+  [1928/2281] Ai-Ling Ji - Research (7.4h)... ✅
+  [1929/2281] Ai-Ling Ji - Research (10.0h)... ✅
+  [1930/2281] Ai-Ling Ji - Research (9.1h)... ✅
+  [1931/2281] Ai-Ling Ji - Formal Presentation Slides (8.4h)... ✅
+  [1932/2281] Ai-Ling Ji - Formal Presentation Slides (9.5h)... ✅
+  [1933/2281] Ai-Ling Ji - Formal Presentation Slides (8.5h)... ✅
+  [1934/2281] Ai-Ling Ji - Formal Presentation Slides (3.7h)... ✅
+  [1935/2281] Ai-Ling Ji - Formal Presentation Slides (2.6h)... ✅
+  [1936/2281] Ai-Ling Ji - Formal Presentation Slides (8.4h)... ✅
+  [1937/2281] Ai-Ling Ji - Formal Presentation Slides (7.5h)... ✅
+  [1938/2281] Ai-Ling Ji - Formal Presentation Slides (9.1h)... ✅
+  [1939/2281] Ai-Ling Ji - Practice presenting (8.0h)... ✅
+  [1940/2281] Ai-Ling Ji - Practice presenting (8.5h)... ✅
+  [1941/2281] Ai-Ling Ji - Perfecting script (9.4h)... ✅
+  [1942/2281] Ai-Ling Ji - Perfecting script (6.8h)... ✅
+  [1943/2281] Ai-Ling Ji - Perfecting script (8.8h)... ✅
+  [1944/2281] Alp - Server Rack CAD (8.8h)... ✅
+  [1945/2281] Alp - Server Rack CAD (8.7h)... ✅
+  [1946/2281] Alp - Server Rack CAD (9.6h)... ✅
+  [1947/2281] Alp - Server Rack CAD (9.7h)... ✅
+  [1948/2281] Alp - Server Rack CAD (10.0h)... ✅
+  [1949/2281] Alp - Server Rack CAD (7.7h)... ✅
+  [1950/2281] Alp - Server Rack CAD (4.6h)... ✅
+  [1951/2281] Alp - Server Rack Validation (4.6h)... ✅
+  [1952/2281] Alp - Server Rack Validation (9.1h)... ✅
+  [1953/2281] Alp - Server Rack Validation (8.4h)... ✅
+  [1954/2281] Alp - Server Rack Validation (10.0h)... ✅
+  [1955/2281] Alp - Server Rack Validation (3.9h)... ✅
+  [1956/2281] Alp - Waterproofing of the Sensor Pl (0.9h)... ✅
+  [1957/2281] Alp - Server Rack Validation (0.9h)... ✅
+  [1958/2281] Alp - Server Rack Assembly (0.9h)... ✅
+  [1959/2281] Alp - Waterproofing of the Sensor Pl (4.3h)... ✅
+  [1960/2281] Alp - Server Rack Assembly (4.3h)... ✅
+  [1961/2281] Alp - Waterproofing of the Sensor Pl (2.7h)... ✅
+  [1962/2281] Alp - Server Rack Assembly (2.7h)... ✅
+  [1963/2281] Alp - Server Rack Plexiglass Order (2.7h)... ✅
+  [1964/2281] Alp - Waterproofing of the Sensor Pl (4.1h)... ✅
+  [1965/2281] Alp - Server Rack Plexiglass Order (4.1h)... ✅
+  [1966/2281] Alp - Waterproofing of the Sensor Pl (4.8h)... ✅
+  [1967/2281] Alp - Server Rack Plexiglass Order (4.8h)... ✅
+  [1968/2281] Alp - Waterproofing of the Sensor Pl (4.7h)... ✅
+  [1969/2281] Alp - Server Rack Plexiglass Order (4.7h)... ✅
+  [1970/2281] Alp - Waterproofing of the Sensor Pl (4.2h)... ✅
+  [1971/2281] Alp - Server Rack Plexiglass Order (4.2h)... ✅
+  [1972/2281] Alp - Server Rack Plexiglass Order (4.0h)... ✅
+  [1973/2281] Alp - Server Rack Plexiglass Assembl (4.0h)... ✅
+  [1974/2281] Alp - Server Rack Plexiglass Assembl (7.8h)... ✅
+  [1975/2281] Alp - Server Rack Plexiglass Assembl (10.0h)... ✅
+  [1976/2281] Alp - Server Rack Plexiglass Assembl (8.7h)... ✅
+  [1977/2281] Alp - Server Rack Plexiglass Assembl (4.2h)... ✅
+  [1978/2281] Alp - Airflow System Assembly (4.2h)... ✅
+  [1979/2281] Alp - Airflow System Assembly (7.4h)... ✅
+  [1980/2281] Alp - Airflow System Assembly (8.4h)... ✅
+  [1981/2281] Alp - Airflow System Assembly (9.0h)... ✅
+  [1982/2281] Alp - Airflow System Assembly (8.5h)... ✅
+  [1983/2281] Austin Lin - Environment Setup (8.3h)... ✅
+  [1984/2281] Austin Lin - Environment Setup (3.8h)... ✅
+  [1985/2281] Austin Lin - Pipeline + Code Walk through (3.8h)... ✅
+  [1986/2281] Austin Lin - Pipeline + Code Walk through (8.3h)... ✅
+  [1987/2281] Austin Lin - Pipeline + Code Walk through (7.9h)... ✅
+  [1988/2281] Austin Lin - Pipeline + Code Walk through (10.0h)... ✅
+  [1989/2281] Austin Lin - BEV Tracking Pipeline w/o Map- (4.8h)... ✅
+  [1990/2281] Austin Lin - BEV Tracking Pipeline w/o Map- (2.4h)... ✅
+  [1991/2281] Austin Lin - BEV Tracking Pipeline w/o Map- (9.0h)... ✅
+  [1992/2281] Austin Lin - BEV Tracking Pipeline w/o Map- (8.7h)... ✅
+  [1993/2281] Austin Lin - BEV Tracking Pipeline w/o Map- (9.6h)... ✅
+  [1994/2281] Austin Lin - BEV Tracking Pipeline w/o Map- (8.5h)... ✅
+  [1995/2281] Austin Lin - BEV Tracking Pipeline w/o Map- (8.5h)... ✅
+  [1996/2281] Austin Lin - BEV Tracking Pipeline w/o Map- (4.0h)... ✅
+  [1997/2281] Austin Lin - BEV Tracking Pipeline w/ Map-S (4.0h)... ✅
+  [1998/2281] Austin Lin - BEV Tracking Pipeline w/ Map-S (9.0h)... ✅
+  [1999/2281] Austin Lin - BEV Tracking Pipeline w/ Map-S (8.7h)... ✅
+  [2000/2281] Austin Lin - BEV Tracking Pipeline w/ Map-S (7.8h)... ✅
+  [2001/2281] Austin Lin - BEV Tracking Pipeline w/ Map-S (3.8h)... ✅
+  [2002/2281] Austin Lin - BEV Tracking Pipeline Validati (3.8h)... ✅
+  [2003/2281] Austin Lin - BEV Tracking Pipeline Validati (8.7h)... ✅
+  [2004/2281] Austin Lin - BEV Tracking Pipeline Validati (7.2h)... ✅
+  [2005/2281] Austin Lin - BEV Tracking Pipeline Validati (8.5h)... ✅
+  [2006/2281] Austin Lin - BEV Tracking Pipeline Validati (9.2h)... ✅
+  [2007/2281] Austin Lin - BEV Tracking Pipeline Validati (8.6h)... ✅
+  [2008/2281] Austin Lin - BEV Tracking Pipeline Validati (8.1h)... ✅
+  [2009/2281] Austin Lin - BEV Tracking Pipeline Validati (8.2h)... ✅
+  [2010/2281] Austin Lin - BEV Tracking Pipeline Validati (7.4h)... ✅
+  [2011/2281] Austin Lin - BEV Tracking Pipeline Validati (8.4h)... ✅
+  [2012/2281] Brody Honigman Delto - Environment setup (8.5h)... ✅
+  [2013/2281] Brody Honigman Delto - Environment setup (8.0h)... ✅
+  [2014/2281] Brody Honigman Delto - Environment setup (4.5h)... ✅
+  [2015/2281] Brody Honigman Delto - 2D Map Obstacle Visualization  (4.5h)... ✅
+  [2016/2281] Brody Honigman Delto - 2D Map Obstacle Visualization  (8.2h)... ✅
+  [2017/2281] Brody Honigman Delto - 2D Map Obstacle Visualization  (10.0h)... ✅
+  [2018/2281] Brody Honigman Delto - 2D Map Obstacle Visualization  (6.2h)... ✅
+  [2019/2281] Brody Honigman Delto - 2D Map Obstacle Visualization  (10.0h)... ✅
+  [2020/2281] Brody Honigman Delto - 2D Map Obstacle Visualization  (6.9h)... ✅
+  [2021/2281] Brody Honigman Delto - 2D Map Obstacle Visualization  (8.0h)... ✅
+  [2022/2281] Brody Honigman Delto - 2D Map Obstacle Visualization  (8.6h)... ✅
+  [2023/2281] Brody Honigman Delto - 2D Map Obstacle Visualization  (1.9h)... ✅
+  [2024/2281] Brody Honigman Delto - 2D Map Feature Integration (1.9h)... ✅
+  [2025/2281] Brody Honigman Delto - 2D Map Feature Integration (2.5h)... ✅
+  [2026/2281] Brody Honigman Delto - 2D Map Feature Integration (8.8h)... ✅
+  [2027/2281] Brody Honigman Delto - 2D Map Feature Integration (4.0h)... ✅
+  [2028/2281] Brody Honigman Delto - Create react/three.js assets (4.0h)... ✅
+  [2029/2281] Brody Honigman Delto - 2D Map Feature Integration (4.1h)... ✅
+  [2030/2281] Brody Honigman Delto - Create react/three.js assets (4.1h)... ✅
+  [2031/2281] Brody Honigman Delto - 2D Map Feature Integration (4.4h)... ✅
+  [2032/2281] Brody Honigman Delto - Create react/three.js assets (4.4h)... ✅
+  [2033/2281] Brody Honigman Delto - 2D Map Feature Integration (4.0h)... ✅
+  [2034/2281] Brody Honigman Delto - Create react/three.js assets (4.0h)... ✅
+  [2035/2281] Brody Honigman Delto - 2D Map Feature Integration (7.9h)... ✅
+  [2036/2281] Brody Honigman Delto - 2D Map Feature Integration (8.5h)... ✅
+  [2037/2281] Jessica Chen - Environment Setup (8.6h)... ✅
+  [2038/2281] Jessica Chen - Environment Setup (4.4h)... ✅
+  [2039/2281] Jessica Chen - Pipeline + Code Walk through (4.4h)... ✅
+  [2040/2281] Jessica Chen - Pipeline + Code Walk through (7.9h)... ✅
+  [2041/2281] Jessica Chen - Pipeline + Code Walk through (8.2h)... ✅
+  [2042/2281] Jessica Chen - Pipeline + Code Walk through (5.0h)... ✅
+  [2043/2281] Jessica Chen - Sliding Window KF (5.0h)... ✅
+  [2044/2281] Jessica Chen - Sliding Window KF (9.6h)... ✅
+  [2045/2281] Jessica Chen - Sliding Window KF (8.1h)... ✅
+  [2046/2281] Jessica Chen - Sliding Window KF (7.9h)... ✅
+  [2047/2281] Jessica Chen - Sliding Window KF (8.4h)... ✅
+  [2048/2281] Jessica Chen - Sliding Window KF (8.4h)... ✅
+  [2049/2281] Jessica Chen - Sliding Window KF (4.7h)... ✅
+  [2050/2281] Jessica Chen - Sliding Window Testing (8.6h)... ✅
+  [2051/2281] Jessica Chen - Sliding Window Testing (9.1h)... ✅
+  [2052/2281] Jessica Chen - Sliding Window Testing (7.5h)... ✅
+  [2053/2281] Jessica Chen - Sliding Window Testing (7.8h)... ✅
+  [2054/2281] Jessica Chen - Sliding Window Testing (7.4h)... ✅
+  [2055/2281] Jessica Chen - Sliding Window Testing (7.4h)... ✅
+  [2056/2281] Jessica Chen - Sliding Window Testing (7.7h)... ✅
+  [2057/2281] Jonathan Zhu - Environment Set-up (8.7h)... ✅
+  [2058/2281] Jonathan Zhu - Environment Set-up (8.5h)... ✅
+  [2059/2281] Jonathan Zhu - Environment Set-up (3.8h)... ✅
+  [2060/2281] Jonathan Zhu - Teensy board set-up  (3.8h)... ✅
+  [2061/2281] Jonathan Zhu - Teensy board set-up  (4.7h)... ✅
+  [2062/2281] Jonathan Zhu - Teensy side ISENSE endpoint -  (4.7h)... ✅
+  [2063/2281] Jonathan Zhu - Teensy side ISENSE endpoint -  (10.0h)... ✅
+  [2064/2281] Jonathan Zhu - Teensy side ISENSE endpoint -  (10.0h)... ✅
+  [2065/2281] Jonathan Zhu - Integrating Radar Lifecycle to (8.2h)... ✅
+  [2066/2281] Jonathan Zhu - Integrating Radar Lifecycle to (9.3h)... ✅
+  [2067/2281] Jonathan Zhu - Integrating Radar Lifecycle to (8.4h)... ✅
+  [2068/2281] Jonathan Zhu - Integrating Radar Lifecycle to (8.0h)... ✅
+  [2069/2281] Jonathan Zhu - Integrating Radar Lifecycle to (4.2h)... ✅
+  [2070/2281] Jonathan Zhu - Integrating Radar Lifecycle to (2.4h)... ✅
+  [2071/2281] Jonathan Zhu - Integrating Radar Lifecycle to (8.9h)... ✅
+  [2072/2281] Jonathan Zhu - Integrating Radar Lifecycle to (2.8h)... ✅
+  [2073/2281] Jonathan Zhu - Integrate watchdog with PDMS c (2.8h)... ✅
+  [2074/2281] Jonathan Zhu - Rosbag automated analysis tool (2.8h)... ✅
+  [2075/2281] Jonathan Zhu - Integrating Radar Lifecycle to (2.5h)... ✅
+  [2076/2281] Jonathan Zhu - Integrate watchdog with PDMS c (2.5h)... ✅
+  [2077/2281] Jonathan Zhu - Rosbag automated analysis tool (2.5h)... ✅
+  [2078/2281] Jonathan Zhu - Integrating Radar Lifecycle to (2.7h)... ✅
+  [2079/2281] Jonathan Zhu - Integrate watchdog with PDMS c (2.7h)... ✅
+  [2080/2281] Jonathan Zhu - Rosbag automated analysis tool (2.7h)... ✅
+  [2081/2281] Jonathan Zhu - Integrate watchdog with PDMS c (3.7h)... ✅
+  [2082/2281] Jonathan Zhu - Rosbag automated analysis tool (3.7h)... ✅
+  [2083/2281] Jonathan Zhu - Integrate watchdog with PDMS c (3.5h)... ✅
+  [2084/2281] Jonathan Zhu - Rosbag automated analysis tool (3.5h)... ✅
+  [2085/2281] Jonathan Zhu - Integrate watchdog with PDMS c (8.6h)... ✅
+  [2086/2281] Jonathan Zhu - Integrate watchdog with PDMS c (7.2h)... ✅
+  [2087/2281] Jonathan Zhu - Integrate watchdog with PDMS c (8.2h)... ✅
+  [2088/2281] Jonathan Zhu - Integrate watchdog with PDMS c (7.7h)... ✅
+  [2089/2281] Mahmoud Anklis - Environment Set-up (9.2h)... ✅
+  [2090/2281] Mahmoud Anklis - Environment Set-up (8.9h)... ✅
+  [2091/2281] Mahmoud Anklis - Environment Set-up (2.9h)... ✅
+  [2092/2281] Mahmoud Anklis - Integrating Cam Lifecycle to P (2.9h)... ✅
+  [2093/2281] Mahmoud Anklis - Documenting branch difference  (2.9h)... ✅
+  [2094/2281] Mahmoud Anklis - Integrating Cam Lifecycle to P (4.1h)... ✅
+  [2095/2281] Mahmoud Anklis - Documenting branch difference  (4.1h)... ✅
+  [2096/2281] Mahmoud Anklis - Integrating Cam Lifecycle to P (2.9h)... ✅
+  [2097/2281] Mahmoud Anklis - Documenting branch difference  (2.9h)... ✅
+  [2098/2281] Mahmoud Anklis - Pull separate life lifecycle n (2.9h)... ✅
+  [2099/2281] Mahmoud Anklis - Integrating Cam Lifecycle to P (5.0h)... ✅
+  [2100/2281] Mahmoud Anklis - Pull separate life lifecycle n (5.0h)... ✅
+  [2101/2281] Mahmoud Anklis - Integrating Cam Lifecycle to P (10.0h)... ✅
+  [2102/2281] Mahmoud Anklis - Integrating Cam Lifecycle to P (9.1h)... ✅
+  [2103/2281] Mahmoud Anklis - Integrating Cam Lifecycle to P (8.7h)... ✅
+  [2104/2281] Mahmoud Anklis - Integrating Cam Lifecycle to P (9.6h)... ✅
+  [2105/2281] Mahmoud Anklis - Integrating Cam Lifecycle to P (8.0h)... ✅
+  [2106/2281] Mahmoud Anklis - Integrating Cam Lifecycle to P (4.3h)... ✅
+  [2107/2281] Mahmoud Anklis - Integrating Cam Lifecycle to P (2.5h)... ✅
+  [2108/2281] Mahmoud Anklis - Integrating Cam Lifecycle to P (8.9h)... ✅
+  [2109/2281] Mahmoud Anklis - Implement communication of fau (8.6h)... ✅
+  [2110/2281] Mahmoud Anklis - Implement communication of fau (8.1h)... ✅
+  [2111/2281] Mahmoud Anklis - Implement communication of fau (8.6h)... ✅
+  [2112/2281] Mahmoud Anklis - Implement communication of fau (8.4h)... ✅
+  [2113/2281] Mahmoud Anklis - Implement communication of fau (8.6h)... ✅
+  [2114/2281] Mahmoud Anklis - Implement communication of fau (8.2h)... ✅
+  [2115/2281] Mahmoud Anklis - Implement communication of fau (7.2h)... ✅
+  [2116/2281] Parker Stewart - Derive EKF equations for updat (8.2h)... ✅
+  [2117/2281] Parker Stewart - Derive EKF equations for updat (3.9h)... ✅
+  [2118/2281] Parker Stewart - Derive and implement sensor mo (3.9h)... ✅
+  [2119/2281] Parker Stewart - Derive and implement sensor mo (9.0h)... ✅
+  [2120/2281] Parker Stewart - Derive and implement sensor mo (9.5h)... ✅
+  [2121/2281] Parker Stewart - Derive and implement sensor mo (8.9h)... ✅
+  [2122/2281] Parker Stewart - Derive and implement sensor mo (7.9h)... ✅
+  [2123/2281] Parker Stewart - Lane Loc MVP Testing (8.0h)... ✅
+  [2124/2281] Parker Stewart - Lane Loc MVP Testing (8.2h)... ✅
+  [2125/2281] Parker Stewart - Lane Loc MVP Testing (8.2h)... ✅
+  [2126/2281] Parker Stewart - Lane Loc MVP Testing (8.8h)... ✅
+  [2127/2281] Parker Stewart - Lane Loc MVP Testing (8.6h)... ✅
+  [2128/2281] Parker Stewart - Lane Loc MVP Testing (4.5h)... ✅
+  [2129/2281] Parker Stewart - Lane Loc Validation (4.5h)... ✅
+  [2130/2281] Parker Stewart - Lane Loc Validation (7.0h)... ✅
+  [2131/2281] Parker Stewart - Lane Loc Validation (7.6h)... ✅
+  [2132/2281] Parker Stewart - Lane Loc Validation (9.4h)... ✅
+  [2133/2281] Parker Stewart - Lane Loc Validation (7.9h)... ✅
+  [2134/2281] Parker Stewart - Lane Loc Validation (9.1h)... ✅
+  [2135/2281] Parker Stewart - Lane Loc Validation (8.6h)... ✅
+  [2136/2281] Parker Stewart - Lane Loc Validation (7.3h)... ✅
+  [2137/2281] Ryan Yang - Implement 14 DOF vehicle model (8.1h)... ✅
+  [2138/2281] Ryan Yang - Implement 14 DOF vehicle model (7.8h)... ✅
+  [2139/2281] Ryan Yang - Implement 14 DOF vehicle model (8.0h)... ✅
+  [2140/2281] Ryan Yang - Implement 14 DOF vehicle model (8.9h)... ✅
+  [2141/2281] Ryan Yang - Implement 14 DOF vehicle model (10.0h)... ✅
+  [2142/2281] Ryan Yang - Implement 14 DOF vehicle model (4.0h)... ✅
+  [2143/2281] Ryan Yang - Tune 14 DOF vehicle model (4.0h)... ✅
+  [2144/2281] Ryan Yang - Tune 14 DOF vehicle model (7.9h)... ✅
+  [2145/2281] Ryan Yang - Tune 14 DOF vehicle model (8.6h)... ✅
+  [2146/2281] Ryan Yang - Tune 14 DOF vehicle model (4.5h)... ✅
+  [2147/2281] Ryan Yang - Design controller simulation a (4.5h)... ✅
+  [2148/2281] Ryan Yang - Design controller simulation a (7.4h)... ✅
+  [2149/2281] Ryan Yang - Design controller simulation a (4.5h)... ✅
+  [2150/2281] Ryan Yang - Design controller simulation a (1.4h)... ✅
+  [2151/2281] Ryan Yang - Add low-traction simulation sc (1.4h)... ✅
+  [2152/2281] Ryan Yang - Add low-traction simulation sc (7.1h)... ✅
+  [2153/2281] Ryan Yang - Add low-traction simulation sc (9.1h)... ✅
+  [2154/2281] Ryan Yang - Add low-traction simulation sc (8.6h)... ✅
+  [2155/2281] Ryan Yang - Add low-traction simulation sc (7.9h)... ✅
+  [2156/2281] Saad Abdul - Server Rack CAD (10.0h)... ✅
+  [2157/2281] Saad Abdul - Server Rack CAD (8.7h)... ✅
+  [2158/2281] Saad Abdul - Server Rack CAD (7.4h)... ✅
+  [2159/2281] Saad Abdul - Server Rack CAD (9.3h)... ✅
+  [2160/2281] Saad Abdul - Server Rack CAD (10.0h)... ✅
+  [2161/2281] Saad Abdul - Server Rack CAD (9.3h)... ✅
+  [2162/2281] Saad Abdul - Server Rack CAD (4.0h)... ✅
+  [2163/2281] Saad Abdul - Server Rack Validation (4.0h)... ✅
+  [2164/2281] Saad Abdul - Server Rack Validation (8.5h)... ✅
+  [2165/2281] Saad Abdul - Server Rack Validation (7.9h)... ✅
+  [2166/2281] Saad Abdul - Server Rack Validation (9.4h)... ✅
+  [2167/2281] Saad Abdul - Server Rack Validation (4.3h)... ✅
+  [2168/2281] Saad Abdul - Waterproofing of the Sensor Pl (0.8h)... ✅
+  [2169/2281] Saad Abdul - Server Rack Validation (0.8h)... ✅
+  [2170/2281] Saad Abdul - Server Rack Assembly (0.8h)... ✅
+  [2171/2281] Saad Abdul - Waterproofing of the Sensor Pl (3.9h)... ✅
+  [2172/2281] Saad Abdul - Server Rack Assembly (3.9h)... ✅
+  [2173/2281] Saad Abdul - Waterproofing of the Sensor Pl (2.7h)... ✅
+  [2174/2281] Saad Abdul - Server Rack Assembly (2.7h)... ✅
+  [2175/2281] Saad Abdul - Server Rack Plexiglass Order (2.7h)... ✅
+  [2176/2281] Saad Abdul - Waterproofing of the Sensor Pl (5.0h)... ✅
+  [2177/2281] Saad Abdul - Server Rack Plexiglass Order (5.0h)... ✅
+  [2178/2281] Saad Abdul - Waterproofing of the Sensor Pl (3.2h)... ✅
+  [2179/2281] Saad Abdul - Server Rack Plexiglass Order (3.2h)... ✅
+  [2180/2281] Saad Abdul - Waterproofing of the Sensor Pl (4.5h)... ✅
+  [2181/2281] Saad Abdul - Server Rack Plexiglass Order (4.5h)... ✅
+  [2182/2281] Saad Abdul - Waterproofing of the Sensor Pl (4.7h)... ✅
+  [2183/2281] Saad Abdul - Server Rack Plexiglass Order (4.7h)... ✅
+  [2184/2281] Saad Abdul - Server Rack Plexiglass Order (4.3h)... ✅
+  [2185/2281] Saad Abdul - Server Rack Plexiglass Assembl (4.3h)... ✅
+  [2186/2281] Saad Abdul - Server Rack Plexiglass Assembl (8.4h)... ✅
+  [2187/2281] Saad Abdul - Server Rack Plexiglass Assembl (10.0h)... ✅
+  [2188/2281] Saad Abdul - Server Rack Plexiglass Assembl (7.5h)... ✅
+  [2189/2281] Saad Abdul - Server Rack Plexiglass Assembl (4.0h)... ✅
+  [2190/2281] Saad Abdul - Airflow System Assembly (4.0h)... ✅
+  [2191/2281] Saad Abdul - Airflow System Assembly (9.1h)... ✅
+  [2192/2281] Saad Abdul - Airflow System Assembly (8.3h)... ✅
+  [2193/2281] Saad Abdul - Airflow System Assembly (8.0h)... ✅
+  [2194/2281] Saad Abdul - Airflow System Assembly (9.7h)... ✅
+  [2195/2281] Sebastian Nidoy - Server Rack CAD (10.0h)... ✅
+  [2196/2281] Sebastian Nidoy - Server Rack CAD (8.7h)... ✅
+  [2197/2281] Sebastian Nidoy - Server Rack CAD (8.5h)... ✅
+  [2198/2281] Sebastian Nidoy - Server Rack CAD (8.9h)... ✅
+  [2199/2281] Sebastian Nidoy - Server Rack CAD (10.0h)... ✅
+  [2200/2281] Sebastian Nidoy - Server Rack CAD (7.9h)... ✅
+  [2201/2281] Sebastian Nidoy - Server Rack CAD (4.4h)... ✅
+  [2202/2281] Sebastian Nidoy - Server Rack Validation (4.4h)... ✅
+  [2203/2281] Sebastian Nidoy - Server Rack Validation (7.9h)... ✅
+  [2204/2281] Sebastian Nidoy - Server Rack Validation (7.4h)... ✅
+  [2205/2281] Sebastian Nidoy - Server Rack Validation (9.4h)... ✅
+  [2206/2281] Sebastian Nidoy - Server Rack Validation (3.7h)... ✅
+  [2207/2281] Sebastian Nidoy - Waterproofing of the Sensor Pl (0.8h)... ✅
+  [2208/2281] Sebastian Nidoy - Server Rack Validation (0.8h)... ✅
+  [2209/2281] Sebastian Nidoy - Server Rack Assembly (0.8h)... ✅
+  [2210/2281] Sebastian Nidoy - Waterproofing of the Sensor Pl (4.7h)... ✅
+  [2211/2281] Sebastian Nidoy - Server Rack Assembly (4.7h)... ✅
+  [2212/2281] Sebastian Nidoy - Waterproofing of the Sensor Pl (2.9h)... ✅
+  [2213/2281] Sebastian Nidoy - Server Rack Assembly (2.9h)... ✅
+  [2214/2281] Sebastian Nidoy - Server Rack Plexiglass Order (2.9h)... ✅
+  [2215/2281] Sebastian Nidoy - Waterproofing of the Sensor Pl (4.5h)... ✅
+  [2216/2281] Sebastian Nidoy - Server Rack Plexiglass Order (4.5h)... ✅
+  [2217/2281] Sebastian Nidoy - Waterproofing of the Sensor Pl (4.2h)... ✅
+  [2218/2281] Sebastian Nidoy - Server Rack Plexiglass Order (4.2h)... ✅
+  [2219/2281] Sebastian Nidoy - Waterproofing of the Sensor Pl (4.7h)... ✅
+  [2220/2281] Sebastian Nidoy - Server Rack Plexiglass Order (4.7h)... ✅
+  [2221/2281] Sebastian Nidoy - Waterproofing of the Sensor Pl (4.4h)... ✅
+  [2222/2281] Sebastian Nidoy - Server Rack Plexiglass Order (4.4h)... ✅
+  [2223/2281] Sebastian Nidoy - Server Rack Plexiglass Order (4.4h)... ✅
+  [2224/2281] Sebastian Nidoy - Server Rack Plexiglass Assembl (4.4h)... ✅
+  [2225/2281] Sebastian Nidoy - Server Rack Plexiglass Assembl (9.2h)... ✅
+  [2226/2281] Sebastian Nidoy - Server Rack Plexiglass Assembl (8.0h)... ✅
+  [2227/2281] Sebastian Nidoy - Server Rack Plexiglass Assembl (9.2h)... ✅
+  [2228/2281] Sebastian Nidoy - Server Rack Plexiglass Assembl (4.3h)... ✅
+  [2229/2281] Sebastian Nidoy - Airflow System Assembly (4.3h)... ✅
+  [2230/2281] Sebastian Nidoy - Airflow System Assembly (6.4h)... ✅
+  [2231/2281] Sebastian Nidoy - Airflow System Assembly (8.0h)... ✅
+  [2232/2281] Sebastian Nidoy - Airflow System Assembly (8.5h)... ✅
+  [2233/2281] Sebastian Nidoy - Airflow System Assembly (7.1h)... ✅
+  [2234/2281] Sterling Huang - Set up Gitlab CI with Sim test (8.4h)... ✅
+  [2235/2281] Sterling Huang - Set up Gitlab CI with Sim test (9.1h)... ✅
+  [2236/2281] Sterling Huang - Set up Gitlab CI with Sim test (8.3h)... ✅
+  [2237/2281] Sterling Huang - Set up Gitlab CI with Sim test (3.8h)... ✅
+  [2238/2281] Sterling Huang - Configure CI alerts (3.8h)... ✅
+  [2239/2281] Sterling Huang - Configure CI alerts (10.0h)... ✅
+  [2240/2281] Sterling Huang - Configure CI alerts (9.2h)... ✅
+  [2241/2281] Sterling Huang - Configure CI alerts (4.0h)... ✅
+  [2242/2281] Sterling Huang - CI Dashboard for results (4.0h)... ✅
+  [2243/2281] Sterling Huang - CI Dashboard for results (9.4h)... ✅
+  [2244/2281] Sterling Huang - CI Dashboard for results (8.6h)... ✅
+  [2245/2281] Sterling Huang - CI Dashboard for results (7.4h)... ✅
+  [2246/2281] Sterling Huang - aUToScheduler and other CI opt (8.9h)... ✅
+  [2247/2281] Sterling Huang - aUToScheduler and other CI opt (9.3h)... ✅
+  [2248/2281] Sterling Huang - aUToScheduler and other CI opt (9.0h)... ✅
+  [2249/2281] Sterling Huang - aUToScheduler and other CI opt (8.8h)... ✅
+  [2250/2281] Syeda Tahiyah - Make planning and controls tes (8.5h)... ✅
+  [2251/2281] Syeda Tahiyah - Make planning and controls tes (10.0h)... ✅
+  [2252/2281] Syeda Tahiyah - Make planning and controls tes (8.5h)... ✅
+  [2253/2281] Syeda Tahiyah - Make planning and controls tes (8.7h)... ✅
+  [2254/2281] Syeda Tahiyah - Make planning and controls tes (10.0h)... ✅
+  [2255/2281] Syeda Tahiyah - Make planning and controls tes (7.7h)... ✅
+  [2256/2281] Syeda Tahiyah - Make planning and controls tes (2.3h)... ✅
+  [2257/2281] Syeda Tahiyah - Make localization tests (2.3h)... ✅
+  [2258/2281] Syeda Tahiyah - Make 2DOD/3DOD tests (2.3h)... ✅
+  [2259/2281] Syeda Tahiyah - Make tracking tests (2.3h)... ✅
+  [2260/2281] Syeda Tahiyah - Make localization tests (2.9h)... ✅
+  [2261/2281] Syeda Tahiyah - Make 2DOD/3DOD tests (2.9h)... ✅
+  [2262/2281] Syeda Tahiyah - Make tracking tests (2.9h)... ✅
+  [2263/2281] Syeda Tahiyah - Make localization tests (2.7h)... ✅
+  [2264/2281] Syeda Tahiyah - Make 2DOD/3DOD tests (2.7h)... ✅
+  [2265/2281] Syeda Tahiyah - Make tracking tests (2.7h)... ✅
+  [2266/2281] Yiyi Xu - Make planning and controls tes (7.8h)... ✅
+  [2267/2281] Yiyi Xu - Make planning and controls tes (9.7h)... ✅
+  [2268/2281] Yiyi Xu - Make planning and controls tes (8.4h)... ✅
+  [2269/2281] Yiyi Xu - Make planning and controls tes (7.6h)... ✅
+  [2270/2281] Yiyi Xu - Make planning and controls tes (10.0h)... ✅
+  [2271/2281] Yiyi Xu - Make planning and controls tes (8.9h)... ✅
+  [2272/2281] Yiyi Xu - Make planning and controls tes (2.3h)... ✅
+  [2273/2281] Yiyi Xu - Make localization tests (2.3h)... ✅
+  [2274/2281] Yiyi Xu - Make 2DOD/3DOD tests (2.3h)... ✅
+  [2275/2281] Yiyi Xu - Make tracking tests (2.3h)... ✅
+  [2276/2281] Yiyi Xu - Make localization tests (2.9h)... ✅
+  [2277/2281] Yiyi Xu - Make 2DOD/3DOD tests (2.9h)... ✅
+  [2278/2281] Yiyi Xu - Make tracking tests (2.9h)... ✅
+  [2279/2281] Yiyi Xu - Make localization tests (2.8h)... ✅
+  [2280/2281] Yiyi Xu - Make 2DOD/3DOD tests (2.8h)... ✅
+  [2281/2281] Yiyi Xu - Make tracking tests (2.8h)... ✅
+
+================================================================================
+✅ EXECUTION COMPLETE!
+
+Summary:
+  • Time blocks created: 2277/2281
+  • Failed: 4
+  • Total hours logged: 14180.9h
+
+Verify in TeamGantt: https://app.teamgantt.com/projects/4461813

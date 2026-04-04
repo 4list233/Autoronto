@@ -1,0 +1,46 @@
+export const theme = {
+  colors: {
+    primary: "#0A1628",
+    secondary: "#1B3A5C",
+    accent: "#00A6FF",
+    accentGreen: "#00D68F",
+    accentOrange: "#FF8C42",
+    white: "#FFFFFF",
+    lightGray: "#F0F4F8",
+    gray: "#8899A6",
+    darkGray: "#2C3E50",
+    text: "#FFFFFF",
+    textDark: "#0A1628",
+    gradientStart: "#0A1628",
+    gradientEnd: "#1B3A5C",
+    highlight: "#FFD700",
+  },
+  fonts: {
+    heading: "Inter, system-ui, sans-serif",
+    body: "Inter, system-ui, sans-serif",
+    mono: "JetBrains Mono, monospace",
+  },
+  spacing: {
+    xs: 8,
+    sm: 16,
+    md: 24,
+    lg: 40,
+    xl: 64,
+    xxl: 96,
+  },
+} as const;
+
+export const slideStyle: React.CSSProperties = {
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  background: `linear-gradient(135deg, ${theme.colors.gradientStart} 0%, ${theme.colors.gradientEnd} 100%)`,
+  fontFamily: theme.fonts.heading,
+  color: theme.colors.text,
+  padding: theme.spacing.xl,
+  boxSizing: "border-box",
+  overflow: "hidden",
+};
